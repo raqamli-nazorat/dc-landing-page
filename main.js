@@ -291,4 +291,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Telegram Bot Integration ---
+    const contactForm = document.getElementById('tg-contact-form');
+    const statusDiv = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    // BOT SOZLAMALARI (Foydalanuvchi buni to'ldirishi kerak)
+    // Telegram Bot uchun Token va ChatID ni shu yerga kiriting
+    const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+    const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE';
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Statusni ko'rsatish
+            statusDiv.innerText = "Yuborilmoqda...";
+            statusDiv.className = "form-status";
+            submitBtn.disabled = true;
+
+            const text = `🚀 *Yangi xabar!*%0A%0A👤 *Ism:* ${name}%0A📞 *Tel:* ${phone}%0A💬 *Xabar:* ${message}`;
+            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${text}&parse_mode=Markdown`;
+
+            try {
+                const response = await fetch(url);
+                const result = await response.json();
+
+                if (result.ok) {
+                    statusDiv.innerText = "✅ Xabaringiz yuborildi! Tez orada bog'lanamiz.";
+                    statusDiv.className = "form-status success";
+                    contactForm.reset();
+                } else {
+                    throw new Error(result.description);
+                }
+            } catch (error) {
+                statusDiv.innerText = "❌ Xatolik yuz berdi. Iltimos, keyinroq urinib ko'ring.";
+                statusDiv.className = "form-status error";
+                console.error('Telegram Error:', error);
+            } finally {
+                submitBtn.disabled = false;
+            }
+        });
+    }
 });

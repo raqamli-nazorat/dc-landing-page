@@ -11,6 +11,8 @@
     --glass-border: rgba(255, 255, 255, 0.1);
     --shadow-glow: 0 0 20px rgba(0, 210, 255, 0.2);
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --success-color: #00ff88;
+    --error-color: #ff4d4d;
 }
 
 * {
@@ -335,21 +337,112 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Contact Section */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    transition: var(--transition-base);
+}
+
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(10px);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 210, 255, 0.1);
+    border-radius: 50%;
+    color: var(--primary-color);
+}
+
+.contact-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-card p, .contact-card a {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.contact-card a:hover {
+    color: var(--primary);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tg-link {
+    display: inline-block;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    color: var(--text);
+    font-family: inherit;
+    transition: var(--transition-base);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-status.success { color: var(--success); }
+.form-status.error { color: var(--error); }
+
 @media (max-width: 992px) {
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        padding-top: 6rem;
-    }
-    .hero-content {
-        max-width: 100%;
-    }
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-    .hero-image img {
-        max-width: 300px;
+    .contact-wrapper {
+        grid-template-columns: 1fr;
     }
 }
 
