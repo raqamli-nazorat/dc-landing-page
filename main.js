@@ -73,8 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'Qurilish va sanoat ob\'ektlari butlovchi qismlarini boshqarish tizimi. Loyiha smetasidan tortib to omborga yetib kelishigacha bo\'lgan jarayonni qamrab oladi.',
             features: ['Ombor qoldiqlari nazorati', 'Yetkazib beruvchilar reytingi', 'Budjetni rejalashtirish', 'Elektron imzo (ERI) bilan tasdiqlash'],
             media: [
-                { type: 'image', src: 'assets/projects/e-komplektasiya/1.jpg' },
-                { type: 'image', src: 'assets/projects/e-komplektasiya/2.jpg' }
+                { type: 'image', src: 'assets/projects/e-komplektasiya/1.png' },
+                { type: 'image', src: 'assets/projects/e-komplektasiya/2.png' }
+            ]
+        },
+        'hitsuk': {
+            title: 'HITSUK WEB PORTALI',
+            tag: 'Boshqaruv Tizimlari',
+            desc: 'Elektron hujjat ijrosi, tashkilot xatlari nazorati va analitikasi yuritiladigan yirik davlat portali. Tashkilot ichki hujjat aylanishini to\'liq raqamlashtiradi.',
+            features: ['Kirim/chiqim xatlar nazorati', 'Xodimlarning ijro intizomi tahlili', 'Hujjatlarni ERI bilan tasdiqlash', 'Tezkor bildirishnomalar (Push Notifications)'],
+            media: [
+                { type: 'image', src: 'assets/projects/hitsuk/1.jpg' },
+                { type: 'image', src: 'assets/projects/hitsuk/2.jpg' }
             ]
         },
         'm-gaz': {
