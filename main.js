@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'hitsuk': {
             title: 'HITSUK WEB PORTALI',
-            tag: 'Boshqaruv Tizimlari',
-            desc: 'Elektron hujjat ijrosi, tashkilot xatlari nazorati va analitikasi yuritiladigan yirik davlat portali. Tashkilot ichki hujjat aylanishini to\'liq raqamlashtiradi.',
-            features: ['Kirim/chiqim xatlar nazorati', 'Xodimlarning ijro intizomi tahlili', 'Hujjatlarni ERI bilan tasdiqlash', 'Tezkor bildirishnomalar (Push Notifications)'],
+            tag: 'Web Tizimlar',
+            desc: 'Ushbu loyiha HITSUK tashkilotining so\'nggi e\'lonlari, tender xaridlari va eng muhim yangiliklari joylashtiriladigan rasmiy web portali hisoblanadi.',
+            features: ['Yangiliklar va e\'lonlar taxtasi', 'Davlat xaridlari va tenderlar bo\'limi', 'Tashkilot korporativ ma\'lumotlari', 'Interaktiv mijozlar murojaati'],
             media: [
                 { type: 'image', src: 'assets/projects/hitsuk/1.jpg' },
                 { type: 'image', src: 'assets/projects/hitsuk/2.jpg' }
