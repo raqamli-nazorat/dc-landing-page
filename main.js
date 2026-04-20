@@ -291,4 +291,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // --- Developer Tools Protection ---
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    document.addEventListener('keydown', function(event) {
+        // Blok F12
+        if (event.key === 'F12' || event.keyCode === 123) {
+            event.preventDefault();
+            return false;
+        }
+        // Blok Ctrl+Shift+I, Ctrl+Shift+J
+        if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i' || event.key === 'J' || event.key === 'j')) {
+            event.preventDefault();
+            return false;
+        }
+        // Blok Ctrl+U (View Source)
+        if (event.ctrlKey && (event.key === 'U' || event.key === 'u')) {
+            event.preventDefault();
+            return false;
+        }
+    });
 });
