@@ -163,4 +163,17 @@ document.addEventListener("DOMContentLoaded", async () => {
             localStorage.setItem('theme', 'light');
         }
     });
+<<<<<<< HEAD
 });
+=======
+
+    projects.forEach(card => {
+        card.addEventListener('click', () => {
+            const projectId = card.getAttribute('data-project-id');
+            window.location.href = `project.html?id=${projectId}`;
+        });
+    });
+});
+
+
+>>>>>>> main

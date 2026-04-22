@@ -882,4 +882,112 @@ body {
 
 .container {
     width: 100%;
+<<<<<<< HEAD
 }
+=======
+}
+
+/* Project Detail Page Blueprint */
+.project-page {
+    background-color: var(--bg-main);
+}
+
+.project-detail-container {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-detail__header {
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+.project-detail__title {
+    font-size: 32px; /* Smaller */
+    font-family: var(--unbounded);
+    font-weight: 600;
+    color: var(--text-title);
+    line-height: 1.2;
+}
+
+.project-detail__description {
+    font-size: 16px; /* Smaller */
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Info Grid */
+.info-card {
+    background: var(--bg-card);
+    padding: 30px; /* Smaller padding */
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+}
+
+.info-card__title {
+    font-size: 18px; /* Smaller */
+    font-family: var(--unbounded);
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-title);
+}
+
+.info-card__text {
+    font-size: 14px; /* Smaller */
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Dark Section */
+.project-dark-section {
+    background: #000;
+    color: white;
+    padding: 40px; /* Smaller padding */
+    border-radius: 24px;
+}
+
+.project-dark-section .section-title {
+    font-size: 20px; /* Smaller */
+}
+
+.functions-list li {
+    font-size: 15px; /* Smaller */
+}
+
+/* Content Block */
+.content-block {
+    padding: 40px; /* Smaller padding */
+}
+
+.content-block__title {
+    font-size: 20px; /* Smaller */
+}
+
+.content-block__text {
+    font-size: 15px; /* Smaller */
+}
+
+/* Dark Mode Overrides */
+body.dark-mode .info-card {
+    background: #1a1a1a;
+}
+
+body.dark-mode .content-block {
+    background: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .project-hero__title {
+        font-size: 32px;
+    }
+    
+    .project-detail-container {
+        padding-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+>>>>>>> main
