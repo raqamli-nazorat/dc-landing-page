@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         const response = await fetch('./language.json');
         translations = await response.json();
-        
+
         // Initial UI Update from localStorage
         const savedLang = (localStorage.getItem('selectedLang') || 'UZ').toUpperCase();
         updateContent(savedLang);
-        
+
         // Update switcher UI (text and flag)
         langCurrent.querySelector('span').textContent = savedLang;
         const option = Array.from(langOptions).find(opt => opt.getAttribute('data-lang').toUpperCase() === savedLang);
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     tags.forEach(tag => {
         tag.addEventListener('click', () => {
             const filter = tag.getAttribute('data-filter');
-            
+
             // Handle active class
             const parent = tag.parentElement;
             parent.querySelectorAll('.tag').forEach(t => t.classList.remove('tag--active'));
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             projects.forEach(project => {
                 const category = project.getAttribute('data-category');
-                
+
                 if (filter === 'all' || category === filter) {
                     project.style.display = 'flex';
                     setTimeout(() => {
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop - 100,
@@ -156,16 +156,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     themeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         themeToggle.classList.toggle('theme-toggle--active');
-        
+
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
         } else {
             localStorage.setItem('theme', 'light');
         }
     });
-<<<<<<< HEAD
-});
-=======
 
     projects.forEach(card => {
         card.addEventListener('click', () => {
@@ -174,6 +171,3 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 });
-
-
->>>>>>> main
