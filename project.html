@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyiha - Raqamli Nazorat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="project-page">
+    <header class="header container">
+        <div class="header__container">
+            <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+                <img src="./Images/Navbar_logo.png" alt="">
+                <span class="logo__text">Raqamli Nazorat</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html#loyihalar" class="nav__link" data-i18n="nav_projects">Loyihalar</a></li>
+                    <li><a href="index.html#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i data-lucide="sun" class="theme-icon-sun"></i>
+                    <i data-lucide="moon" class="theme-icon-moon"></i>
+                </button>
+                <div class="lang-switcher">
+                    <div class="lang-switcher__current" id="lang-current">
+                        <img src="./Images/uzbekistan.png" alt="UZ">
+                        <span>UZ</span>
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <div class="lang-switcher__dropdown" id="lang-dropdown">
+                        <div class="lang-switcher__option" data-lang="uz">
+                            <img src="./Images/uzbekistan.png" alt="UZ">
+                            <span>O'zbekcha</span>
+                        </div>
+                        <div class="lang-switcher__option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+                            <span>English</span>
+                        </div>
+                        <div class="lang-switcher__option" data-lang="ru">
+                            <img src="./Images/russia.png" alt="RU">
+                            <span>Русский</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--aloqa"><span data-i18n="btn_contact">Aloqa</span> <i
+                        data-lucide="phone"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-detail-container container">
+        <div class="breadcrumbs" style="margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">
+            <span data-i18n="nav_home" onclick="location.href='index.html'" style="cursor: pointer;">Asosiy</span> / 
+            <span data-i18n="nav_projects" onclick="location.href='index.html#loyihalar'" style="cursor: pointer;">Loyihalar</span>
+        </div>
+        <div id="project-content">
+            <!-- Dynamic sections -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+                <img src="./Images/footer_logo.png" alt="">
+                <span class="logo__text">Raqamli Nazorat</span>
+            </div>
+            <div class="footer__actions">
+                <button class="btn btn--aloqa" data-i18n="btn_contact">Aloqa <i data-lucide="phone"></i></button>
+                <button class="btn btn--project" data-i18n="btn_new_project">Yangi loyiha <i data-lucide="mouse-pointer-2"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="project-script.js"></script>
+</body>
+
+</html>

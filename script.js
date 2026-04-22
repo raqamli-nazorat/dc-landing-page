@@ -163,4 +163,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             localStorage.setItem('theme', 'light');
         }
     });
+
+    projects.forEach(card => {
+        card.addEventListener('click', () => {
+            const projectId = card.getAttribute('data-project-id');
+            window.location.href = `project.html?id=${projectId}`;
+        });
+    });
 });
+
+
