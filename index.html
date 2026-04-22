@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raqamli Nazorat - Kelajakni raqamli boshqaramiz</title>
+    <meta name="description"
+        content="O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header class="header container">
+        <div class="header__container">
+            <div class="logo">
+                <img src="./Images/Navbar_logo.png" alt="">
+                <span class="logo__text">Raqamli Nazorat</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#loyihalar" class="nav__link" data-i18n="nav_projects">Loyihalar</a></li>
+                    <li><a href="#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="theme-toggle" id="theme-toggle" title="Mavzuni almashtirish">
+                    <i data-lucide="sun" class="theme-icon-sun"></i>
+                    <i data-lucide="moon" class="theme-icon-moon"></i>
+                </button>
+                <div class="lang-switcher">
+                    <div class="lang-switcher__current" id="lang-current">
+                        <img src="./Images/uzbekistán.png" alt="UZ">
+                        <span>UZ</span>
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <div class="lang-switcher__dropdown" id="lang-dropdown">
+                        <div class="lang-switcher__option" data-lang="uz">
+                            <img src="./Images/uzbekistán.png" alt="UZ">
+                            <span>O'zbekcha</span>
+                        </div>
+                        <div class="lang-switcher__option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+                            <span>English</span>
+                        </div>
+                        <div class="lang-switcher__option" data-lang="ru">
+                            <img src="./Images/russia.png" alt="RU">
+                            <span>Русский</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--aloqa"><span data-i18n="btn_contact">Aloqa</span> <i
+                        data-lucide="phone"></i></button>
+                <button class="btn btn--project"><span data-i18n="btn_new_project">Yangi loyiha</span> <i
+                        data-lucide="mouse-pointer-2"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title" data-i18n="hero_title">
+                        Kelajakni raqamli boshqaramiz
+                        <span class="hero__title-icon">
+                            <img src="./Images/hero_icon.png" alt="">
+                        </span>
+                    </h1>
+                    <p class="hero__description" data-i18n="hero_desc">
+                        O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan
+                        boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.
+                    </p>
+                    <a href="#loyihalar" class="btn btn--large btn-linear-gradient">
+                        <span data-i18n="hero_btn">Loyihalarni ko'rish</span>
+                        <i data-lucide="rocket" style="width: 20px; height: 20px;"></i>
+                    </a>
+                </div>
+                <div class="hero__graphic">
+                    <!-- Background wireframe globe handled via CSS/SVG or image -->
+                    <div class="globe-background"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="overview container">
+            <div class="overview__grid">
+                <div class="stats">
+                    <div class="stat-card stat-card--dark">
+                        <div class="stat-card__number">50+</div>
+                        <div class="stat-card__label" data-i18n="stat_projects">sohada amalga oshirilgan loyihalar</div>
+                    </div>
+                    <div class="stat-card stat-card--light">
+                        <div class="stat-card__number">10 000+</div>
+                        <div class="stat-card__label" data-i18n="stat_devices">ulangan qurilmalar va modemlar</div>
+                    </div>
+                </div>
+                <div class="solutions-card">
+                    <h2 class="section-title" data-i18n="solutions_title">Yechimlarimiz</h2>
+                    <div class="filter-tags">
+                        <button data-i18n="monitoring_systems" class="tag tag--active">Monitoring tizimlari</button>
+                        <button data-i18n="gas_modems" class="tag">Gaz modemlari</button>
+                        <button data-i18n="it_devices" class="tag tag--active">IT qurilmalar</button>
+                        <button data-i18n="software_platforms" class="tag">Dasturiy platformalar</button>
+                        <button data-i18n="infrastructure_solutions" class="tag">Infratuzilma yechimlari</button>
+                        <button data-i18n="technical_support" class="tag tag--active">Texnik qo'llab-quvvatlash</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="features__grid-container">
+                    <h2 class="features__main-title" data-i18n="features_title">Nega bizni tanlashadi</h2>
+                    <div class="features__grid">
+                        <div class="feature-item">
+                            <div class="feature-item__icon"><img src="./images/Group 1.png" alt="Engineering"></div>
+                            <h3 class="feature-item__title" data-i18n="feature_1_title">Muhandislik tajribasi</h3>
+                            <p class="feature-item__text" data-i18n="feature_1_desc">
+                                Gaz sohasining o'ziga xos jihatlarini chuqur tushunib, amaliy
+                                va samarali yechimlar ishlab chiqamiz.
+                            </p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item__icon"><img src="./images/Group 2.png" alt="Reliability"></div>
+                            <h3 class="feature-item__title" data-i18n="feature_2_title">Ishonchlilik va xavfsizlik</h3>
+                            <p class="feature-item__text" data-i18n="feature_2_desc">
+                                Barcha yechimlarimiz sanoat standartlariga mos va tizim
+                                barqarorligini ta'minlaydi.
+                            </p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item__icon"><img src="./images/Group 3.png" alt="Flexibility"></div>
+                            <h3 class="feature-item__title" data-i18n="feature_3_title">Moslashuvchanlik</h3>
+                            <p class="feature-item__text" data-i18n="feature_3_desc">
+                                Yechimlarimiz kichik loyihalardan tortib yirik
+                                infratuzilmalargacha moslashadi.
+                            </p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item__icon"><img src="./images/Group 4.png" alt="Technology"></div>
+                            <h3 class="feature-item__title" data-i18n="feature_4_title">Zamonaviy texnologiyalar</h3>
+                            <p class="feature-item__text" data-i18n="feature_4_desc">
+                                Eng so'nggi raqamli texnologiyalar orqali samaradorlik va
+                                nazoratni oshiramiz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="loyihalar" class="projects container">
+            <div class="projects__header">
+                <h2 class="section-title" data-i18n="projects_title">Loyihalar</h2>
+                <div class="filter-tags filter-tags--small">
+                    <button class="tag tag--dark tag--active" data-filter="all" data-i18n="projects_all">
+                        Barchasi
+                    </button>
+                    <button class="tag tag--dark" data-filter="ai" data-i18n="projects_ai">
+                        Sun'iy intellekt
+                    </button>
+                    <button class="tag tag--dark" data-filter="industrial" data-i18n="projects_industrial">
+                        Sanoat (PLC)
+                    </button>
+                    <button class="tag tag--dark" data-filter="web" data-i18n="projects_web">
+                        Web Tizimlar
+                    </button>
+                </div>
+            </div>
+            <div class="projects__grid">
+                <!-- Project cards will be populated here -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_1_title">AI Call center</h3>
+                        <p class="project-card__description" data-i18n="project-card_1_desc">
+                            Mijozlar bilan aloqani avtomatlashtirish va nutqni tahlil
+                            qiluvchi aqlli call markaz tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_2_title">YPX AI</h3>
+                        <p class="project-card__description" data-i18n="project-card_2_desc">
+                            Yo'l harakati qoidabuzarliklarini intellektual tahlil va
+                            avtomatlashtirish platformasi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_3_title">Elektron o'qituvchi</h3>
+                        <p class="project-card__description" data-i18n="project-card_3_desc">
+                            Ta'lim sohasida o'quvchilar uchun individual qobiliyatlari
+                            va o'zlashtirishni tahlil qiluvchi AI assistent platformasi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_4_title">Ageing Tank</h3>
+                        <p class="project-card__description" data-i18n="project-card_4_desc">
+                            Pivo va boshqa ichimliklarni tayyorlash jarayonini nazorat
+                            qiluvchi sanoat PLC tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_5_title">Gazprom PLS</h3>
+                        <p class="project-card__description" data-i18n="project-card_5_desc">
+                            Gaz sanoati ob'ektlari uchun zamonaviy texnologik nazorat
+                            va boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_6_title">Biokimyo</h3>
+                        <p class="project-card__description" data-i18n="project-card_6_desc">
+                            Kimyoviy jarayonlarni monitoring-laboratoriya nazoratini
+                            avtomatlashtirilgan boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_7_title">Gologramma</h3>
+                        <p class="project-card__description" data-i18n="project-card_7_desc">
+                            Markaziy nazorat va vizuallashtirish tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_8_title">ERP-CRM Hudud</h3>
+                        <p class="project-card__description" data-i18n="project-card_8_desc">
+                            Hududiy boshqaruvni rejalashtirish uchun mo'ljallangan keng
+                            qamrovli korporativ tizim.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_9_title">M-Gaz</h3>
+                        <p class="project-card__description" data-i18n="project-card_9_desc">
+                            G'az taqsimlash punktlari uchun zamonaviy nazorat va
+                            boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_10_title">S-Gaz</h3>
+                        <p class="project-card__description" data-i18n="project-card_10_desc">
+                            Gaz ta'minoti va monitoring markazi uchun yagona nazorat va
+                            monitoring platformasi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_11_title">Dispatcher</h3>
+                        <p class="project-card__description" data-i18n="project-card_11_desc">
+                            Operativ boshqaruv va dispetcherlik xizmatlari uchun
+                            mo'ljallangan boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_12_title">E-Komplektatsiya</h3>
+                        <p class="project-card__description" data-i18n="project-card_12_desc">
+                            Ishlab chiqarish va qurilish materiallari
+                            komplektatsiyasini boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_13_title">Telman</h3>
+                        <p class="project-card__description" data-i18n="project-card_13_desc">
+                            Telekommunikatsiya tizimlari va tarmoqlarini boshqarish
+                            interfeysi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_14_title">Yashil energiya</h3>
+                        <p class="project-card__description" data-i18n="project-card_14_desc">
+                            Muqobil energiya manbalari va yashil texnologiyalar
+                            monitoringi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_15_title">Mudofaa</h3>
+                        <p class="project-card__description" data-i18n="project-card_15_desc">
+                            Mudofaa tizimlari uchun maxsus mo'ljallangan xavfsiz va
+                            barqaror boshqaruv platformasi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="biz-haqimizda" class="about container">
+            <div class="about__card">
+                <img src="./Images/Group 1 (1).png" alt="" />
+                <div class="about__content">
+                    <h2 class="about__title" data-i18n="about_title">Biz haqimizda</h2>
+                    <p class="about__text" data-i18n="about_text">"Raqamli Nazorat" — bu O'zbekistonning raqamli modernizatsiyasiga hissa
+                        qo'shayotgan, yuqori texnologiyali loyihalarni amalga oshiruvchi jamoa. Bizning maqsadimiz — eng
+                        murakkab texnik topshiriqlarni eng sodda va samarali yechimlar bilan ta'minlashdir.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="logo">
+                <img src="./Images/footer_logo.png" alt="">
+                <span class="logo__text">Raqamli Nazorat</span>
+            </div>
+            <div class="footer__actions">
+                <button class="btn btn--aloqa" data-i18n="btn_contact">Aloqa <i data-lucide="phone"></i></button>
+                <button class="btn btn--project" data-i18n="btn_new_project">Yangi loyiha <i data-lucide="mouse-pointer-2"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
