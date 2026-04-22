@@ -1,17 +1,20 @@
 :root {
-    /* Color Palette */
+    /* Color Palette - Light Mode Default */
     --primary: #3b82f6;
     --primary-dark: #2563eb;
     --accent: #4f46e5;
-    --bg-light: #f8fafc;
-    --bg-white: #ffffff;
-    --bg-dark: #0f172a;
-    --bg-black: #000000;
+    --bg-main: #F1F3F9;
+    --bg-header: #000000;
+    --bg-card: #ffffff;
+    --bg-card-alt: #000000;
+    --bg-hero: #ffffff;
     --text-main: #1e293b;
+    --text-title: #1A1D2E;
     --text-muted: #64748b;
     --text-light: #94a3b8;
     --white: #ffffff;
     --border-color: #e2e8f0;
+    --footer-bg: #fffdfd;
 
     /* font Unbounded */
     --unbounded: 'Unbounded', sans-serif;
@@ -24,6 +27,20 @@
     --radius-md: 16px;
     --radius-lg: 24px;
     --radius-xl: 32px;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    --bg-main: #1a1a1a;
+    --bg-header: #000000;
+    --bg-hero: #0f0f0f;
+    --bg-card: #121212;
+    --bg-card-alt: #121212;
+    --text-main: #f1f3f9;
+    --text-title: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --footer-bg: #000000;
 }
 
 /* Reset & Base Styles */
@@ -125,6 +142,11 @@ h3 {
     box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
 }
 
+.btn--aloqa i, .btn--project i {
+    width: 18px;
+    height: 18px;
+}
+
 .btn--large {
     padding: 14px 28px;
     font-size: 16px;
@@ -138,7 +160,7 @@ h3 {
 
 /* Header */
 .header {
-    background: var(--bg-black);
+    background: var(--bg-header);
     color: var(--white);
     padding: 15px 20px !important;
     position: sticky;
@@ -148,7 +170,7 @@ h3 {
 }
 
 main {
-    background: #F1F3F9;
+    background: var(--bg-main);
 }
 
 .header__container {
@@ -205,15 +227,21 @@ main {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: white;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--bg-black);
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    color: #000000;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     transition: var(--transition);
+}
+
+body.dark-mode .theme-toggle {
+    background: #121212;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .theme-toggle:hover {
@@ -253,7 +281,7 @@ main {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     padding: 8px 16px;
     border-radius: var(--radius-lg);
     cursor: pointer;
@@ -287,6 +315,12 @@ main {
     transform: translateY(10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 100;
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .lang-switcher__dropdown {
+    background: #121212;
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .lang-switcher__dropdown--active {
@@ -307,7 +341,11 @@ main {
 }
 
 .lang-switcher__option:hover {
-    background: #f1f5f9;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .lang-switcher__option:hover {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .lang-switcher__option span {
@@ -322,6 +360,7 @@ main {
     position: relative;
     overflow: hidden;
     height: 90vh;
+    background: var(--bg-hero);
 }
 
 .hero__content {
@@ -334,7 +373,7 @@ main {
     font-size: 56px;
     font-weight: 500;
     margin-bottom: 15px;
-    color: #1A1D2E;
+    color: var(--text-title);
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -349,7 +388,7 @@ main {
 .hero__description {
     font-size: 18px;
     font-weight: 700;
-    color: #5B6078;
+    color: var(--text-muted);
     margin-bottom: 40px;
     max-width: 1000px;
     margin-left: auto;
@@ -365,10 +404,10 @@ main {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: white;
+    background: transparent;
     pointer-events: none;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .globe-background {
@@ -377,7 +416,12 @@ main {
     background: center/cover no-repeat url('./Images/globe.png');
     margin-top: 30px;
     margin-right: 40px;
-    opacity: 0.150;
+    opacity: 0.15;
+}
+
+body.dark-mode .globe-background {
+    opacity: 0.4;
+    filter: invert(1) hue-rotate(180deg);
 }
 
 .btn-linear-gradient {
@@ -434,13 +478,13 @@ main {
 }
 
 .stat-card--dark {
-    background: var(--bg-black);
+    background: var(--bg-card-alt);
     color: var(--white);
 }
 
 .stat-card--light {
     background: var(--white);
-    color: var(--bg-black);
+    color: #000000;
 }
 
 .stat-card__number {
@@ -461,11 +505,11 @@ main {
 }
 
 .stat-card--light .stat-card__label {
-    color: var(--text-muted);
+    color: #4b5563;
 }
 
 .solutions-card {
-    background: var(--white);
+    background: var(--bg-card);
     padding: 60px;
     border-radius: var(--radius-xl);
     text-align: left;
@@ -476,7 +520,7 @@ main {
     font-family: var(--unbounded);
     font-weight: 500;
     margin-bottom: 50px;
-    color: var(--bg-black);
+    color: var(--text-title);
 }
 
 .filter-tags {
@@ -487,24 +531,41 @@ main {
 }
 
 .tag {
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: var(--radius-lg);
     background: var(--white);
     border: 1px solid var(--border-color);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    color: #000000;
 }
 
 .tag:hover {
-    border-color: var(--bg-black);
+    border-color: #000000;
 }
 
 .tag--active {
-    background: var(--bg-black);
+    background: #000000;
     color: var(--white);
-    border-color: var(--bg-black);
+    border-color: #000000;
+}
+
+body.dark-mode .tag {
+    background: #1a1a1a;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .tag:hover {
+    border-color: var(--white);
+}
+
+body.dark-mode .tag--active {
+    background: var(--white);
+    color: #000000;
+    border-color: var(--white);
 }
 
 /* Features Section */
@@ -514,10 +575,10 @@ main {
 }
 
 .features__grid-container {
-    background: var(--bg-black);
-    color: var(--white);
+    background: var(--white);
+    color: #000000;
     padding: 80px 60px;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-xl);
 }
 
 .features__main-title {
@@ -527,6 +588,7 @@ main {
     margin-bottom: 80px;
     max-width: 400px;
     line-height: 1.1;
+    color: #000000;
 }
 
 .features__grid {
@@ -557,10 +619,11 @@ main {
     font-family: var(--unbounded);
     font-weight: 500;
     margin-bottom: 16px;
+    color: #000000;
 }
 
 .feature-item__text {
-    color: rgba(255, 255, 255, 0.7);
+    color: #4b5563;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -583,7 +646,7 @@ main {
 }
 
 .project-card {
-    background: var(--white);
+    background: var(--bg-card);
     padding: 32px;
     border-radius: var(--radius-lg);
     display: flex;
@@ -680,13 +743,13 @@ main {
 }
 
 .about__card {
-    background: var(--bg-black);
+    background: var(--white);
     padding: 60px 100px;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-xl);
     display: flex;
     align-items: center;
     gap: 60px;
-    color: var(--white);
+    color: #000000;
 }
 
 .about__icon {
@@ -699,18 +762,21 @@ main {
     font-family: var(--unbounded);
     font-weight: 500;
     margin-bottom: 20px;
+    color: #000000;
 }
 
 .about__text {
     font-size: 16px;
-    color: var(--text-light);
+    color: #4b5563;
     line-height: 1.8;
 }
 
 /* Footer */
 .footer {
-    padding: 40px 0;
+    padding: 40px 50px;
     border-top: 1px solid var(--border-color);
+    background: var(--footer-bg);
+    color: var(--text-main);
 }
 
 .footer__content {
@@ -742,6 +808,15 @@ main {
 @media (max-width: 768px) {
     .header {
         margin: 10px;
+    }
+
+    .header__actions {
+        gap: 10px;
+    }
+
+    .btn--aloqa, .btn--project {
+        padding: 10px 16px;
+        font-size: 14px;
     }
 
     .nav {
@@ -798,4 +873,13 @@ main {
     .stat-card__number {
         font-size: 40px;
     }
+}
+
+/* Fix for the white bars in images 2 and 3 */
+body {
+    background-color: var(--bg-hero);
+}
+
+.container {
+    width: 100%;
 }

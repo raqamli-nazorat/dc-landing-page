@@ -85,20 +85,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         observer.observe(el);
     });
 
-    // Header scroll effect
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(0, 0, 0, 0.9)';
-            header.style.backdropFilter = 'blur(10px)';
-            header.style.padding = '10px 0';
-        } else {
-            header.style.background = 'var(--bg-black)';
-            header.style.backdropFilter = 'none';
-            header.style.padding = '15px 0';
-        }
-    });
-
     // Smooth scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -158,7 +144,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Theme Toggle Logic
     const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.classList.add('theme-toggle--active');
+    }
+
     themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
         themeToggle.classList.toggle('theme-toggle--active');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
     });
 });
