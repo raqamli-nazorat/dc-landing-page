@@ -153,8 +153,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
         themeToggle.classList.add('theme-toggle--active');
-        footerImg.src = './Images/Footer_logo_dark.png';
-        heroIcon.src = './Images/hero_icon_dark.png';
+        footerImg.src = './Assets/Footer_logo_dark.svg';
+        heroIcon.src = './Assets/hero_icon_dark.svg';
     }
 
     themeToggle.addEventListener('click', () => {
@@ -163,12 +163,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
-            footerImg.src = './Images/Footer_logo_dark.png';
-            heroIcon.src = './Images/hero_icon_dark.png';
+            footerImg.src = './Assets/Footer_logo_dark.svg';
+            heroIcon.src = './Assets/hero_icon_dark.svg';
         } else {
             localStorage.setItem('theme', 'light');
-            footerImg.src = './Images/Footer_logo.png';
-            heroIcon.src = './Images/hero_icon_light.png';
+            footerImg.src = './Assets/Footer_logo.svg';
+            heroIcon.src = './Assets/hero_icon_light.svg';
         }
     });
 

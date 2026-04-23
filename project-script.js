@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         const response = await fetch('./language.json');
         translations = await response.json();
-        
+
         const savedLang = (localStorage.getItem('selectedLang') || 'UZ').toUpperCase();
         updateContent(savedLang);
         populateProjectDetails(projectId, savedLang);
-        
+
         langCurrent.querySelector('span').textContent = savedLang;
         const option = Array.from(langOptions).find(opt => opt.getAttribute('data-lang').toUpperCase() === savedLang);
         if (option) {
@@ -71,131 +71,132 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Layout Wrapper
         const wrapper = document.createElement('div');
         wrapper.className = 'project-detail-layout';
-        wrapper.style.maxWidth = '1070px';
         wrapper.style.margin = '0 auto';
         wrapper.style.display = 'flex';
         wrapper.style.flexDirection = 'column';
         wrapper.style.gap = '30px';
 
-        // 1. Main Info Card (Title, Desc, Features) - Matches Image 2 & 3
-        const mainCard = document.createElement('div');
-        mainCard.style.background = 'var(--bg-card)';
-        mainCard.style.borderRadius = '32px';
-        mainCard.style.padding = '50px';
-        mainCard.style.boxShadow = '0 10px 40px rgba(0,0,0,0.03)';
-        mainCard.style.border = '1px solid var(--border-color)';
+        // Use the Premium Figma Layout for all projects
+        const isPremium = true;
 
-        mainCard.innerHTML = `
-            <h1 class="project-detail__title" style="margin-bottom: 20px;">${title}</h1>
-            <p class="project-detail__description" style="margin-bottom: 40px; max-width: 800px;">${desc}</p>
+        if (isPremium) {
+            // PREMIUM FIGMA LAYOUT (ID 1 ONLY)
+            wrapper.style.gap = '24px';
             
-            ${features && features.length > 0 ? `
-                <div class="features-section">
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 24px;">
+            // 1. Blue Header Card
+            const headerBlock = document.createElement('div');
+            headerBlock.className = 'project-header-premium';
+            headerBlock.innerHTML = `
+                <h1 class="project-header-premium__title">${title}</h1>
+                <p class="project-header-premium__desc">${desc}</p>
+            `;
+            wrapper.appendChild(headerBlock);
+
+            // 2. Info Grid (Two Cards) - Dynamic from language.json
+            const sumTitle1 = project[`project-card_${id}_summary_title_1`] || 'Loyiha haqida';
+            const sumText1 = project[`project-card_${id}_summary_text_1`] || desc;
+            const sumTitle2 = project[`project-card_${id}_summary_title_2`] || 'Asosiy maqsad';
+            const sumText2 = project[`project-card_${id}_summary_text_2`] || 'Tizimni raqamlashtirish va jarayonlarni avtomatlashtirish orqali samaradorlikni oshirish.';
+
+            const infoGrid = document.createElement('div');
+            infoGrid.className = 'project-info-grid-premium';
+            infoGrid.innerHTML = `
+                <div class="info-card-premium">
+                    <div class="info-card-premium__icon">
+                        <img src="./Assets/detail_icon_2.svg" alt="">
+                    </div>
+                    <div class="info-card-premium__content">
+                        <h3 class="info-card-premium__title">${sumTitle1}</h3>
+                        <p class="info-card-premium__text">${sumText1}</p>
+                    </div>
+                </div>
+                <div class="info-card-premium">
+                    <div class="info-card-premium__icon">
+                        <img src="./Assets/detail_icon_2.svg" alt="">
+                    </div>
+                    <div class="info-card-premium__content">
+                        <h3 class="info-card-premium__title">${sumTitle2}</h3>
+                        <p class="info-card-premium__text">${sumText2}</p>
+                    </div>
+                </div>
+            `;
+            wrapper.appendChild(infoGrid);
+            wrapper.appendChild(infoGrid);
+
+            // 3. Black Functions Block
+            if (features && features.length > 0) {
+                const functionsBox = document.createElement('div');
+                functionsBox.className = 'project-functions-premium';
+                functionsBox.innerHTML = `
+                    <h2 class="project-functions-premium__title">Funksiyalar</h2>
+                    <ul class="functions-list-premium">
                         ${features.map(f => `
-                            <li style="display: flex; align-items: center; gap: 16px; font-size: 16px; font-weight: 500; color: var(--text-main);">
-                                <img src="./Images/detail_icon_img.png" alt="" style="width: 32px; height: 32px; flex-shrink: 0;">
-                                ${f}
+                            <li class="function-item-premium">
+                                <img src="./Assets/detail_icon_2.svg" style="width: 32px; height: 32px;" alt="">
+                                <span>${f}</span>
                             </li>
                         `).join('')}
                     </ul>
-                </div>
-            ` : ''}
-        `;
-        wrapper.appendChild(mainCard);
-
-        // 2. Detailed Text Sections (Advantages, Results, etc.)
-        if (advantages || results || users || work || screens) {
-            const detailsCard = document.createElement('div');
-            detailsCard.style.background = 'var(--bg-card)';
-            detailsCard.style.borderRadius = '32px';
-            detailsCard.style.padding = '50px';
-            detailsCard.style.boxShadow = '0 10px 40px rgba(0,0,0,0.03)';
-            detailsCard.style.border = '1px solid var(--border-color)';
-            detailsCard.style.display = 'flex';
-            detailsCard.style.flexDirection = 'column';
-            detailsCard.style.gap = '40px';
-
-            const addSection = (title, text) => {
-                if (!text) return '';
-                return `
-                    <div class="detail-section">
-                        <h3 style="font-size: 22px; margin-bottom: 16px; font-weight: 700; color: var(--text-title); font-family: var(--unbounded);">${title}</h3>
-                        <p style="font-size: 16px; color: var(--text-muted); line-height: 1.8;">${text}</p>
-                    </div>
                 `;
-            };
+                wrapper.appendChild(functionsBox);
+            }
 
-            detailsCard.innerHTML = `
-                ${addSection(advantagesTitle, advantages)}
-                ${addSection(resultsTitle, results)}
-                ${addSection(usersTitle, users)}
-                ${addSection(workTitle, work)}
-                ${addSection(screensTitle, screens)}
-            `;
-            wrapper.appendChild(detailsCard);
-        }
-
-        // 3. Media Section
-        if (videoId || (images && images.length > 0)) {
-            const mediaSection = document.createElement('div');
-            mediaSection.style.marginTop = '10px';
-
+            // 5. Video Section (If exists)
             if (videoId) {
-                const video = document.createElement('div');
-                video.className = 'video-wrapper';
-                video.style.marginBottom = '30px';
+                const videoContainer = document.createElement('div');
+                videoContainer.className = 'project-video-premium';
+                videoContainer.style.borderRadius = '32px';
+                videoContainer.style.overflow = 'hidden';
+                videoContainer.style.marginTop = '24px';
+                videoContainer.innerHTML = `
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/${videoId}" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                `;
+                wrapper.appendChild(videoContainer);
+            }
+
+            // 6. Image Gallery (If exists)
+            if (images && images.length > 0) {
+                const galleryContainer = document.createElement('div');
+                galleryContainer.className = 'project-gallery-premium';
+                galleryContainer.style.marginTop = '24px';
+                galleryContainer.style.display = 'grid';
+                galleryContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(380px, 1fr))';
+                galleryContainer.style.gap = '24px';
                 
-                // Helper to get embed URL
-                const getEmbedUrl = (url) => {
-                    if (!url) return '';
-                    if (url.includes('youtube.com/embed/')) return url;
-                    let id = '';
-                    if (url.includes('youtu.be/')) {
-                        id = url.split('youtu.be/')[1].split('?')[0];
-                    } else if (url.includes('v=')) {
-                        id = url.split('v=')[1].split('&')[0];
-                    } else if (!url.includes('http')) {
-                        id = url; // Just an ID
-                    }
-                    return id ? `https://www.youtube.com/embed/${id}` : url;
+                galleryContainer.innerHTML = images.map(src => `
+                    <div style="border-radius: 24px; overflow: hidden; border: 1px solid var(--border-color);">
+                        <img src="${src}" alt="${title}" style="width: 100%; height: 280px; object-fit: cover; transition: transform 0.3s ease; transform: scale(1.05);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1.05)'">
+                    </div>
+                `).join('');
+                wrapper.appendChild(galleryContainer);
+            }
+
+            // 4. White Details Section (Only if content exists)
+            if (advantages || results || users || work || screens) {
+                const detailsSection = document.createElement('div');
+                detailsSection.className = 'project-details-premium';
+                
+                const addSec = (title, text) => {
+                    if (!text) return '';
+                    return `
+                        <div class="premium-section">
+                            <h3 class="premium-section__title">${title}</h3>
+                            <p class="premium-section__text">${text}</p>
+                        </div>
+                    `;
                 };
 
-                video.innerHTML = `<iframe src="${getEmbedUrl(videoId)}" frameborder="0" allowfullscreen></iframe>`;
-                mediaSection.appendChild(video);
+                detailsSection.innerHTML = `
+                    ${addSec(advantagesTitle, advantages)}
+                    ${addSec(resultsTitle, results)}
+                    ${addSec(usersTitle, users)}
+                    ${addSec(workTitle, work)}
+                    ${addSec(screensTitle, screens)}
+                `;
+                wrapper.appendChild(detailsSection);
             }
-
-            if (images && images.length > 0) {
-                const gallery = document.createElement('div');
-                gallery.className = 'gallery-grid';
-                
-                if (galleryLayout === 'list') {
-                    // Full-width vertical list for tall screenshots
-                    gallery.style.display = 'flex';
-                    gallery.style.flexDirection = 'column';
-                    gallery.style.gap = '30px';
-                    gallery.innerHTML = images.map(src => `
-                        <div style="border-radius: 24px; overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                            <img src="${src}" alt="${title}" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                        </div>
-                    `).join('');
-                } else {
-                    // Standard grid for smaller images
-                    gallery.style.display = 'grid';
-                    gallery.style.gridTemplateColumns = 'repeat(auto-fit, minmax(320px, 1fr))';
-                    gallery.style.gap = '24px';
-                    gallery.innerHTML = images.map(src => `
-                        <div style="border-radius: 24px; overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-color);">
-                            <img src="${src}" alt="${title}" style="width: 100%; height: 280px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        </div>
-                    `).join('');
-                }
-                
-                mediaSection.appendChild(gallery);
-            }
-
-            wrapper.appendChild(mediaSection);
-        }
+        } 
 
         container.appendChild(wrapper);
 
@@ -233,12 +234,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
-        footerImg.src = './Images/footer_logo_dark.png';
+        footerImg.src = './Assets/footer_logo_dark.png';
     }
 
     themeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-        footerImg.src = body.classList.contains('dark-mode') ? './Images/footer_logo_dark.png' : './Images/Footer_logo.png';
+        footerImg.src = body.classList.contains('dark-mode') ? './Assets/footer_logo_dark.png' : './Assets/footer_logo_light.png';
     });
 });

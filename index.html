@@ -20,7 +20,7 @@
     <header class="header container">
         <div class="header__container">
             <div class="logo">
-                <img src="./Images/Navbar_logo.png" alt="">
+                <img src="./Assets/Navbar_logo.svg" alt="" loading="lazy">
                 <span class="logo__text">Raqamli Nazorat</span>
             </div>
             <nav class="nav">
@@ -30,7 +30,7 @@
                 </ul>
             </nav>
             <div class="header__actions">
-                <button class="theme-toggle" id="theme-toggle" title="Mavzuni almashtirish">
+                <button class="theme-toggle" id="theme-toggle">
                     <i data-lucide="sun" class="theme-icon-sun"></i>
                     <i data-lucide="moon" class="theme-icon-moon"></i>
                 </button>
@@ -38,11 +38,11 @@
                     <div class="lang-switcher__current" id="lang-current">
                         <img src="./Images/uzbekistan.png" alt="UZ">
                         <span>UZ</span>
-                        <i data-lucide="chevron-down"></i>
+                        <img src="./Assets/arrow-up-01-sharp.svg" style="width: 25px; height: 25px;" alt="">
                     </div>
                     <div class="lang-switcher__dropdown" id="lang-dropdown">
                         <div class="lang-switcher__option" data-lang="uz">
-                            <img src="./Images/uzbekistan.png" alt="UZ">
+                            <img src="./Images/uzbekistan.png" alt="UZ" loading="lazy">
                             <span>O'zbekcha</span>
                         </div>
                         <div class="lang-switcher__option" data-lang="en">
@@ -50,19 +50,19 @@
                             <span>English</span>
                         </div>
                         <div class="lang-switcher__option" data-lang="ru">
-                            <img src="./Images/russia.png" alt="RU">
+                            <img src="./Images/russia.png" alt="RU" loading="lazy">
                             <span>Русский</span>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn--aloqa">
+                <a class="btn btn--aloqa" href="#aloqa">
                     <span data-i18n="btn_contact">Aloqa</span>
                     <i data-lucide="phone"></i>
-                </button>
-                <button class="btn btn--project">
+                </a>
+                <a class="btn btn--project" target="_blank" href="https://boshqaruv.raqamlinazorat.uz">
                     <span data-i18n="btn_new_project">Yangi loyiha</span>
                     <i data-lucide="mouse-pointer-2"></i>
-                </button>
+                </a>
             </div>
         </div>
     </header>
@@ -74,7 +74,7 @@
                     <h1 class="hero__title" data-i18n="hero_title">
                         Kelajakni raqamli boshqaramiz
                         <span class="hero__title-icon">
-                            <img id="hero-icon" src="./Images/hero_icon_light.png" alt="">
+                            <img id="hero-icon" src="./Assets/hero_icon_light.svg" alt="" loading="lazy">
                         </span>
                     </h1>
                     <p class="hero__description" data-i18n="hero_desc">
@@ -125,7 +125,8 @@
                     <h2 class="features__main-title" data-i18n="features_title">Nega bizni tanlashadi</h2>
                     <div class="features__grid">
                         <div class="feature-item">
-                            <div class="feature-item__icon"><img src="./images/Group 1.png" alt="Engineering"></div>
+                            <div class="feature-item__icon"><img src="./Assets/Group 1.svg" alt="Engineering"
+                                    loading="lazy"></div>
                             <h3 class="feature-item__title" data-i18n="feature_1_title">Muhandislik tajribasi</h3>
                             <p class="feature-item__text" data-i18n="feature_1_desc">
                                 Gaz sohasining o'ziga xos jihatlarini chuqur tushunib, amaliy
@@ -133,7 +134,8 @@
                             </p>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-item__icon"><img src="./images/Group 2.png" alt="Reliability"></div>
+                            <div class="feature-item__icon"><img src="./Assets/Group 2.svg" alt="Reliability"
+                                    loading="lazy"></div>
                             <h3 class="feature-item__title" data-i18n="feature_2_title">Ishonchlilik va xavfsizlik</h3>
                             <p class="feature-item__text" data-i18n="feature_2_desc">
                                 Barcha yechimlarimiz sanoat standartlariga mos va tizim
@@ -141,7 +143,8 @@
                             </p>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-item__icon"><img src="./images/Group 3.png" alt="Flexibility"></div>
+                            <div class="feature-item__icon"><img src="./Assets/Group 3.svg" alt="Flexibility"
+                                    loading="lazy"></div>
                             <h3 class="feature-item__title" data-i18n="feature_3_title">Moslashuvchanlik</h3>
                             <p class="feature-item__text" data-i18n="feature_3_desc">
                                 Yechimlarimiz kichik loyihalardan tortib yirik
@@ -149,7 +152,8 @@
                             </p>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-item__icon"><img src="./images/Group 4.png" alt="Technology"></div>
+                            <div class="feature-item__icon"><img src="./Assets/Group 4.svg" alt="Technology"
+                                    loading="lazy"></div>
                             <h3 class="feature-item__title" data-i18n="feature_4_title">Zamonaviy texnologiyalar</h3>
                             <p class="feature-item__text" data-i18n="feature_4_desc">
                                 Eng so'nggi raqamli texnologiyalar orqali samaradorlik va
@@ -365,7 +369,7 @@
 
         <section id="biz-haqimizda" class="about container">
             <div class="about__card">
-                <img src="./Images/Group 1 (1).png" alt="" />
+                <img src="./Assets/Group 1 (1).svg" alt="" loading="lazy" />
                 <div class="about__content">
                     <h2 class="about__title" data-i18n="about_title">Biz haqimizda</h2>
                     <p class="about__text" data-i18n="about_text">"Raqamli Nazorat" — bu O'zbekistonning raqamli
@@ -380,11 +384,11 @@
     <footer class="footer">
         <div class="footer__content">
             <div class="logo">
-                <img id="footer-img" src="./Images/Footer_logo.png" alt="">
+                <img id="footer-img" src="./Assets/Footer_logo.svg" alt="" loading="lazy">
                 <span class="logo__text">Raqamli Nazorat</span>
             </div>
             <div class="footer__actions">
-                <button class="btn btn--number">
+                <button class="btn btn--number" id="aloqa">
                     <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
                     <span style="font-size: 15px; font-weight: 600;">+998 90 164 41 01</span>
                 </button>

@@ -69,7 +69,7 @@
                 "project-card_14_desc": "Muqobil energiya manbalari va yashil texnologiyalar monitoringi.",
                 "project-card_15_title": "Mudofaa",
                 "project-card_15_desc": "Mudofaa tizimlari uchun maxsus mo'ljallangan xavfsiz va barqaror boshqaruv platformasi.",
-                "project-card_1_detail": "Mijozlar bilan muloqotni inson aralashuvisiz amalga oshiruvchi, nutqni tushunish va tahlil qilishga asoslangan intellektual platforma. Tizim 24/7 rejimida ishlaydi va har qanday murakkablikdagi savollarga javob bera oladi.",
+                "project-card_1_detail": "Mijoz murojaatlarini sun’iy intellekt asosida boshqarish tizimi",
                 "project-card_1_features": [
                         "Call-markaz orqali murojaatlarni qabul qilish",
                         "Avtomatik javob berish (AI asosida)",
@@ -83,27 +83,43 @@
                 "project-card_1_users": "Mazkur tizimdan asosan call-markaz operatorlari, kompaniya xodimlari hamda tizim administratorlari foydalanadi. Har bir foydalanuvchi o'ziga tegishli funksiyalar orqali tizim bilan samarali ishlash imkoniyatiga ega bo'ladi.",
                 "project-card_1_work": "Loyiha doirasida foydalanuvchi tajribasini yaxshilashga qaratilgan UX/UI dizayn ishlab chiqildi, foydalanuvchi ssenariylari tahlil qilinib, interfeyslar loyihalashtirildi. Shuningdek, tizim ichki servislar bilan integratsiya qilindi va analitika modullari yaratildi.",
                 "project-card_1_screens": "Tizim interfeysi bir nechta asosiy ekranlardan iborat bo'lib, ular orasida boshqaruv paneli, murojaatlarni boshqarish oynasi, analitika va hisobotlar bo'limi, foydalanuvchilarni boshqarish sahifasi hamda xabarnomalar tizimi mavjud.",
-                "project-card_2_detail": "Yo'l harakati xavfsizligini ta'minlash uchun sun'iy intellektga asoslangan videokuzatuv tizimi. Tizim qoidabuzarliklarni avtomatik aniqlaydi va tegishli organlarga xabar beradi.",
+                "project-card_2_detail": "Avtotransport va maxsus texnikani GPS orqali nazorat qilish tizimi",
                 "project-card_2_features": [
-                        "Davlat raqamlarini (ANPR) 99% aniqlikda o'qish",
-                        "To'xtash va burilish qoidalarini nazorat qilish",
-                        "Tezlikni o'lchash (radar aralashuvisiz)",
-                        "Tungi ko'rish va yomon ob-havoda ishlash"
+                        "Real vaqt rejimida transport monitoringi",
+                        "Harakat trayektoriyasini kuzatish va saqlash",
+                        "Ish faoliyatini tahlil qilish",
+                        "Avtomatik hisobotlar shakllantirish",
+                        "Holatlarni ranglar orqali ko'rsatish",
+                        "Ma'lumotlarni eksport qilish (PDF, Excel)"
                 ],
+                "project-card_2_summary_title_1": "Transport va maxsus texnikaning harakatini real vaqt rejimida kuzatish va tahlil qilish",
+                "project-card_2_summary_text_1": "Mazkur tizim xizmat transportlari va jihozlarining joylashuvi, harakat yo'nalishi hamda bajarilgan ishlarni avtomatik nazorat qilish imkonini beradi.",
+                "project-card_2_summary_title_2": "Mahsulot haqida",
+                "project-card_2_summary_text_2": "Platforma GPS texnologiyalari orqali transport vositalari va maxsus texnikalarning faoliyatini yagona tizimda boshqarish imkonini beradi. Tizim real vaqt monitoringi, ish trayektoriyasini aniqlash va avtomatik hisobotlar shakllantirish orqali tashkilotlar ish samaradorligini oshiradi.",
                 "project-card_2_images": [
                         "./ProjectDetailImages/project_2_img_1.jpg",
                         "./ProjectDetailImages/project_2_img_2.jpg",
                         "./ProjectDetailImages/project_2_img_3.jpg"
                 ],
-                "project-card_2_video": "",
+                "project-card_2_advantages": "Tizim transport va maxsus texnikaning harakatini to'liq nazorat qilish imkonini beradi hamda bajarilgan ishlarni aniq va shaffof tarzda kuzatishga yordam beradi. Real vaqt monitoringi orqali jarayonlar doimiy nazorat ostida bo'ladi va qaror qabul qilish tezlashadi. Avtomatik hisobotlar inson omiliga bog'liq xatolarni kamaytiradi va ish faoliyatini tahlil qilishni soddalashtiradi. Tizim resurslardan samarali foydalanishga yordam berib, vaqt va yoqilg'i sarfini optimallashtiradi. Shu bilan birga, platforma turli xizmat yo'nalishlariga moslashuvchan bo'lib, kengaytirish imkoniyatiga ega.",
+                "project-card_2_results": "Tizim joriy etilishi natijasida transport va texnikadan foydalanish samaradorligi oshdi hamda ish jarayonlari ustidan nazorat kuchaydi. Bajarilgan ishlar bo'yicha aniq va ishonchli ma'lumotlar shakllantirilib, hisobotlar avtomatlashtirildi. Shu bilan birga, resurslardan foydalanish optimallashtirilib, vaqt va yoqilg'i sarfi kamaytirildi.",
+                "project-card_2_users": "Mazkur tizimdan operatorlar, rahbarlar hamda administratorlar foydalanadi. Har bir foydalanuvchi o'z vazifasiga mos funksiyalar orqali tizimdan samarali foydalanish imkoniyatiga ega bo'ladi.",
+                "project-card_2_work": "Loyiha doirasida tizimning UX/UI dizayni ishlab chiqildi, monitoring va tahlil jarayonlari uchun interfeyslar loyihalashtirildi hamda ma'lumotlarni vizuallashtirishga alohida e'tibor qaratildi. Shuningdek, GPS qurilmalaridan kelayotgan ma'lumotlarni qayta ishlash va tizimga integratsiya qilish ishlari amalga oshirildi.",
+                "project-card_2_screens": "Tizim interfeysi boshqaruv paneli, xarita asosidagi monitoring oynasi, transport trayektoriyasini ko'rish sahifasi, analitika va hisobotlar bo'limi hamda foydalanuvchilarni boshqarish oynasidan iborat.",
                 "project-card_3_detail": "Ushbu loyiha bo'yicha batafsil ma'lumot va texnik hujjatlar tayyorlanmoqda. Raqamli Nazorat jamoasi ushbu yechimni to'liq raqamlashtirish va avtomatlashtirishga qaratgan.",
-                "project-card_4_detail": "Polimer xomashyosini tayyorlash jarayonida harorat, bosim va vaqt parametrlarini boshqaruvchi yuqori texnologik PLC tizimi. Sanoat xavfsizligi talablariga to'liq javob beradi.",
+                "project-card_4_detail": "Sanoat uskunalarini monitoring va boshqarish tizimi",
                 "project-card_4_features": [
-                        "Haroratni +- 0.1 darajagacha aniqlikda saqlash",
-                        "Favqulodda to'xtatish (Safety) tizimi",
-                        "Masofaviy monitoring va boshqaruv",
-                        "Jarayonlar arxivi va loglash"
+                        "Uskunalar holatini real vaqt monitoringi",
+                        "Ishlab chiqarish jarayonlarini tahlil qilish",
+                        "Nosozliklar haqida ogohlantirish",
+                        "Statistika va hisobotlar",
+                        "Jarayonlarni avtomatik boshqarish",
+                        "Masofadan turib nazorat qilish"
                 ],
+                "project-card_4_summary_title_1": "Sanoat jarayonlarini real vaqt rejimida nazorat qilish va optimallashtirish",
+                "project-card_4_summary_text_1": "Mazkur tizim ishlab chiqarish jarayonlarini monitoring qilish, uskunalar holatini kuzatish va texnologik jarayonlarni samarali boshqarish uchun ishlab chiqilgan.",
+                "project-card_4_summary_title_2": "Mahsulot haqida",
+                "project-card_4_summary_text_2": "Platforma sanoat uskunalari va ishlab chiqarish jarayonlarini yagona tizimda boshqarish imkonini beradi. Tizim sensorlar orqali ma'lumotlarni yig'adi, ularni tahlil qiladi va foydalanuvchiga qulay interfeys orqali taqdim etadi.",
                 "project-card_4_images": [
                         "./ProjectDetailImages/project_4_img_1.jpg",
                         "./ProjectDetailImages/project_4_img_2.jpg",
@@ -112,6 +128,11 @@
                         "./ProjectDetailImages/project_4_img_5.jpg",
                         "./ProjectDetailImages/project_4_img_6.jpg"
                 ],
+                "project-card_4_advantages": "Tizim ishlab chiqarish jarayonlarini to'liq nazorat qilish imkonini berib, uskunalar samaradorligini oshiradi. Real vaqt monitoringi orqali nosozliklar erta aniqlanadi va ularni bartaraf etish tezlashadi. Avtomatlashtirilgan jarayonlar inson omilini kamaytirib, xatolar ehtimolini pasaytiradi. Tizim resurslardan samarali foydalanishga yordam beradi va ishlab chiqarish xarajatlarini optimallashtiradi. Shu bilan birga, platforma kengaytiriladigan arxitekturaga ega bo'lib, turli sanoat yo'nalishlariga moslashadi.",
+                "project-card_4_results": "Tizim joriy etilishi natijasida ishlab chiqarish jarayonlari ustidan nazorat kuchaydi va uskunalar ishlash samaradorligi oshdi. Nosozliklar soni kamaydi va ularni bartaraf etish vaqti qisqardi. Shu bilan birga, ishlab chiqarish jarayonlari yanada barqaror va samarali yo'lga qo'yildi.",
+                "project-card_4_users": "Mazkur tizimdan muhandislar, operatorlar hamda ishlab chiqarish jarayonlarini boshqaruvchi mutaxassislar foydalanadi. Har bir foydalanuvchi o'z vazifasiga mos funksiyalar orqali tizim bilan samarali ishlaydi.",
+                "project-card_4_work": "Loyiha doirasida sanoat jarayonlarini qulay boshqarish uchun UX/UI dizayn ishlab chiqildi, monitoring va tahlil interfeyslari loyihalashtirildi. Shuningdek, sensorlardan kelayotgan ma'lumotlarni qayta ishlash va tizimga integratsiya qilish ishlari amalga oshirildi.",
+                "project-card_4_screens": "Tizim interfeysi boshqaruv paneli, real vaqt monitoring oynasi, uskunalar holatini kuzatish sahifasi, analitika va hisobotlar bo'limi hamda boshqaruv sozlamalaridan iborat.",
                 "project-card_5_detail": "Gaz konlari va taqsimlash stansiyalari uchun maxsus ishlab chiqilgan PLC boshqaruv shkaflari va dasturiy ta'minoti.",
                 "project-card_5_features": [
                         "Yuqori bosim ostida ishlash xavfsizligi",
@@ -181,19 +202,27 @@
                         "Budjetni rejalashtirish",
                         "Elektron imzo (ERI) bilan tasdiqlash"
                 ],
+                "project-card_12_summary_title_1": "Loyiha haqida",
+                "project-card_12_summary_text_1": "Qurilish va sanoat ob'ektlari butlovchi qismlarini boshqarish tizimi. Loyiha smetasidan tortib to omborga yetib kelishigacha bo'lgan jarayonni qamrab oladi.",
+                "project-card_12_summary_title_2": "Asosiy maqsad",
+                "project-card_12_summary_text_2": "Ombor qoldiqlari nazorati, yetkazib beruvchilar reytingi va budjetni rejalashtirish orqali samaradorlikni oshirish.",
                 "project-card_12_images": [
                         "./ProjectDetailImages/project_12_img_1.jpg",
                         "./ProjectDetailImages/project_12_img_2.jpg"
                 ],
                 "project-card_12_gallery_layout": "list",
-                "project-card_13_detail": "Biokimyoviy laboratoriyalar va ishlab chiqarish liniyalari uchun mo'ljallangan avtomatlashtirish majmuasi. Kimyoviy reaksiyalar ketma-ketligini qat'iy nazorat qiladi.",
-                "project-card_14_detail": "Biokimyoviy laboratoriyalar va ishlab chiqarish liniyalari uchun mo'ljallangan avtomatlashtirish majmuasi. Kimyoviy reaksiyalar ketma-ketligini qat'iy nazorat qiladi.",
-                "project-card_15_detail": "Mudofaa tizimi uchun maxsus mo'ljallangan, yopiq tarmoqlarda ishlovchi yuqori darajadagi xavfsiz boshqaruv loyihasi.",
-                "project-card_15_features": [
-                        "Yopiq aloqa kanallari",
-                        "Resurslarni taqsimlash",
-                        "Strategik hisobotlar"
-                ],
+                "project-card_13_summary_title_1": "Loyiha haqida",
+                "project-card_13_summary_text_1": "Biokimyoviy laboratoriyalar va ishlab chiqarish liniyalari uchun mo'ljallangan avtomatlashtirish majmuasi. Kimyoviy reaksiyalar ketma-ketligini qat'iy nazorat qiladi.",
+                "project-card_13_summary_title_2": "Texnik imkoniyatlar",
+                "project-card_13_summary_text_2": "Telekommunikatsiya tizimlari va tarmoqlarini boshqarish interfeysi orqali yuqori aniqlikdagi nazoratni ta'minlash.",
+                "project-card_14_summary_title_1": "Loyiha haqida",
+                "project-card_14_summary_text_1": "Biokimyoviy laboratoriyalar va ishlab chiqarish liniyalari uchun mo'ljallangan avtomatlashtirish majmuasi. Kimyoviy reaksiyalar ketma-ketligini qat'iy nazorat qiladi.",
+                "project-card_14_summary_title_2": "Maqsad",
+                "project-card_14_summary_text_2": "Muqobil energiya manbalari va yashil texnologiyalar monitoringini raqamlashtirish.",
+                "project-card_15_summary_title_1": "Loyiha haqida",
+                "project-card_15_summary_text_1": "Mudofaa tizimi uchun maxsus mo'ljallangan, yopiq tarmoqlarda ishlovchi yuqori darajadagi xavfsiz boshqaruv loyihasi.",
+                "project-card_15_summary_title_2": "Xavfsizlik",
+                "project-card_15_summary_text_2": "Yopiq aloqa kanallari va resurslarni strategik taqsimlash orqali maksimal xavfsizlikni ta'minlash.",
                 "project-card_15_video": "",
                 "about_title": "Biz haqimizda",
                 "about_text": "\"Raqamli Nazorat\" — bu O'zbekistonning raqamli modernizatsiyasiga hissa qo'shayotgan, yuqori texnologiyali loyihalarni amalga oshiruvchi jamoa. Bizning maqsadimiz — eng murakkab texnik topshiriqlarni eng sodda va samarali yechimlar bilan ta'minlashdir."
