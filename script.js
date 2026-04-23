@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const themeToggle = document.getElementById('theme-toggle');
     const footerImg = document.getElementById('footer-img');
     const body = document.body;
+    const heroIcon = document.getElementById('hero-icon');
 
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
@@ -153,6 +154,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         body.classList.add('dark-mode');
         themeToggle.classList.add('theme-toggle--active');
         footerImg.src = './Images/Footer_logo_dark.png';
+        heroIcon.src = './Images/hero_icon_dark.png';
     }
 
     themeToggle.addEventListener('click', () => {
@@ -162,9 +164,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
             footerImg.src = './Images/Footer_logo_dark.png';
+            heroIcon.src = './Images/hero_icon_dark.png';
         } else {
             localStorage.setItem('theme', 'light');
             footerImg.src = './Images/Footer_logo.png';
+            heroIcon.src = './Images/hero_icon_light.png';
         }
     });
 
