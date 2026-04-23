@@ -8,6 +8,11 @@
                 "modal_features_title": "Asosiy imkoniyatlar",
                 "modal_video_title": "Video namoyish",
                 "modal_gallery_title": "Loyihadan lavhalar",
+                "project_advantages_title": "Afzalliklar",
+                "project_results_title": "Natija",
+                "project_users_title": "Foydalanuvchilar",
+                "project_work_title": "Amalga oshirilgan ishlar",
+                "project_screens_title": "Ekranlar uchun tavsif",
                 "hero_title": "Kelajakni raqamli boshqaramiz",
                 "hero_desc": "O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.",
                 "hero_btn": "Loyihalarni ko'rish",
@@ -24,7 +29,7 @@
                 "feature_1_title": "Muhandislik tajribasi",
                 "feature_1_desc": "Gaz sohasining o'ziga xos jihatlarini chuqur tushunib, amaliy va samarali yechimlar ishlab chiqamiz.",
                 "feature_2_title": "Ishonchlilik va xavfsizlik",
-                "feature_2_desc": "Barcha yechimlarimiz sanoat standartlariga mos va tizim barqarorligini ta'minlaydi.",
+                "feature_2_desc": "Ballar yechimlarimiz sanoat standartlariga mos va tizim barqarorligini ta'minlaydi.",
                 "feature_3_title": "Moslashuvchanlik",
                 "feature_3_desc": "Yechimlarimiz kichik loyihalardan tortib yirik infratuzilmalargacha moslashadi.",
                 "feature_4_title": "Zamonaviy texnologiyalar",
@@ -39,7 +44,7 @@
                 "project-card_2_title": "YPX AI",
                 "project-card_2_desc": "Avtotransport va maxsus texnikani GPS orqali nazorat qilish tizimi.",
                 "project-card_3_title": "Elektron o'qituvchi",
-                "project-card_3_desc": "Zaxira o'quv markazlari va ta'lim muassasalari uchun masofaviy o'qitish va bilim darajasini baholash tizimi.",
+                "project-card_3_desc": "Talaba va o'quvchilar uchun individual ta'lim trayektoriyasini yaratuvchi AI mentor platformasi.",
                 "project-card_4_title": "Ageing Tank",
                 "project-card_4_desc": "Polimer xomashyosini tayyorlash jarayonida harorat, bosim va vaqt parametrlarini boshqaruvchi yuqori texnologik PLC tizimi.",
                 "project-card_5_title": "Gazprom PLS",
@@ -64,31 +69,35 @@
                 "project-card_14_desc": "Muqobil energiya manbalari va yashil texnologiyalar monitoringi.",
                 "project-card_15_title": "Mudofaa",
                 "project-card_15_desc": "Mudofaa tizimlari uchun maxsus mo'ljallangan xavfsiz va barqaror boshqaruv platformasi.",
-                "project-card_1_detail": "Ushbu tizim sun'iy intellekt yordamida mijozlar bilan muloqotni tahlil qiladi, operatorlar ishini optimallashtiradi va xizmat ko'rsatish sifatini oshiradi. Asosiy funksiyalar: nutqni matnga aylantirish, hissiyotlarni tahlil qilish, avtomatik hisobotlar.",
-                "project-card_2_detail": "Tizim transport vositalarining harakatini real vaqt rejimida kuzatish va tahlil qilish imkonini beradi.",
-                "project-card_3_detail": "O'quv jarayonini to'liq avtomatlashtirishga yordam beradi.",
-                "project-card_4_detail": "Sanoat xavfsizligi talablariga to'liq javob beradi.",
-                "project-card_5_detail": "Gaz sanoati ob'ektlari uchun yuqori aniqlikdagi texnologik nazorat tizimi. PLC va SCADA texnologiyalari asosida ishlaydi.",
-                "project-card_6_detail": "Kimyoviy laboratoriya jarayonlarini monitoring qilish va xavfsizlik parametrlarini nazorat qilish tizimi.",
-                "project-card_7_detail": "3D gologramma orqali ma'lumotlarni vizuallashtirish va markaziy boshqaruv interfeysi.",
-                "project-card_8_detail": "Korporativ resurslarni rejalashtirish va mijozlar bilan munosabatlarni boshqarishning yaxlit tizimi.",
-                "project-card_9_detail": "Gaz taqsimlash punktlari uchun zamonaviy monitoring va xavfsizlikni ta'minlash tizimi.",
-                "project-card_10_detail": "Markazlashtirilgan gaz ta'minoti tarmog'ini real vaqt rejimida nazorat qilish platformasi.",
-                "project-card_11_detail": "Dispetcherlik xizmatlari uchun operativ boshqaruv va tezkor qaror qabul qilish tizimi.",
-                "project-card_12_detail": "Ishlab chiqarish jarayonida butlovchi qismlarni hisobga olish va komplektatsiyani boshqarish tizimi.",
-                "project-card_13_detail": "Telekommunikatsiya tarmoqlari trafigini tahlil qilish va boshqarish interfeysi.",
-                "project-card_14_detail": "Quyosh va shamol energiyasi manbalarini monitoring qilish va samaradorlikni hisoblash tizimi.",
-                "project-card_15_detail": "Mudofaa va xavfsizlik tizimlari uchun maxsus kriptografik himoyalangan boshqaruv platformasi.",
-
-                "project-card_2_features": [
-                        "Real vaqt rejimida transport monitoringi",
-                        "Harakat trayektoriyasini kuzatish va saqlash",
-                        "Ish faoliyatini tahlil qilish",
-                        "Avtomatik hisobotlar shakllantirish",
-                        "Yoqilg'i sarfini nazorat qilish"
+                "project-card_1_detail": "Mijozlar bilan muloqotni inson aralashuvisiz amalga oshiruvchi, nutqni tushunish va tahlil qilishga asoslangan intellektual platforma. Tizim 24/7 rejimida ishlaydi va har qanday murakkablikdagi savollarga javob bera oladi.",
+                "project-card_1_features": [
+                        "Call-markaz orqali murojaatlarni qabul qilish",
+                        "Avtomatik javob berish (AI asosida)",
+                        "Real vaqt rejimida analitika",
+                        "Vazifalarni nazorat qilish",
+                        "Xabarnomalar tizimi",
+                        "Ko'p tilli qo'llab-quvvatlash"
                 ],
-                "project-card_2_video": "dQw4w9WgXcQ",
-
+                "project-card_1_advantages": "Tizim 24/7 rejimida uzluksiz ishlash imkonini beradi va foydalanuvchilarga istalgan vaqtda murojaat yuborish imkoniyatini yaratadi. Sun'iy intellekt yordamida nutqni aniqlash va qayta ishlash funksiyasi orqali murojaatlar tez va aniq tahlil qilahdi. Avtomatlashtirilgan jarayonlar operatorlar yuklamasini sezilarli darajada kamaytiradi va xizmat ko'rsatish samaradorligini oshiradi. Tizim tezkor javob berish imkoniyati bilan foydalanuvchi tajribasini yaxshilaydi. Shu bilan birga, tizim arxitekturasi masshtablanadigan bo'lib, kelajakda qo'shimcha modullarni integratsiya qilish imkonini beradi.",
+                "project-card_1_results": "Tizim joriy etilishi natijasida murojaatlarni ko'rib chiqish vaqti sezilarli darajada qisqardi va foydalanuvchilarga xizmat ko'rsatish sifati oshdi. Ichki ish jarayonlari optimallashtirilib, vazifalarni bajarish yanada tizimli va nazorat ostida amalga oshiriladigan bo'ldi. Shu bilan birga, avtomatlashtirish hisobiga xodimlar yuklamasi kamaytirildi va umumiy ish samaradorligi oshirildi.",
+                "project-card_1_users": "Mazkur tizimdan asosan call-markaz operatorlari, kompaniya xodimlari hamda tizim administratorlari foydalanadi. Har bir foydalanuvchi o'ziga tegishli funksiyalar orqali tizim bilan samarali ishlash imkoniyatiga ega bo'ladi.",
+                "project-card_1_work": "Loyiha doirasida foydalanuvchi tajribasini yaxshilashga qaratilgan UX/UI dizayn ishlab chiqildi, foydalanuvchi ssenariylari tahlil qilinib, interfeyslar loyihalashtirildi. Shuningdek, tizim ichki servislar bilan integratsiya qilindi va analitika modullari yaratildi.",
+                "project-card_1_screens": "Tizim interfeysi bir nechta asosiy ekranlardan iborat bo'lib, ular orasida boshqaruv paneli, murojaatlarni boshqarish oynasi, analitika va hisobotlar bo'limi, foydalanuvchilarni boshqarish sahifasi hamda xabarnomalar tizimi mavjud.",
+                "project-card_2_detail": "Yo'l harakati xavfsizligini ta'minlash uchun sun'iy intellektga asoslangan videokuzatuv tizimi. Tizim qoidabuzarliklarni avtomatik aniqlaydi va tegishli organlarga xabar beradi.",
+                "project-card_2_features": [
+                        "Davlat raqamlarini (ANPR) 99% aniqlikda o'qish",
+                        "To'xtash va burilish qoidalarini nazorat qilish",
+                        "Tezlikni o'lchash (radar aralashuvisiz)",
+                        "Tungi ko'rish va yomon ob-havoda ishlash"
+                ],
+                "project-card_2_images": [
+                        "./ProjectDetailImages/project_2_img_1.jpg",
+                        "./ProjectDetailImages/project_2_img_2.jpg",
+                        "./ProjectDetailImages/project_2_img_3.jpg"
+                ],
+                "project-card_2_video": "",
+                "project-card_3_detail": "Ushbu loyiha bo'yicha batafsil ma'lumot va texnik hujjatlar tayyorlanmoqda. Raqamli Nazorat jamoasi ushbu yechimni to'liq raqamlashtirish va avtomatlashtirishga qaratgan.",
+                "project-card_4_detail": "Polimer xomashyosini tayyorlash jarayonida harorat, bosim va vaqt parametrlarini boshqaruvchi yuqori texnologik PLC tizimi. Sanoat xavfsizligi talablariga to'liq javob beradi.",
                 "project-card_4_features": [
                         "Haroratni +- 0.1 darajagacha aniqlikda saqlash",
                         "Favqulodda to'xtatish (Safety) tizimi",
@@ -96,13 +105,96 @@
                         "Jarayonlar arxivi va loglash"
                 ],
                 "project-card_4_images": [
-                        "https://picsum.photos/seed/tank1/800/600",
-                        "https://picsum.photos/seed/tank2/800/600",
-                        "https://picsum.photos/seed/tank3/800/600",
-                        "https://picsum.photos/seed/tank4/800/600",
-                        "https://picsum.photos/seed/tank5/800/600",
-                        "https://picsum.photos/seed/tank6/800/600"
+                        "./ProjectDetailImages/project_4_img_1.jpg",
+                        "./ProjectDetailImages/project_4_img_2.jpg",
+                        "./ProjectDetailImages/project_4_img_3.jpg",
+                        "./ProjectDetailImages/project_4_img_4.jpg",
+                        "./ProjectDetailImages/project_4_img_5.jpg",
+                        "./ProjectDetailImages/project_4_img_6.jpg"
                 ],
+                "project-card_5_detail": "Gaz konlari va taqsimlash stansiyalari uchun maxsus ishlab chiqilgan PLC boshqaruv shkaflari va dasturiy ta'minoti.",
+                "project-card_5_features": [
+                        "Yuqori bosim ostida ishlash xavfsizligi",
+                        "Portlashdan himoyalangan uskunalar nazorati",
+                        "Yillik hisobotlar generatsiyasi",
+                        "Avariya holatlarini bashorat qilish"
+                ],
+                "project-card_5_images": [
+                        "./ProjectDetailImages/project_5_img_1.jpg",
+                        "./ProjectDetailImages/project_5_img_2.jpg",
+                        "./ProjectDetailImages/project_5_img_3.jpg"
+                ],
+                "project-card_6_detail": "Biokimyoviy laboratoriyalar va ishlab chiqarish liniyalari uchun mo'ljallangan avtomatlashtirish majmuasi. Kimyoviy reaksiyalar ketma-ketligini qat'iy nazorat qiladi.",
+                "project-card_6_features": [
+                        "Reagentlar sarfini avtomatik o'lchash",
+                        "PH va boshqa kimyoviy ko'rsatkichlar tahlili",
+                        "SCADA visualizatsiyasi",
+                        "Xalqaro standartlar bo'yicha sifat nazorati"
+                ],
+                "project-card_6_images": [
+                        "./ProjectDetailImages/project_6_img_1.jpg",
+                        "./ProjectDetailImages/project_6_img_2.jpg",
+                        "./ProjectDetailImages/project_6_img_3.jpg"
+                ],
+                "project-card_7_detail": "Mahsulotlar haqiqiyligini tekshirish va qalbakilashtirishga qarshi kurashish uchun maxsus golografik markirovka tizimi.",
+                "project-card_7_features": [
+                        "QR va Gologramma integratsiyasi",
+                        "Mobil ilova orqali tekshirish",
+                        "Ishlab chiqaruvchi uchun statistik portal",
+                        "Logistika zanjiri nazorati"
+                ],
+                "project-card_8_detail": "Ushbu loyiha bo'yicha batafsil ma'lumot va texnik hujjatlar tayyorlanmoqda. Raqamli Nazorat jamoasi ushbu yechimni to'liq raqamlashtirish va avtomatlashtirishga qaratgan.",
+                "project-card_9_detail": "Gaz iste'moli va abonentlar hisobini yuritish uchun mo'ljallangan onlayn platforma.",
+                "project-card_9_features": [
+                        "Elektron to'lovlar integratsiyasi",
+                        "Iste'mol tahlili",
+                        "Abonentlar shaxsiy kabineti"
+                ],
+                "project-card_9_images": [
+                        "./ProjectDetailImages/project_9_img_1.jpg",
+                        "./ProjectDetailImages/project_9_img_2.jpg"
+                ],
+                "project-card_10_detail": "Gaz iste'moli va abonentlar hisobini yuritish uchun mo'ljallangan onlayn platforma.",
+                "project-card_10_features": [
+                        "Quvurlar holati monitoringi",
+                        "Avariya holatlarini tezkor aniqlash",
+                        "Olti oylik tahliliy hisobotlar"
+                ],
+                "project-card_10_images": [
+                        "./ProjectDetailImages/project_10_img_1.jpg",
+                        "./ProjectDetailImages/project_10_img_2.jpg",
+                        "./ProjectDetailImages/project_10_img_3.jpg",
+                        "./ProjectDetailImages/project_10_img_4.jpg"
+                ],
+                "project-card_10_gallery_layout": "list",
+                "project-card_11_detail": "Yirik korxonalar va davlat organlari uchun operativ dispetcherlik markazi. Barcha ma'lumotlar yagona ekranda (Situation Center) jamlanadi va tahlil qilinadi.",
+                "project-card_11_features": [
+                        "Real-vaqtda geografik xaritalar (GIS)",
+                        "Hodisalar haqida tezkor bildirishnomalar",
+                        "Guruhli aloqa tizimi integratsiyasi",
+                        "Tarixiy ma'lumotlar tahlili (Big Data)"
+                ],
+                "project-card_12_detail": "Qurilish va sanoat ob'ektlari butlovchi qismlarini boshqarish tizimi. Loyiha smetasidan tortib to omborga yetib kelishigacha bo'lgan jarayonni qamrab oladi.",
+                "project-card_12_features": [
+                        "Ombor qoldiqlari nazorati",
+                        "Yetkazib beruvchilar reytingi",
+                        "Budjetni rejalashtirish",
+                        "Elektron imzo (ERI) bilan tasdiqlash"
+                ],
+                "project-card_12_images": [
+                        "./ProjectDetailImages/project_12_img_1.jpg",
+                        "./ProjectDetailImages/project_12_img_2.jpg"
+                ],
+                "project-card_12_gallery_layout": "list",
+                "project-card_13_detail": "Biokimyoviy laboratoriyalar va ishlab chiqarish liniyalari uchun mo'ljallangan avtomatlashtirish majmuasi. Kimyoviy reaksiyalar ketma-ketligini qat'iy nazorat qiladi.",
+                "project-card_14_detail": "Biokimyoviy laboratoriyalar va ishlab chiqarish liniyalari uchun mo'ljallangan avtomatlashtirish majmuasi. Kimyoviy reaksiyalar ketma-ketligini qat'iy nazorat qiladi.",
+                "project-card_15_detail": "Mudofaa tizimi uchun maxsus mo'ljallangan, yopiq tarmoqlarda ishlovchi yuqori darajadagi xavfsiz boshqaruv loyihasi.",
+                "project-card_15_features": [
+                        "Yopiq aloqa kanallari",
+                        "Resurslarni taqsimlash",
+                        "Strategik hisobotlar"
+                ],
+                "project-card_15_video": "",
                 "about_title": "Biz haqimizda",
                 "about_text": "\"Raqamli Nazorat\" — bu O'zbekistonning raqamli modernizatsiyasiga hissa qo'shayotgan, yuqori texnologiyali loyihalarni amalga oshiruvchi jamoa. Bizning maqsadimiz — eng murakkab texnik topshiriqlarni eng sodda va samarali yechimlar bilan ta'minlashdir."
         },
@@ -115,6 +207,11 @@
                 "modal_features_title": "Key Features",
                 "modal_video_title": "Video Demo",
                 "modal_gallery_title": "Project Gallery",
+                "project_advantages_title": "Advantages",
+                "project_results_title": "Results",
+                "project_users_title": "Users",
+                "project_work_title": "Work Done",
+                "project_screens_title": "Screen Descriptions",
                 "hero_title": "Controlling the Future Digitally",
                 "hero_desc": "Innovative project center in Uzbekistan. Professional solutions from artificial intelligence to complex industrial automation systems.",
                 "hero_btn": "View Projects",
@@ -131,93 +228,174 @@
                 "feature_1_title": "Engineering experience",
                 "feature_1_desc": "A deep understanding of specific aspects of the gas sector, we will develop practical and effective solutions.",
                 "feature_2_title": "Reliability and security",
-                "feature_2_desc": "All or our industry standards and ensures the stability of the system.",
-                "feature_3_title": "Adapted",
-                "feature_3_desc": "Adapted from various infrastructure projects, two small or major subject.",
+                "feature_2_desc": "All our solutions meet industry standards and ensure system stability.",
+                "feature_3_title": "Flexibility",
+                "feature_3_desc": "Our solutions adapt from small projects to large infrastructures.",
                 "feature_4_title": "Modern technology",
-                "feature_4_desc": "Stir through the latest digital technology to increase efficiency and control.",
+                "feature_4_desc": "We increase efficiency and control through the latest digital technologies.",
                 "projects_title": "Projects",
                 "projects_all": "All",
                 "projects_ai": "Artificial Intelligence",
                 "projects_industrial": "Industrial (PLC)",
                 "projects_web": "Web Systems",
-                "project-card_1_title": "Call center AI",
-                "project-card_1_desc": "Call center speech analysis system automation and the smart communication with clients.",
+                "project-card_1_title": "AI Call center",
+                "project-card_1_desc": "Smart call center system for automating customer communication and analyzing speech.",
                 "project-card_2_title": "YPX AI",
-                "project-card_2_desc": "Road violators intellectual analysis and automation platform.",
-                "project-card_3_title": "E-teacher",
-                "project-card_3_desc": "Individual skills development for students in the field of education and rigorous analysis of the platform's ai assistant.",
-                "project-card_4_title": "AGMK Monitoring",
-                "project-card_4_desc": "PLC system control the process of the preparation of beer and other beverages industry.",
+                "project-card_2_desc": "GPS control system for vehicles and special equipment.",
+                "project-card_3_title": "Electronic Teacher",
+                "project-card_3_desc": "AI mentor platform creating individual learning paths for students.",
+                "project-card_4_title": "Ageing Tank",
+                "project-card_4_desc": "High-tech PLC system controlling temperature, pressure, and time parameters in polymer raw material preparation.",
                 "project-card_5_title": "Gazprom PLS",
-                "project-card_5_desc": "Modern technological facilities are control and gas industry management system.",
+                "project-card_5_desc": "Modern technological control and management system for gas industry facilities.",
                 "project-card_6_title": "Biochemistry",
-                "project-card_6_desc": "Monitoring of chemical processes-laboratory of automated management control system.",
-                "project-card_7_title": "Gologramma",
-                "project-card_7_desc": "Central control and visualisation system.",
+                "project-card_6_desc": "Automated control system for chemical process monitoring and laboratory control.",
+                "project-card_7_title": "Hologram",
+                "project-card_7_desc": "Centralized control and visualization system.",
                 "project-card_8_title": "ERP-CRM Hudud",
-                "project-card_8_desc": "Designed for corporate management planning is a comprehensive regional system.",
+                "project-card_8_desc": "Comprehensive corporate system designed for regional management planning.",
                 "project-card_9_title": "M-Gas",
-                "project-card_9_desc": "Modern control and management system for gas distribution stations.",
-                "project-card_10_title": "S-Gas",
-                "project-card_10_desc": "Single gas supply and the monitoring center for control and monitoring platform.",
+                "project-card_9_desc": "Modern control and management system for gas distribution points.",
+                "project-card_10_title": "S-Gaz",
+                "project-card_10_desc": "Unified control and monitoring platform for gas supply and monitoring center.",
                 "project-card_11_title": "Dispatcher",
-                "project-card_11_desc": "A management system designed for operational management and dispatching services.",
+                "project-card_11_desc": "Management system designed for operational control and dispatching services.",
                 "project-card_12_title": "E-Komplektatsiya",
-                "project-card_12_desc": "Production and construction materials inventory management system.",
+                "project-card_12_desc": "Inventory management system for production and construction materials.",
                 "project-card_13_title": "Telman",
-                "project-card_13_desc": "The management interface of telecommunication systems and networks.",
-                "project-card_14_title": "Green energy",
-                "project-card_14_desc": "Alternative energy sources and green technologies and monitoring.",
+                "project-card_13_desc": "Interface for managing telecommunication systems and networks.",
+                "project-card_14_title": "Green Energy",
+                "project-card_14_desc": "Monitoring of alternative energy sources and green technologies.",
                 "project-card_15_title": "Defense",
-                "project-card_15_desc": "Defense systems management platform designed specifically for safe and sustainable.",
-                "project-card_1_detail": "This system uses AI to analyze customer communication, optimize operator performance, and improve service quality. Key features: speech-to-text, sentiment analysis, automatic reporting.",
-                "project-card_2_detail": "An intelligent system designed for traffic police. It automatically detects violations by analyzing camera footage and records them in the database.",
-                "project-card_3_detail": "An AI system designed for individual assessment of students' knowledge levels and creating customized learning plans.",
-                "project-card_4_detail": "A fully automated control system for the beverage production process. It precisely controls temperature, pressure, and time parameters.",
-                "project-card_5_detail": "A high-precision technological control system for gas industry facilities, based on PLC and SCADA technologies.",
-                "project-card_6_detail": "A system for monitoring chemical laboratory processes and controlling safety parameters.",
-                "project-card_7_detail": "Data visualization and central control interface using 3D holograms.",
-                "project-card_8_detail": "An integrated system for corporate resource planning and customer relationship management.",
-                "project-card_9_detail": "A modern monitoring and security system for gas distribution points.",
-                "project-card_10_detail": "A real-time control platform for the centralized gas supply network.",
-                "project-card_11_detail": "An operational control and rapid decision-making system for dispatch services.",
-                "project-card_12_detail": "A system for tracking components and managing kits in the manufacturing process.",
-                "project-card_13_detail": "Interface for analyzing and managing telecommunications network traffic.",
-                "project-card_14_detail": "A system for monitoring solar and wind energy sources and calculating efficiency.",
-                "project-card_15_detail": "A specially cryptographically protected management platform for defense and security systems.",
+                "project-card_15_desc": "Safe and stable management platform specifically designed for defense systems.",
+                "project-card_1_detail": "An intelligent platform that handles customer communication without human intervention, based on speech understanding and analysis. The system works 24/7 and can answer questions of any complexity.",
                 "project-card_1_features": [
-                        "Automating customer communication",
-                        "Speech-to-Text conversion",
-                        "Sentiment analysis",
-                        "Operator activity monitoring"
+                        "Receiving requests through call center",
+                        "Automatic response (AI-based)",
+                        "Real-time analytics",
+                        "Task control",
+                        "Notification system",
+                        "Multi-language support"
                 ],
+                "project-card_1_advantages": "The system enables continuous 24/7 operation and allows users to submit requests at any time. Through AI-powered speech recognition and processing, requests are analyzed quickly and accurately. Automated processes significantly reduce operator workload and increase service efficiency. The system improves user experience with quick response capability. At the same time, the system architecture is scalable, allowing for future integration of additional modules.",
+                "project-card_1_results": "As a result of system implementation, request processing time was significantly reduced and service quality for users improved. Internal workflows were optimized, and task execution became more systematic and controlled. Simultaneously, automation reduced staff workload and increased overall work efficiency.",
+                "project-card_1_users": "The system is mainly used by call center operators, company employees, and system administrators. Each user can work effectively with the system through their respective functions.",
+                "project-card_1_work": "Within the project, a UX/UI design aimed at improving user experience was developed, user scenarios were analyzed, and interfaces were designed. Additionally, the system was integrated with internal services and analytics modules were created.",
+                "project-card_1_screens": "The system interface consists of several main screens, including a dashboard, a request management window, an analytics and reporting section, a user management page, and a notification system.",
+                "project-card_2_detail": "An AI-based video surveillance system designed to ensure traffic safety. The system automatically detects violations and notifies the relevant authorities.",
                 "project-card_2_features": [
-                        "Automatic violation detection",
-                        "Database integration",
-                        "Real-time analysis",
-                        "Notification system"
+                        "Reading license plates (ANPR) with 99% accuracy",
+                        "Control of stopping and turning rules",
+                        "Speed measurement (without radar interference)",
+                        "Night vision and operation in bad weather"
                 ],
-                "project-card_2_video": "dQw4w9WgXcQ",
                 "project-card_2_images": [
-                        "https://picsum.photos/seed/ypx1/800/600",
-                        "https://picsum.photos/seed/ypx2/800/600",
-                        "https://picsum.photos/seed/ypx3/800/600"
+                        "./ProjectDetailImages/project_2_img_1.jpg",
+                        "./ProjectDetailImages/project_2_img_2.jpg",
+                        "./ProjectDetailImages/project_2_img_3.jpg"
                 ],
+                "project-card_2_video": "",
+                "project-card_3_detail": "Detailed information and technical documentation for this project are being prepared. The Digital Control team focuses on fully digitizing and automating this solution.",
+                "project-card_4_detail": "A high-tech PLC system controlling temperature, pressure, and time parameters during polymer raw material preparation. Fully meets industrial safety requirements.",
                 "project-card_4_features": [
-                        "Temperature control",
-                        "Pressure sensor management",
-                        "Automatic filling system",
-                        "Safety valve control"
+                        "Maintaining temperature with +- 0.1 degree accuracy",
+                        "Emergency stop (Safety) system",
+                        "Remote monitoring and control",
+                        "Process archiving and logging"
                 ],
                 "project-card_4_images": [
-                        "https://picsum.photos/seed/tank1/800/600",
-                        "https://picsum.photos/seed/tank2/800/600",
-                        "https://picsum.photos/seed/tank3/800/600",
-                        "https://picsum.photos/seed/tank4/800/600"
+                        "./ProjectDetailImages/project_4_img_1.jpg",
+                        "./ProjectDetailImages/project_4_img_2.jpg",
+                        "./ProjectDetailImages/project_4_img_3.jpg",
+                        "./ProjectDetailImages/project_4_img_4.jpg",
+                        "./ProjectDetailImages/project_4_img_5.jpg",
+                        "./ProjectDetailImages/project_4_img_6.jpg"
                 ],
+                "project-card_5_detail": "Specially designed PLC control cabinets and software for gas fields and distribution stations.",
+                "project-card_5_features": [
+                        "Safety of operation under high pressure",
+                        "Control of explosion-proof equipment",
+                        "Annual report generation",
+                        "Predicting emergency situations"
+                ],
+                "project-card_5_images": [
+                        "./ProjectDetailImages/project_5_img_1.jpg",
+                        "./ProjectDetailImages/project_5_img_2.jpg",
+                        "./ProjectDetailImages/project_5_img_3.jpg"
+                ],
+                "project-card_6_detail": "Automation complex designed for biochemical laboratories and production lines. Strictly controls the sequence of chemical reactions.",
+                "project-card_6_features": [
+                        "Automatic measurement of reagent consumption",
+                        "Analysis of PH and other chemical indicators",
+                        "SCADA visualization",
+                        "Quality control according to international standards"
+                ],
+                "project-card_6_images": [
+                        "./ProjectDetailImages/project_6_img_1.jpg",
+                        "./ProjectDetailImages/project_6_img_2.jpg",
+                        "./ProjectDetailImages/project_6_img_3.jpg"
+                ],
+                "project-card_7_detail": "Special holographic marking system for checking product authenticity and anti-counterfeiting.",
+                "project-card_7_features": [
+                        "QR and Hologram integration",
+                        "Verification via mobile app",
+                        "Statistical portal for the manufacturer",
+                        "Logistics chain control"
+                ],
+                "project-card_8_detail": "Detailed information and technical documentation for this project are being prepared. The Digital Control team focuses on fully digitizing and automating this solution.",
+                "project-card_9_detail": "Online platform designed for gas consumption and subscriber accounting.",
+                "project-card_9_features": [
+                        "Electronic payments integration",
+                        "Consumption analysis",
+                        "Subscriber personal account"
+                ],
+                "project-card_9_images": [
+                        "./ProjectDetailImages/project_9_img_1.jpg",
+                        "./ProjectDetailImages/project_9_img_2.jpg"
+                ],
+                "project-card_10_detail": "Online platform designed for gas consumption and subscriber accounting.",
+                "project-card_10_features": [
+                        "Pipeline status monitoring",
+                        "Rapid detection of emergency situations",
+                        "Six-month analytical reports"
+                ],
+                "project-card_10_images": [
+                        "./ProjectDetailImages/project_10_img_1.jpg",
+                        "./ProjectDetailImages/project_10_img_2.jpg",
+                        "./ProjectDetailImages/project_10_img_3.jpg",
+                        "./ProjectDetailImages/project_10_img_4.jpg"
+                ],
+                "project-card_10_gallery_layout": "list",
+                "project-card_11_detail": "Operational dispatch center for large enterprises and government agencies. All information is collected and analyzed on a single screen (Situation Center).",
+                "project-card_11_features": [
+                        "Real-time geographic maps (GIS)",
+                        "Rapid notifications about events",
+                        "Group communication system integration",
+                        "Historical data analysis (Big Data)"
+                ],
+                "project-card_12_detail": "Management system for construction and industrial object components. Covers the process from project estimates to arrival at the warehouse.",
+                "project-card_12_features": [
+                        "Warehouse stock control",
+                        "Supplier ratings",
+                        "Budget planning",
+                        "Confirmation with electronic signature (ERI)"
+                ],
+                "project-card_12_images": [
+                        "./ProjectDetailImages/project_12_img_1.jpg",
+                        "./ProjectDetailImages/project_12_img_2.jpg"
+                ],
+                "project-card_12_gallery_layout": "list",
+                "project-card_13_detail": "Automation complex designed for biochemical laboratories and production lines. Strictly controls the sequence of chemical reactions.",
+                "project-card_14_detail": "Automation complex designed for biochemical laboratories and production lines. Strictly controls the sequence of chemical reactions.",
+                "project-card_15_detail": "High-level secure management project working in closed networks, specifically designed for the defense system.",
+                "project-card_15_features": [
+                        "Closed communication channels",
+                        "Resource distribution",
+                        "Strategic reports"
+                ],
+                "project-card_15_video": "",
                 "about_title": "About Us",
-                "about_text": "\"Digital Control\" - is a team implementing high-tech projects, contributing to the digital modernization of Uzbekistan. Our goal is to provide the most simple and effective solutions to the most complex technical tasks."
+                "about_text": "\"Digital Control\" — is a team implementing high-tech projects, contributing to the digital modernization of Uzbekistan. Our goal is to provide the most simple and effective solutions to the most complex technical tasks."
         },
         "RU": {
                 "nav_home": "Главная",
@@ -228,6 +406,11 @@
                 "modal_features_title": "Основные возможности",
                 "modal_video_title": "Видео демонстрация",
                 "modal_gallery_title": "Галерея проекта",
+                "project_advantages_title": "Преимущества",
+                "project_results_title": "Результат",
+                "project_users_title": "Пользователи",
+                "project_work_title": "Выполненные работы",
+                "project_screens_title": "Описание экранов",
                 "hero_title": "Управляем будущим цифровым способом",
                 "hero_desc": "Центр инновационных проектов в Узбекистане. Профессиональные решения от искусственного интеллекта до сложных систем промышленной автоматизации.",
                 "hero_btn": "Посмотреть проекты",
@@ -257,79 +440,160 @@
                 "project-card_1_title": "AI Call center",
                 "project-card_1_desc": "Интеллектуальная система колл-центра для автоматизации общения с клиентами и анализа речи.",
                 "project-card_2_title": "YPX AI",
-                "project-card_2_desc": "Платформа интеллектуального анализа и автоматизации нарушений правил дорожного движения.",
+                "project-card_2_desc": "Система GPS-контроля автотранспорта и спецтехники.",
                 "project-card_3_title": "Электронный учитель",
-                "project-card_3_desc": "Платформа ИИ-ассистента в сфере образования, анализирующая индивидуальные способности и успеваемость учащихся.",
-                "project-card_4_title": "AGMK Мониторинг",
-                "project-card_4_desc": "Промышленная система ПЛК для контроля процесса приготовления пива и других напитков.",
-                "project-card_5_title": "Газпром ПЛК",
+                "project-card_3_desc": "Платформа ИИ-ментора, создающая индивидуальные траектории обучения для студентов.",
+                "project-card_4_title": "Ageing Tank",
+                "project-card_4_desc": "Высокотехнологичная система ПЛК, управляющая параметрами температуры, давления и времени при подготовке полимерного сырья.",
+                "project-card_5_title": "Gazprom PLS",
                 "project-card_5_desc": "Современная система технологического контроля и управления для объектов газовой промышленности.",
                 "project-card_6_title": "Биохимия",
-                "project-card_6_desc": "Автоматизированная система управления мониторингом и лабораторным контролем химических процессов.",
+                "project-card_6_desc": "Автоматизированная система управления мониторингом химических процессов и лабораторным контролем.",
                 "project-card_7_title": "Голограмма",
-                "project-card_7_desc": "Система центрального контроля и визуализации.",
-                "project-card_8_title": "ERP-CRM Регион",
-                "project-card_8_desc": "Комплексная корпоративная система для планирования регионального управления.",
+                "project-card_7_desc": "Централизованная система контроля и визуализации.",
+                "project-card_8_title": "ERP-CRM Hudud",
+                "project-card_8_desc": "Комплексная корпоративная система, предназначенная для планирования регионального управления.",
                 "project-card_9_title": "M-Gaz",
                 "project-card_9_desc": "Современная система контроля и управления для газораспределительных пунктов.",
                 "project-card_10_title": "S-Gaz",
                 "project-card_10_desc": "Единая платформа контроля и мониторинга для центра газоснабжения и мониторинга.",
                 "project-card_11_title": "Диспетчер",
-                "project-card_11_desc": "Система управления для оперативного управления и диспетчерских служб.",
+                "project-card_11_desc": "Система управления, предназначенная для оперативного управления и диспетчерских служб.",
                 "project-card_12_title": "Э-Комплектация",
-                "project-card_12_desc": "Система управления комплектацией производственных и строительных материалов.",
+                "project-card_12_desc": "Система управления запасами производственных и строительных материалов.",
                 "project-card_13_title": "Telman",
-                "project-card_13_desc": "Интерфейс управления телекоммуникационными системами и сетями.",
+                "project-card_13_desc": "Интерфейс для управления телекоммуникационными системами и сетями.",
                 "project-card_14_title": "Зеленая энергия",
                 "project-card_14_desc": "Мониторинг альтернативных источников энергии и зеленых технологий.",
                 "project-card_15_title": "Оборона",
                 "project-card_15_desc": "Безопасная и стабильная платформа управления, специально разработанная для систем обороны.",
-                "project-card_1_detail": "Эта система использует ИИ для анализа общения с клиентами, оптимизации работы операторов и повышения качества обслуживания. Основные функции: преобразование речи в текст, анализ настроений, автоматическая отчетность.",
-                "project-card_2_detail": "Интеллектуальная система, разработанная для дорожной полиции. Автоматически выявляет нарушения путем анализа видеозаписей с камер и заносит их в базу данных.",
-                "project-card_3_detail": "Система ИИ, предназначенная для индивидуальной оценки уровня знаний учащихся и создания персонализированных планов обучения.",
-                "project-card_4_detail": "Полностью автоматизированная система управления процессом производства напитков. Точно контролирует параметры температуры, давления и времени.",
-                "project-card_5_detail": "Высокоточная система технологического контроля объектов газовой промышленности на базе технологий ПЛК и SCADA.",
-                "project-card_6_detail": "Система мониторинга процессов химической лаборатории и контроля параметров безопасности.",
-                "project-card_7_detail": "Интерфейс визуализации данных и центрального управления с помощью 3D-голограмм.",
-                "project-card_8_detail": "Интегрированная система планирования корпоративных ресурсов и управления взаимоотношениями с клиентами.",
-                "project-card_9_detail": "Современная система мониторинга и обеспечения безопасности газораспределительных пунктов.",
-                "project-card_10_detail": "Платформа контроля централизованной сети газоснабжения в режиме реального времени.",
-                "project-card_11_detail": "Система оперативного управления и быстрого принятия решений для диспетчерских служб.",
-                "project-card_12_detail": "Система учета комплектующих и управления комплектацией в процессе производства.",
-                "project-card_13_detail": "Интерфейс для анализа и управления трафиком телекоммуникационных сетей.",
-                "project-card_14_detail": "Система мониторинга источников солнечной и ветровой энергии и расчета эффективности.",
-                "project-card_15_detail": "Специально криптографически защищенная платформа управления для систем обороны и безопасности.",
+                "project-card_1_detail": "Интеллектуальная платформа, осуществляющая общение с клиентами без участия человека, основанная на понимании и анализе речи. Система работает в режиме 24/7 и может отвечать на вопросы любой сложности.",
                 "project-card_1_features": [
-                        "Автоматизация общения с клиентами",
-                        "Преобразование речи в текст",
-                        "Анализ настроений",
-                        "Мониторинг деятельности операторов"
+                        "Прием обращений через колл-центр",
+                        "Автоматический ответ (на базе ИИ)",
+                        "Аналитика в реальном времени",
+                        "Контроль задач",
+                        "Система уведомлений",
+                        "Мультиязычная поддержка"
                 ],
+                "project-card_1_advantages": "Система обеспечивает круглосуточную работу 24/7 и позволяет пользователям отправлять запросы в любое время. Благодаря функции распознавания и обработки речи на базе ИИ, обращения анализируются быстро и точно. Автоматизированные процессы значительно снижают нагрузку на операторов и повышают эффективность обслуживания. Система улучшает пользовательский опыт за счет возможности быстрого реагирования. В то же время архитектура системы является масштабируемой, что позволяет интегрировать дополнительные модули в будущем.",
+                "project-card_1_results": "В результате внедрения системы время обработки заявок значительно сократилось, а качество обслуживания пользователей повысилось. Внутренние рабочие процессы были оптимизированы, а выполнение задач стало более систематическим и контролируемым. В то же время за счет автоматизации снизилась нагрузка на персонал и повысилась общая эффективность работы.",
+                "project-card_1_users": "Системой в основном пользуются операторы колл-центров, сотрудники компании и администраторы системы. Каждый пользователь может эффективно работать с системой через соответствующие функции.",
+                "project-card_1_work": "В рамках проекта был разработан UX/UI дизайн, направленный на улучшение пользовательского опыта, проанализированы сценарии использования и спроектированы интерфейсы. Кроме того, система была интегрирована с внутренними сервисами и созданы модули аналитики.",
+                "project-card_1_screens": "Интерфейс системы состоит из нескольких основных экранов, включая панель управления, окно управления заявками, раздел аналитики и отчетности, страницу управления пользователями и систему уведомлений.",
+                "project-card_2_detail": "Система видеонаблюдения на базе искусственного интеллекта, предназначенная для обеспечения безопасности дорожного движения. Система автоматически выявляет нарушения и уведомляет соответствующие органы.",
                 "project-card_2_features": [
-                        "Автоматическое обнаружение нарушений",
-                        "Интеграция с базой данных",
-                        "Анализ в реальном времени",
-                        "Система уведомлений"
+                        "Чтение госномеров (ANPR) с точностью 99%",
+                        "Контроль правил остановки и поворота",
+                        "Измерение скорости (без помех радара)",
+                        "Ночное видение и работа в плохую погоду"
                 ],
-                "project-card_2_video": "dQw4w9WgXcQ",
                 "project-card_2_images": [
-                        "https://picsum.photos/seed/ypx1/800/600",
-                        "https://picsum.photos/seed/ypx2/800/600",
-                        "https://picsum.photos/seed/ypx3/800/600"
+                        "./ProjectDetailImages/project_2_img_1.jpg",
+                        "./ProjectDetailImages/project_2_img_2.jpg",
+                        "./ProjectDetailImages/project_2_img_3.jpg"
                 ],
+                "project-card_2_video": "",
+                "project-card_3_detail": "Подробная информация и техническая документация по данному проекту готовятся. Команда Raqamli Nazorat фокусируется на полной цифровизации и автоматизации этого решения.",
+                "project-card_4_detail": "Высокотехнологичная система ПЛК, управляющая параметрами температуры, давления и времени в процессе подготовки полимерного сырья. Полностью соответствует требованиям промышленной безопасности.",
                 "project-card_4_features": [
-                        "Контроль температуры",
-                        "Управление датчиками давления",
-                        "Автоматическая система наполнения",
-                        "Контроль предохранительных клапанов"
+                        "Поддержание температуры с точностью +- 0,1 градуса",
+                        "Система аварийной остановки (Safety)",
+                        "Дистанционный мониторинг и управление",
+                        "Архивирование и логирование процессов"
                 ],
                 "project-card_4_images": [
-                        "https://picsum.photos/seed/tank1/800/600",
-                        "https://picsum.photos/seed/tank2/800/600",
-                        "https://picsum.photos/seed/tank3/800/600",
-                        "https://picsum.photos/seed/tank4/800/600"
+                        "./ProjectDetailImages/project_4_img_1.jpg",
+                        "./ProjectDetailImages/project_4_img_2.jpg",
+                        "./ProjectDetailImages/project_4_img_3.jpg",
+                        "./ProjectDetailImages/project_4_img_4.jpg",
+                        "./ProjectDetailImages/project_4_img_5.jpg",
+                        "./ProjectDetailImages/project_4_img_6.jpg"
                 ],
+                "project-card_5_detail": "Специально разработанные шкафы управления ПЛК и программное обеспечение для газовых месторождений и распределительных станций.",
+                "project-card_5_features": [
+                        "Безопасность работы под высоким давлением",
+                        "Контроль взрывозащищенного оборудования",
+                        "Генерация годовых отчетов",
+                        "Прогнозирование аварийных ситуаций"
+                ],
+                "project-card_5_images": [
+                        "./ProjectDetailImages/project_5_img_1.jpg",
+                        "./ProjectDetailImages/project_5_img_2.jpg",
+                        "./ProjectDetailImages/project_5_img_3.jpg"
+                ],
+                "project-card_6_detail": "Автоматизированный комплекс, предназначенный для биохимических лабораторий и производственных линий. Строго контролирует последовательность химических реакций.",
+                "project-card_6_features": [
+                        "Автоматическое измерение расхода реагентов",
+                        "Анализ PH и других химических показателей",
+                        "Визуализация SCADA",
+                        "Контроль качества согласно международным стандартам"
+                ],
+                "project-card_6_images": [
+                        "./ProjectDetailImages/project_6_img_1.jpg",
+                        "./ProjectDetailImages/project_6_img_2.jpg",
+                        "./ProjectDetailImages/project_6_img_3.jpg"
+                ],
+                "project-card_7_detail": "Специальная система голографической маркировки для проверки подлинности продукции и борьбы с контрафактом.",
+                "project-card_7_features": [
+                        "Интеграция QR и голограммы",
+                        "Проверка через мобильное приложение",
+                        "Статистический портал для производителя",
+                        "Контроль логистической цепочки"
+                ],
+                "project-card_8_detail": "Подробная информация и техническая документация по данному проекту готовятся. Команда Raqamli Nazorat фокусируется на полной цифровизации и автоматизации этого решения.",
+                "project-card_9_detail": "Онлайн-платформа, предназначенная для учета потребления газа и абонентов.",
+                "project-card_9_features": [
+                        "Интеграция электронных платежей",
+                        "Анализ потребления",
+                        "Личный кабинет абонента"
+                ],
+                "project-card_9_images": [
+                        "./ProjectDetailImages/project_9_img_1.jpg",
+                        "./ProjectDetailImages/project_9_img_2.jpg"
+                ],
+                "project-card_10_detail": "Онлайн-платформа, предназначенная для учета потребления газа и абонентов.",
+                "project-card_10_features": [
+                        "Мониторинг состояния трубопроводов",
+                        "Оперативное обнаружение аварийных ситуаций",
+                        "Полугодовые аналитические отчеты"
+                ],
+                "project-card_10_images": [
+                        "./ProjectDetailImages/project_10_img_1.jpg",
+                        "./ProjectDetailImages/project_10_img_2.jpg",
+                        "./ProjectDetailImages/project_10_img_3.jpg",
+                        "./ProjectDetailImages/project_10_img_4.jpg"
+                ],
+                "project-card_10_gallery_layout": "list",
+                "project-card_11_detail": "Оперативный диспетчерский центр для крупных предприятий и государственных органов. Вся информация собирается и анализируется на едином экране (Situation Center).",
+                "project-card_11_features": [
+                        "Географические карты в реальном времени (GIS)",
+                        "Оперативные уведомления о событиях",
+                        "Интеграция системы групповой связи",
+                        "Анализ исторических данных (Big Data)"
+                ],
+                "project-card_12_detail": "Система управления комплектующими строительных и промышленных объектов. Охватывает процесс от сметы проекта до прибытия на склад.",
+                "project-card_12_features": [
+                        "Контроль складских остатков",
+                        "Рейтинг поставщиков",
+                        "Планирование бюджета",
+                        "Подтверждение электронной подписью (ЭЦП)"
+                ],
+                "project-card_12_images": [
+                        "./ProjectDetailImages/project_12_img_1.jpg",
+                        "./ProjectDetailImages/project_12_img_2.jpg"
+                ],
+                "project-card_12_gallery_layout": "list",
+                "project-card_13_detail": "Автоматизированный комплекс, предназначенный для биохимических лабораторий и производственных линий. Строго контролирует последовательность химических реакций.",
+                "project-card_14_detail": "Автоматизированный комплекс, предназначенный для биохимических лабораторий и производственных линий. Строго контролирует последовательность химических реакций.",
+                "project-card_15_detail": "Проект высокозащищенного управления, работающий в закрытых сетях, специально разработанный для системы обороны.",
+                "project-card_15_features": [
+                        "Закрытые каналы связи",
+                        "Распределение ресурсов",
+                        "Стратегические отчеты"
+                ],
+                "project-card_15_video": "",
                 "about_title": "О нас",
-                "about_text": "«Цифровое управление» — это команда, реализующая высокотехнологичные проекты и вносящая вклад в цифровую модернизацию Узбекистана. Наша цель — предложить самые простые и эффективные решения для самых сложных технических задач."
+                "about_text": "«Raqamli Nazorat» — это команда, реализующая высокотехнологичные проекты и вносящая вклад в цифровую модернизацию Узбекистана. Наша цель — предложить самые простые и эффективные решения для самых сложных технических задач."
         }
 }

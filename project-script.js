@@ -51,61 +51,153 @@ document.addEventListener("DOMContentLoaded", async () => {
         container.innerHTML = ''; // Clear existing
 
         const title = project[`project-card_${id}_title`];
-        const desc = project[`project-card_${id}_desc`];
-        const detail = project[`project-card_${id}_detail`];
+        const desc = project[`project-card_${id}_detail`];
         const features = project[`project-card_${id}_features`];
+        const advantages = project[`project-card_${id}_advantages`];
+        const results = project[`project-card_${id}_results`];
+        const users = project[`project-card_${id}_users`];
+        const work = project[`project-card_${id}_work`];
+        const screens = project[`project-card_${id}_screens`];
         const videoId = project[`project-card_${id}_video`];
         const images = project[`project-card_${id}_images`];
+        const galleryLayout = project[`project-card_${id}_gallery_layout`] || 'grid';
 
-        // Main Card (Ageing Tank style)
+        const advantagesTitle = project['project_advantages_title'];
+        const resultsTitle = project['project_results_title'];
+        const usersTitle = project['project_users_title'];
+        const workTitle = project['project_work_title'];
+        const screensTitle = project['project_screens_title'];
+
+        // Layout Wrapper
+        const wrapper = document.createElement('div');
+        wrapper.className = 'project-detail-layout';
+        wrapper.style.maxWidth = '1070px';
+        wrapper.style.margin = '0 auto';
+        wrapper.style.display = 'flex';
+        wrapper.style.flexDirection = 'column';
+        wrapper.style.gap = '30px';
+
+        // 1. Main Info Card (Title, Desc, Features) - Matches Image 2 & 3
         const mainCard = document.createElement('div');
-        mainCard.className = 'info-card';
-        mainCard.style.maxWidth = '1000px';
-        mainCard.style.margin = '0 auto';
-        
+        mainCard.style.background = 'var(--bg-card)';
+        mainCard.style.borderRadius = '32px';
+        mainCard.style.padding = '50px';
+        mainCard.style.boxShadow = '0 10px 40px rgba(0,0,0,0.03)';
+        mainCard.style.border = '1px solid var(--border-color)';
+
         mainCard.innerHTML = `
-            <h1 class="project-detail__title" style="margin-bottom: 24px;">${title}</h1>
-            <p class="project-detail__description" style="margin-bottom: 30px;">${desc} ${detail || ''}</p>
+            <h1 class="project-detail__title" style="margin-bottom: 20px;">${title}</h1>
+            <p class="project-detail__description" style="margin-bottom: 40px; max-width: 800px;">${desc}</p>
             
-            ${features ? `
-                <ul class="project-detail__features" style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
-                    ${features.map(f => `
-                        <li style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--text-main);">
-                            <div style="width: 32px; height: 32px; background: #6366f1; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <i data-lucide="check" style="width: 18px; height: 18px;"></i>
-                            </div>
-                            ${f}
-                        </li>
-                    `).join('')}
-                </ul>
+            ${features && features.length > 0 ? `
+                <div class="features-section">
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 24px;">
+                        ${features.map(f => `
+                            <li style="display: flex; align-items: center; gap: 16px; font-size: 16px; font-weight: 500; color: var(--text-main);">
+                                <img src="./Images/detail_icon_img.png" alt="" style="width: 32px; height: 32px; flex-shrink: 0;">
+                                ${f}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
             ` : ''}
         `;
-        container.appendChild(mainCard);
+        wrapper.appendChild(mainCard);
 
-        // Media Section (Video then Gallery)
+        // 2. Detailed Text Sections (Advantages, Results, etc.)
+        if (advantages || results || users || work || screens) {
+            const detailsCard = document.createElement('div');
+            detailsCard.style.background = 'var(--bg-card)';
+            detailsCard.style.borderRadius = '32px';
+            detailsCard.style.padding = '50px';
+            detailsCard.style.boxShadow = '0 10px 40px rgba(0,0,0,0.03)';
+            detailsCard.style.border = '1px solid var(--border-color)';
+            detailsCard.style.display = 'flex';
+            detailsCard.style.flexDirection = 'column';
+            detailsCard.style.gap = '40px';
+
+            const addSection = (title, text) => {
+                if (!text) return '';
+                return `
+                    <div class="detail-section">
+                        <h3 style="font-size: 22px; margin-bottom: 16px; font-weight: 700; color: var(--text-title); font-family: var(--unbounded);">${title}</h3>
+                        <p style="font-size: 16px; color: var(--text-muted); line-height: 1.8;">${text}</p>
+                    </div>
+                `;
+            };
+
+            detailsCard.innerHTML = `
+                ${addSection(advantagesTitle, advantages)}
+                ${addSection(resultsTitle, results)}
+                ${addSection(usersTitle, users)}
+                ${addSection(workTitle, work)}
+                ${addSection(screensTitle, screens)}
+            `;
+            wrapper.appendChild(detailsCard);
+        }
+
+        // 3. Media Section
         if (videoId || (images && images.length > 0)) {
             const mediaSection = document.createElement('div');
-            mediaSection.className = 'project-media';
-            mediaSection.style.maxWidth = '1000px';
-            mediaSection.style.margin = '40px auto 0';
+            mediaSection.style.marginTop = '10px';
 
             if (videoId) {
                 const video = document.createElement('div');
                 video.className = 'video-wrapper';
-                video.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;
+                video.style.marginBottom = '30px';
+                
+                // Helper to get embed URL
+                const getEmbedUrl = (url) => {
+                    if (!url) return '';
+                    if (url.includes('youtube.com/embed/')) return url;
+                    let id = '';
+                    if (url.includes('youtu.be/')) {
+                        id = url.split('youtu.be/')[1].split('?')[0];
+                    } else if (url.includes('v=')) {
+                        id = url.split('v=')[1].split('&')[0];
+                    } else if (!url.includes('http')) {
+                        id = url; // Just an ID
+                    }
+                    return id ? `https://www.youtube.com/embed/${id}` : url;
+                };
+
+                video.innerHTML = `<iframe src="${getEmbedUrl(videoId)}" frameborder="0" allowfullscreen></iframe>`;
                 mediaSection.appendChild(video);
             }
 
             if (images && images.length > 0) {
                 const gallery = document.createElement('div');
                 gallery.className = 'gallery-grid';
-                gallery.style.gridTemplateColumns = 'repeat(3, 1fr)'; // 3 images per row like in image 2
-                gallery.innerHTML = images.map(src => `<img src="${src}" alt="${title}" style="height: 200px;">`).join('');
+                
+                if (galleryLayout === 'list') {
+                    // Full-width vertical list for tall screenshots
+                    gallery.style.display = 'flex';
+                    gallery.style.flexDirection = 'column';
+                    gallery.style.gap = '30px';
+                    gallery.innerHTML = images.map(src => `
+                        <div style="border-radius: 24px; overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                            <img src="${src}" alt="${title}" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                    `).join('');
+                } else {
+                    // Standard grid for smaller images
+                    gallery.style.display = 'grid';
+                    gallery.style.gridTemplateColumns = 'repeat(auto-fit, minmax(320px, 1fr))';
+                    gallery.style.gap = '24px';
+                    gallery.innerHTML = images.map(src => `
+                        <div style="border-radius: 24px; overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-color);">
+                            <img src="${src}" alt="${title}" style="width: 100%; height: 280px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                    `).join('');
+                }
+                
                 mediaSection.appendChild(gallery);
             }
 
-            container.appendChild(mediaSection);
+            wrapper.appendChild(mediaSection);
         }
+
+        container.appendChild(wrapper);
 
         // Re-initialize icons
         lucide.createIcons();
@@ -136,14 +228,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
+    const footerImg = document.getElementById('footer-img');
     const body = document.body;
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
+        footerImg.src = './Images/footer_logo_dark.png';
     }
 
     themeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        footerImg.src = body.classList.contains('dark-mode') ? './Images/footer_logo_dark.png' : './Images/Footer_logo.png';
     });
 });

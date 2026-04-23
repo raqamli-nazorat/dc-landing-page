@@ -144,6 +144,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Theme Toggle Logic
     const themeToggle = document.getElementById('theme-toggle');
+    const footerImg = document.getElementById('footer-img');
     const body = document.body;
 
     // Check for saved theme preference
@@ -151,6 +152,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
         themeToggle.classList.add('theme-toggle--active');
+        footerImg.src = './Images/Footer_logo_dark.png';
     }
 
     themeToggle.addEventListener('click', () => {
@@ -159,8 +161,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
+            footerImg.src = './Images/Footer_logo_dark.png';
         } else {
             localStorage.setItem('theme', 'light');
+            footerImg.src = './Images/Footer_logo.png';
         }
     });
 

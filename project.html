@@ -24,10 +24,11 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="index.html#loyihalar" class="nav__link" data-i18n="nav_projects">Loyihalar</a></li>
-                    <li><a href="index.html#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a></li>
+                    <li><a href="index.html#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a>
+                    </li>
                 </ul>
             </nav>
-            
+
             <div class="header__actions">
                 <button class="theme-toggle" id="theme-toggle">
                     <i data-lucide="sun" class="theme-icon-sun"></i>
@@ -54,16 +55,24 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn--aloqa"><span data-i18n="btn_contact">Aloqa</span> <i
-                        data-lucide="phone"></i></button>
+                <button class="btn btn--aloqa">
+                    <span data-i18n="btn_contact">Aloqa</span>
+                    <i data-lucide="phone"></i>
+                </button>
+                <button class="btn btn--project">
+                    <span data-i18n="btn_new_project">Yangi loyiha</span>
+                    <i data-lucide="mouse-pointer-2"></i>
+                </button>
             </div>
         </div>
     </header>
 
     <main class="project-detail-container container">
-        <div class="breadcrumbs" style="margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">
-            <span data-i18n="nav_home" onclick="location.href='index.html'" style="cursor: pointer;">Asosiy</span> / 
-            <span data-i18n="nav_projects" onclick="location.href='index.html#loyihalar'" style="cursor: pointer;">Loyihalar</span>
+        <div class="breadcrumbs" style="margin-top: -50px; margin-left: 140px;
+         font-size: 14px; color: var(--text-muted);">
+            <span data-i18n="nav_home" onclick="location.href='index.html'" style="cursor: pointer;">Asosiy</span> /
+            <span data-i18n="nav_projects" style="color: var(--text-title);"
+                onclick="location.href='index.html#loyihalar'" style="cursor: pointer;">Loyihalar</span>
         </div>
         <div id="project-content">
             <!-- Dynamic sections -->
@@ -73,12 +82,18 @@
     <footer class="footer">
         <div class="footer__content">
             <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
-                <img src="./Images/footer_logo.png" alt="">
+                <img id="footer-img" src="./Images/Footer_logo.png" alt="">
                 <span class="logo__text">Raqamli Nazorat</span>
             </div>
             <div class="footer__actions">
-                <button class="btn btn--aloqa" data-i18n="btn_contact">Aloqa <i data-lucide="phone"></i></button>
-                <button class="btn btn--project" data-i18n="btn_new_project">Yangi loyiha <i data-lucide="mouse-pointer-2"></i></button>
+                <button class="btn btn--aloqa">
+                    <span data-i18n="btn_contact">Aloqa</span>
+                    <i data-lucide="phone"></i>
+                </button>
+                <button class="btn btn--project">
+                    <span data-i18n="btn_new_project">Yangi loyiha</span>
+                    <i data-lucide="mouse-pointer-2"></i>
+                </button>
             </div>
         </div>
     </footer>

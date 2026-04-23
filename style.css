@@ -142,7 +142,8 @@ h3 {
     box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
 }
 
-.btn--aloqa i, .btn--project i {
+.btn--aloqa i,
+.btn--project i {
     width: 18px;
     height: 18px;
 }
@@ -361,6 +362,11 @@ body.dark-mode .lang-switcher__option:hover {
     overflow: hidden;
     height: 90vh;
     background: var(--bg-hero);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .hero__content {
@@ -578,7 +584,7 @@ body.dark-mode .tag--active {
     background: var(--white);
     color: #000000;
     padding: 80px 60px;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-sm);
 }
 
 .features__main-title {
@@ -745,7 +751,7 @@ body.dark-mode .tag--active {
 .about__card {
     background: var(--white);
     padding: 60px 100px;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     gap: 60px;
@@ -814,7 +820,8 @@ body.dark-mode .tag--active {
         gap: 10px;
     }
 
-    .btn--aloqa, .btn--project {
+    .btn--aloqa,
+    .btn--project {
         padding: 10px 16px;
         font-size: 14px;
     }
@@ -895,6 +902,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    min-height: 67.5vh;
 }
 
 .project-detail__header {
@@ -903,7 +911,8 @@ body {
 }
 
 .project-detail__title {
-    font-size: 32px; /* Smaller */
+    font-size: 32px;
+    /* Smaller */
     font-family: var(--unbounded);
     font-weight: 600;
     color: var(--text-title);
@@ -911,7 +920,8 @@ body {
 }
 
 .project-detail__description {
-    font-size: 16px; /* Smaller */
+    font-size: 16px;
+    /* Smaller */
     line-height: 1.6;
     color: var(--text-muted);
 }
@@ -919,13 +929,15 @@ body {
 /* Info Grid */
 .info-card {
     background: var(--bg-card);
-    padding: 30px; /* Smaller padding */
+    padding: 30px;
+    /* Smaller padding */
     border-radius: 24px;
     border: 1px solid var(--border-color);
 }
 
 .info-card__title {
-    font-size: 18px; /* Smaller */
+    font-size: 18px;
+    /* Smaller */
     font-family: var(--unbounded);
     font-weight: 600;
     margin-bottom: 12px;
@@ -933,7 +945,8 @@ body {
 }
 
 .info-card__text {
-    font-size: 14px; /* Smaller */
+    font-size: 14px;
+    /* Smaller */
     line-height: 1.6;
     color: var(--text-muted);
 }
@@ -942,29 +955,48 @@ body {
 .project-dark-section {
     background: #000;
     color: white;
-    padding: 40px; /* Smaller padding */
+    padding: 40px;
+    /* Smaller padding */
     border-radius: 24px;
 }
 
 .project-dark-section .section-title {
-    font-size: 20px; /* Smaller */
+    font-size: 20px;
+    /* Smaller */
 }
 
 .functions-list li {
-    font-size: 15px; /* Smaller */
+    font-size: 15px;
+    /* Smaller */
 }
 
 /* Content Block */
 .content-block {
-    padding: 40px; /* Smaller padding */
+    padding: 40px;
+    /* Smaller padding */
 }
 
 .content-block__title {
-    font-size: 20px; /* Smaller */
+    font-size: 20px;
+    /* Smaller */
 }
 
 .content-block__text {
-    font-size: 15px; /* Smaller */
+    font-size: 15px;
+    /* Smaller */
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 600px;
+    background: #000;
+    border-radius: 24px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
 }
 
 /* Dark Mode Overrides */
@@ -980,7 +1012,7 @@ body.dark-mode .content-block {
     .project-hero__title {
         font-size: 32px;
     }
-    
+
     .project-detail-container {
         padding-top: 80px;
         padding-left: 20px;
