@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.project-card, .feature-item, .stat-card, .about__card');
+    const animatedElements = document.querySelectorAll('.project-card, .feature-item, .about__card');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';

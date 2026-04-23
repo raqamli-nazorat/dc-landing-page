@@ -15,7 +15,7 @@
     --white: #ffffff;
     --border-color: #e2e8f0;
     --footer-bg: #fffdfd;
-    --features-bg: #000;
+    --features-bg: #191A1A;
     --features-text: #fff;
 
     --number: #3f51a3;
@@ -37,21 +37,20 @@
 
 /* Dark Mode Overrides */
 body.dark-mode {
-    --bg-main: #1a1a1a;
+    --bg-main: #222323;
     --bg-header: #000000;
     --bg-hero: #0f0f0f;
-    --bg-card: #121212;
+    --bg-card: #111;
     --bg-card-alt: #121212;
     --text-main: #f1f3f9;
     --text-title: #ffffff;
     --text-muted: #94a3b8;
     --border-color: rgba(255, 255, 255, 0.08);
     --footer-bg: #000000;
-    --features-bg: #fff;
-    --features-text: #000;
-    --number: #fff;
-    --card-action-bg: #ffffff;
-    --card-action-text: #000000;
+    --features-bg: #191A1A;
+    --features-text: #fff;
+    --card-action-bg: #222;
+    --card-action-text: #fff;
 }
 
 /* Reset & Base Styles */
@@ -286,19 +285,16 @@ body.dark-mode .theme-toggle {
 .theme-toggle .theme-icon-sun {
     opacity: 0;
     display: none;
-    filter: brightness(10);
 }
 
 .theme-toggle--active .theme-icon-moon {
     opacity: 0;
     display: none;
-    filter: brightness(10);
 }
 
 .theme-toggle--active .theme-icon-sun {
     opacity: 1;
     display: block;
-    filter: brightness(10);
 }
 
 .header__actions {
@@ -462,17 +458,18 @@ body.dark-mode .lang-switcher__option:hover {
 }
 
 .globe-background {
-    width: 800px;
+    width: 880px;
     height: 800px;
-    background: center/cover no-repeat url('./Images/globe.png');
+    background: center/cover no-repeat url('./Assets/globe.svg');
     margin-top: 30px;
-    margin-right: 40px;
-    opacity: 0.15;
+    margin-right: 10px;
+    /* opacity: 0.15; */
 }
 
 body.dark-mode .globe-background {
-    opacity: 0.4;
-    filter: invert(1) hue-rotate(180deg);
+    background-image: url('./Assets/globe_dark.svg');
+    /* opacity: 0.4; */
+    filter: brightness(1.2);
 }
 
 .btn-linear-gradient {
@@ -557,20 +554,25 @@ body.dark-mode .globe-background {
 .filter-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 50px;
+    gap: 10px;
+    margin-bottom: 40px;
 }
 
 .tag {
-    padding: 12px 28px;
+    padding: 10px 24px;
     border-radius: 100px;
     background: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(0, 0, 0);
     color: #000000;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
     font-weight: 600;
+    white-space: nowrap;
+}
+
+.tag.tag--active.features_tag{
+    border-radius: 10px !important;
 }
 
 .tag--active {
@@ -580,41 +582,37 @@ body.dark-mode .globe-background {
 }
 
 body.dark-mode .tag {
-    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.08);
     color: #ffffff;
 }
 
 body.dark-mode .tag--active {
-    background: #ffffff;
-    color: #000000;
-    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: transparent;
+    color: #ffffff;
 }
 
 .tag:hover:not(.tag--active) {
     background: rgba(0, 0, 0, 0.05);
-    border-color: black;
+    border-color: rgba(0, 0, 0, 0.3);
 }
 
 body.dark-mode .tag:hover:not(.tag--active) {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-body.dark-mode .tag {
-    background: #1a1a1a;
-    color: var(--white);
-    border-color: rgba(255, 255, 255, 0.1);
+.filter-tags--small .tag {
+    padding: 8px 20px;
+    font-size: 13px;
 }
 
-body.dark-mode .tag:hover {
-    border-color: var(--white);
+.features_tag{
+    border-radius: 10px !important;
 }
 
-body.dark-mode .tag--active {
-    background: var(--white);
-    color: #000000;
-    border-color: var(--white);
-}
+
 
 /* Features Section */
 .features {
@@ -784,7 +782,7 @@ body.dark-mode .project-card:hover {
 
 .project-card:hover .project-card__title {
     color: var(--white);
-    transform: translateX(5px);
+    transform: translateX(2px);
 }
 
 .project-card__description {
@@ -796,7 +794,7 @@ body.dark-mode .project-card:hover {
 
 .project-card:hover .project-card__description {
     color: rgba(255, 255, 255, 0.9);
-    transform: translateX(5px);
+    transform: translateX(2px);
 }
 
 .project-card__action {
@@ -819,7 +817,7 @@ body.dark-mode .project-card:hover {
     background: var(--white);
     color: #000000;
     border-color: var(--white);
-    transform: scale(1.1) rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .project-card--highlight {

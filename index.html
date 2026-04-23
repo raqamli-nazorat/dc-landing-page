@@ -8,6 +8,7 @@
     <meta name="description"
         content="O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Assets/footer_logo_dark.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
@@ -36,21 +37,21 @@
                 </button>
                 <div class="lang-switcher">
                     <div class="lang-switcher__current" id="lang-current">
-                        <img src="./Images/uzbekistan.png" alt="UZ">
+                        <img src="./Assets/UZB.svg" alt="UZ">
                         <span>UZ</span>
                         <img src="./Assets/arrow-up-01-sharp.svg" style="width: 25px; height: 25px;" alt="">
                     </div>
                     <div class="lang-switcher__dropdown" id="lang-dropdown">
                         <div class="lang-switcher__option" data-lang="uz">
-                            <img src="./Images/uzbekistan.png" alt="UZ" loading="lazy">
+                            <img src="./Assets/UZB.svg" alt="UZ" loading="lazy">
                             <span>O'zbekcha</span>
                         </div>
                         <div class="lang-switcher__option" data-lang="en">
-                            <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+                            <img src="./Assets/ENG.svg" alt="EN" loading="lazy">
                             <span>English</span>
                         </div>
                         <div class="lang-switcher__option" data-lang="ru">
-                            <img src="./Images/russia.png" alt="RU" loading="lazy">
+                            <img src="./Assets/RUS.svg" alt="RU" loading="lazy">
                             <span>Русский</span>
                         </div>
                     </div>
@@ -108,12 +109,12 @@
                 <div class="solutions-card">
                     <h2 class="section-title" data-i18n="solutions_title">Yechimlarimiz</h2>
                     <div class="filter-tags">
-                        <button data-i18n="monitoring_systems" class="tag tag--active">Monitoring tizimlari</button>
-                        <button data-i18n="gas_modems" class="tag">Gaz modemlari</button>
-                        <button data-i18n="it_devices" class="tag tag--active">IT qurilmalar</button>
-                        <button data-i18n="software_platforms" class="tag">Dasturiy platformalar</button>
-                        <button data-i18n="infrastructure_solutions" class="tag">Infratuzilma yechimlari</button>
-                        <button data-i18n="technical_support" class="tag tag--active">Texnik qo'llab-quvvatlash</button>
+                        <button data-i18n="monitoring_systems" class="tag tag--active features_tag">Monitoring tizimlari</button>
+                        <button data-i18n="gas_modems" class="tag features_tag">Gaz modemlari</button>
+                        <button data-i18n="it_devices" class="tag tag--active features_tag">IT qurilmalar</button>
+                        <button data-i18n="software_platforms" class="tag features_tag">Dasturiy platformalar</button>
+                        <button data-i18n="infrastructure_solutions" class="tag features_tag">Infratuzilma yechimlari</button>
+                        <button data-i18n="technical_support" class="tag tag--active features_tag">Texnik qo'llab-quvvatlash</button>
                     </div>
                 </div>
             </div>
@@ -185,6 +186,30 @@
             </div>
             <div class="projects__grid">
                 <!-- Project cards will be populated here -->
+                <div class="project-card" data-category="web" data-project-id="12">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_12_title">E-Komplektatsiya</h3>
+                        <p class="project-card__description" data-i18n="project-card_12_desc">
+                            Ishlab chiqarish va qurilish materiallari
+                            komplektatsiyasini boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="9">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_9_title">M-Gaz</h3>
+                        <p class="project-card__description" data-i18n="project-card_9_desc">
+                            G'az taqsimlash punktlari uchun zamonaviy nazorat va
+                            boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
                 <div class="project-card" data-category="ai" data-project-id="1">
                     <div class="project-card__content">
                         <h3 class="project-card__title" data-i18n="project-card_1_title">AI Call center</h3>
@@ -280,19 +305,7 @@
                         <i data-lucide="arrow-up-right"></i>
                     </div>
                 </div>
-                <div class="project-card" data-category="industrial" data-project-id="9">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_9_title">M-Gaz</h3>
-                        <p class="project-card__description" data-i18n="project-card_9_desc">
-                            G'az taqsimlash punktlari uchun zamonaviy nazorat va
-                            boshqaruv tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="industrial" data-project-id="10">
+                <div class="project-card" data-category="web" data-project-id="10">
                     <div class="project-card__content">
                         <h3 class="project-card__title" data-i18n="project-card_10_title">S-Gaz</h3>
                         <p class="project-card__description" data-i18n="project-card_10_desc">
@@ -316,19 +329,7 @@
                         <i data-lucide="arrow-up-right"></i>
                     </div>
                 </div>
-                <div class="project-card" data-category="web" data-project-id="12">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_12_title">E-Komplektatsiya</h3>
-                        <p class="project-card__description" data-i18n="project-card_12_desc">
-                            Ishlab chiqarish va qurilish materiallari
-                            komplektatsiyasini boshqaruv tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web" data-project-id="13">
+                <div class="project-card" data-category="industrial" data-project-id="13">
                     <div class="project-card__content">
                         <h3 class="project-card__title" data-i18n="project-card_13_title">Telman</h3>
                         <p class="project-card__description" data-i18n="project-card_13_desc">
@@ -390,7 +391,7 @@
             <div class="footer__actions">
                 <button class="btn btn--number" id="aloqa">
                     <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
-                    <span style="font-size: 15px; font-weight: 600;">+998 90 164 41 01</span>
+                    <span style="font-size: 15px; font-weight: 600;">+998 91 601 43 33</span>
                 </button>
             </div>
         </div>

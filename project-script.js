@@ -121,7 +121,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </div>
             `;
             wrapper.appendChild(infoGrid);
-            wrapper.appendChild(infoGrid);
 
             // 3. Black Functions Block
             if (features && features.length > 0) {
@@ -160,15 +159,28 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const galleryContainer = document.createElement('div');
                 galleryContainer.className = 'project-gallery-premium';
                 galleryContainer.style.marginTop = '24px';
-                galleryContainer.style.display = 'grid';
-                galleryContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(380px, 1fr))';
-                galleryContainer.style.gap = '24px';
                 
-                galleryContainer.innerHTML = images.map(src => `
-                    <div style="border-radius: 24px; overflow: hidden; border: 1px solid var(--border-color);">
-                        <img src="${src}" alt="${title}" style="width: 100%; height: 280px; object-fit: cover; transition: transform 0.3s ease; transform: scale(1.05);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1.05)'">
-                    </div>
-                `).join('');
+                if (galleryLayout === 'list') {
+                    galleryContainer.style.display = 'flex';
+                    galleryContainer.style.flexDirection = 'column';
+                    galleryContainer.style.gap = '24px';
+                } else {
+                    galleryContainer.style.display = 'grid';
+                    galleryContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(380px, 1fr))';
+                    galleryContainer.style.gap = '24px';
+                }
+                
+                galleryContainer.innerHTML = images.map(src => {
+                    const imgStyle = galleryLayout === 'list' 
+                        ? 'width: 100%; height: auto; object-fit: contain; transition: transform 0.3s ease; transform: scale(1);' 
+                        : 'width: 100%; height: 280px;';
+                    
+                    return `
+                        <div style="border-radius: 24px; overflow: hidden; border: 1px solid var(--border-color);">
+                            <img src="${src}" alt="${title}" style="${imgStyle} transition: transform 0.3s ease; transform: scale(1);" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                    `;
+                }).join('');
                 wrapper.appendChild(galleryContainer);
             }
 
@@ -234,11 +246,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
+        themeToggle.classList.add('theme-toggle--active');
         footerImg.src = './Assets/footer_logo_dark.png';
     }
 
     themeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
+        themeToggle.classList.toggle('theme-toggle--active');
         localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
         footerImg.src = body.classList.contains('dark-mode') ? './Assets/footer_logo_dark.png' : './Assets/footer_logo_light.png';
     });
