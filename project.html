@@ -12,6 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Anti-flash script -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+            document.documentElement.style.visibility = 'hidden';
+        })();
+    </script>
 </head>
 
 <body class="project-page">
@@ -103,7 +113,7 @@
                     <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
                     <span style="font-size: 15px; font-weight: 600;">+998 91 601 43 33</span>
                 </a>
-                <a href="mailto:info@example.com" target="_blank" class="btn btn--number">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alxsoft2018@gmail.com" target="_blank" class="btn btn--number">
                     <img src="./Assets/mail-02.svg" alt="" style="width: 18px; height: 18px;">
                 </a>
                 <a href="https://t.me/BAT2N93" target="_blank" class="btn btn--number">

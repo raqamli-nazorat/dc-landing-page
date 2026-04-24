@@ -16,7 +16,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Initial UI Update from localStorage
         const savedLang = (localStorage.getItem('selectedLang') || 'UZ').toUpperCase();
-        updateContent(savedLang);
+        await updateContent(savedLang); // Wait for content update
+
+        // Sync theme to body from html if set by anti-flash script
+        if (document.documentElement.classList.contains('dark-mode')) {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Show document now that it's ready
+        document.documentElement.style.visibility = 'visible';
 
         // Update switcher UI (text and flag)
         langCurrent.querySelector('span').textContent = savedLang;
@@ -26,6 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     } catch (error) {
         console.error('Failed to load translations:', error);
+        document.documentElement.style.visibility = 'visible'; // Ensure visibility even on error
     }
 
     // Tag filtering logic
@@ -35,13 +44,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     tags.forEach(tag => {
         tag.addEventListener('click', () => {
             const filter = tag.getAttribute('data-filter');
+            if (!filter) return; // Completely skip if no data-filter (e.g. features tags)
 
             // Handle active class
             const parent = tag.parentElement;
             parent.querySelectorAll('.tag').forEach(t => t.classList.remove('tag--active'));
             tag.classList.add('tag--active');
-
-            if (!filter) return; // Skip if no data-filter (e.g. overview tags)
 
             projects.forEach(project => {
                 const category = project.getAttribute('data-category');
@@ -122,6 +130,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     langCurrent.addEventListener('click', (e) => {
         e.stopPropagation();
+        
+        // Close mobile nav menu if open
+        if (typeof navMenu !== 'undefined' && navMenu && navMenu.classList.contains('nav--active')) {
+            navMenu.classList.remove('nav--active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            }
+        }
+        
+        // Close filter dropdown if open
+        const filterHeader = document.querySelector('.filter-tags--small');
+        if (filterHeader) filterHeader.classList.remove('filter-tags--open');
+
         langDropdown.classList.toggle('lang-switcher__dropdown--active');
     });
 
@@ -198,6 +221,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
+            
+            // Close filter dropdown if open
+            const filterHeader = document.querySelector('.filter-tags--small');
+            if (filterHeader) filterHeader.classList.remove('filter-tags--open');
+            
+            // Close language dropdown if open
+            if (langDropdown) langDropdown.classList.remove('active');
+
             navMenu.classList.toggle('nav--active');
             
             // Toggle icon between menu and x
@@ -213,10 +244,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Project Filter Logic Enhancement
     tags.forEach(tag => {
-        tag.addEventListener('click', () => {
+        tag.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 const filterHeader = tag.parentElement;
-                filterHeader.classList.remove('filter-tags--open');
+                if (filterHeader.classList.contains('filter-tags--small')) {
+                    if (filterHeader.classList.contains('filter-tags--open')) {
+                        e.stopPropagation(); // Prevent container's toggle listener
+                        filterHeader.classList.remove('filter-tags--open');
+                    }
+                    // If not open, let it bubble to filterHeader to trigger toggle (open)
+                }
             }
         });
     });
@@ -245,6 +282,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (filterHeader) {
         filterHeader.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
+                e.stopPropagation();
+                
+                // Close mobile nav menu if open
+                if (navMenu) {
+                    navMenu.classList.remove('nav--active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.setAttribute('data-lucide', 'menu');
+                        lucide.createIcons();
+                    }
+                }
+                
+                // Close language dropdown if open
+                if (langDropdown) langDropdown.classList.remove('active');
+
                 filterHeader.classList.toggle('filter-tags--open');
             }
         });

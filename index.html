@@ -15,6 +15,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Anti-flash script -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            document.documentElement.style.visibility = 'hidden';
+        })();
+    </script>
 </head>
 
 <body>
@@ -83,39 +93,38 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container hero__container">
-                <div class="hero__content">
-                    <h1 class="hero__title" data-i18n="hero_title">
-                        Kelajakni raqamli boshqaramiz
-                        <span class="hero__title-icon">
-                            <img id="hero-icon" src="./Assets/hero_icon_light.svg" alt="" loading="lazy">
-                        </span>
-                    </h1>
-                    <p class="hero__description" data-i18n="hero_desc">
-                        O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan
-                        boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.
-                    </p>
-                    <div class="hero__actions">
-                        <a href="#loyihalar" class="btn btn--hero btn--hero-primary">
-                            <span data-i18n="hero_btn">Loyihalarni ko'rish</span>
-                            <i data-lucide="rocket"></i>
-                        </a>
-                        <a target="_blank" href="https://boshqaruv.raqamlinazorat.uz"
-                            class="btn btn--hero btn--hero-secondary btn--mobile-only">
-                            <span data-i18n="btn_new_project">Yangi loyiha</span>
-                            <i data-lucide="sparkles"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero__graphic">
-                    <!-- Background wireframe globe handled via CSS/SVG or image -->
-                    <div class="globe-background"></div>
+    <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title" data-i18n="hero_title">
+                    Kelajakni raqamli boshqaramiz
+                    <span class="hero__title-icon">
+                        <img id="hero-icon" src="./Assets/hero_icon_light.svg" alt="" loading="lazy">
+                    </span>
+                </h1>
+                <p class="hero__description" data-i18n="hero_desc">
+                    O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan
+                    boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.
+                </p>
+                <div class="hero__actions">
+                    <a href="#loyihalar" class="btn btn--hero btn--hero-primary">
+                        <span data-i18n="hero_btn">Loyihalarni ko'rish</span>
+                        <i data-lucide="rocket"></i>
+                    </a>
+                    <a target="_blank" href="https://boshqaruv.raqamlinazorat.uz"
+                        class="btn btn--hero btn--hero-secondary btn--mobile-only">
+                        <span data-i18n="btn_new_project">Yangi loyiha</span>
+                        <i data-lucide="sparkles"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-
+            <div class="hero__graphic">
+                <!-- Background wireframe globe handled via CSS/SVG or image -->
+                <div class="globe-background"></div>
+            </div>
+        </div>
+    </section>
+    <main>
         <section class="overview container">
             <div class="overview__grid">
                 <div class="stats">
@@ -419,7 +428,8 @@
                     <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
                     <span style="font-size: 15px; font-weight: 600;">+998 91 601 43 33</span>
                 </a>
-                <a href="mailto:info@example.com" target="_blank" class="btn btn--number">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alxsoft2018@gmail.com" target="_blank"
+                    class="btn btn--number">
                     <img src="./Assets/mail-02.svg" alt="" style="width: 18px; height: 18px;">
                 </a>
                 <a href="https://t.me/BAT2N93" target="_blank" class="btn btn--number">

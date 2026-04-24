@@ -21,8 +21,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         translations = await response.json();
 
         const savedLang = (localStorage.getItem('selectedLang') || 'UZ').toUpperCase();
-        updateContent(savedLang);
+        await updateContent(savedLang); // Wait for content update
         populateProjectDetails(projectId, savedLang);
+
+        // Sync theme to body from html if set by anti-flash script
+        if (document.documentElement.classList.contains('dark-mode')) {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Show document now that it's ready
+        document.documentElement.style.visibility = 'visible';
 
         langCurrent.querySelector('span').textContent = savedLang;
         const option = Array.from(langOptions).find(opt => opt.getAttribute('data-lang').toUpperCase() === savedLang);
@@ -31,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     } catch (error) {
         console.error('Failed to load translations:', error);
+        document.documentElement.style.visibility = 'visible'; // Ensure visibility even on error
     }
 
     function updateContent(lang) {
