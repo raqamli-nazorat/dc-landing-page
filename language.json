@@ -254,7 +254,6 @@
                         "./ProjectDetailImages/project_9_img_1.jpg",
                         "./ProjectDetailImages/project_9_img_2.jpg"
                 ],
-                "project-card_9_gallery_layout": "list",
                 "project-card_10_detail": "Suyultirilgan gaz (LPG) logistikasini boshqarish tizimi",
                 "project-card_10_features": [
                         "Gaz ballonlari hisobini yuritish",
@@ -339,11 +338,6 @@
                 "project-card_13_users": "Mazkur tizimdan shifokorlar, tibbiyot xodimlari, administratorlar va sog'liqni saqlash tashkilotlari rahbarlari foydalanadi.",
                 "project-card_13_work": "Tibbiy ma'lumotlarni boshqarish va bemorlar bilan ishlash tizimi joriy etilgan. Elektron kartalar yuritish va xizmatlarni nazorat qilish mexanizmlari yo'lga qo'yilgan.",
                 "project-card_13_screens": "Tizim interfeysi boshqaruv paneli, bemor kartasi sahifasi, tibbiy xizmatlar oynasi, analitika va hisobotlar bo'limi hamda administrator boshqaruv panelidan iborat.",
-                "project-card_13_images": [
-                        "./ProjectDetailImages/project_13_img_1.jpg",
-                        "./ProjectDetailImages/project_13_img_2.jpg"
-                ],
-                "project-card_13_gallery_layout": "list",
                 "project-card_14_detail": "Yashil energiya va qayta tiklanuvchi resurslarni boshqarish tizimi",
                 "project-card_14_features": [
                         "Quyosh va boshqa energiya manbalarini monitoring qilish",
@@ -362,11 +356,6 @@
                 "project-card_14_users": "Mazkur tizimdan energetika mutaxassislari, muhandislar, davlat tashkilotlari vakillari va operatorlar foydalanadi.",
                 "project-card_14_work": "Qayta tiklanuvchi energiya manbalarini monitoring qilish va tahlil qilish tizimi joriy etilgan. Energiya ishlab chiqarish va iste'mol ko'rsatkichlarini nazorat qilish mexanizmlari yo'lga qo'yilgan.",
                 "project-card_14_screens": "Tizim interfeysi boshqaruv paneli, energiya monitoring sahifasi, analitika va hisobotlar oynasi, ogohlantirishlar bo'limi hamda foydalanuvchilarni boshqarish sahifasidan iborat.",
-                "project-card_14_images": [
-                        "./ProjectDetailImages/project_14_img_1.jpg",
-                        "./ProjectDetailImages/project_14_img_2.jpg"
-                ],
-                "project-card_14_gallery_layout": "list",
                 "project-card_15_detail": "Harbiy tayyorgarlik va simulyatsiya tizimi",
                 "project-card_15_features": [
                         "Simulyatsiya asosida treninglar",
@@ -385,11 +374,6 @@
                 "project-card_15_users": "Mazkur tizimdan harbiy xizmatchilar, instruktorlar va boshqaruv xodimlari foydalanadi.",
                 "project-card_15_work": "Harbiy trening va simulyatsiya jarayonlarini boshqarish tizimi joriy etilgan. Mashg'ulotlarni rejalashtirish va natijalarni tahlil qilish mexanizmlari yo'lga qo'yilgan.",
                 "project-card_15_screens": "Tizim interfeysi boshqaruv paneli, trening sahifasi, natijalar va analitika oynasi, foydalanuvchilarni boshqarish bo'limi hamda sozlamalar sahifasidan iborat.",
-                "project-card_15_images": [
-                        "./ProjectDetailImages/project_15_img_1.jpg",
-                        "./ProjectDetailImages/project_15_img_2.jpg"
-                ],
-                "project-card_15_gallery_layout": "list",
                 "about_title": "Biz haqimizda",
                 "about_text": "\"Raqamli Nazorat\" — bu O'zbekistonning raqamli modernizatsiyasiga hissa qo'shayotgan, yuqori texnologiyali loyihalarni amalga oshiruvchi jamoa. Bizning maqsadimiz — eng murakkab texnik topshiriqlarni eng sodda va samarali yechimlar bilan ta'minlashdir."
         },
@@ -734,11 +718,6 @@
                 "project-card_13_users": "This system is used by doctors, medical staff, administrators, and healthcare organization leaders.",
                 "project-card_13_work": "A system for medical data management and working with patients has been implemented. Mechanisms for maintaining electronic records and monitoring services have been established.",
                 "project-card_13_screens": "The system interface consists of a management panel, a patient card page, a medical services window, an analytics and reports section, and an administrator management panel.",
-                "project-card_13_images": [
-                        "./ProjectDetailImages/project_13_img_1.jpg",
-                        "./ProjectDetailImages/project_13_img_2.jpg"
-                ],
-                "project-card_13_gallery_layout": "list",
                 "project-card_14_detail": "Green energy and renewable resource management system",
                 "project-card_14_features": [
                         "Monitoring of solar and other energy sources",
@@ -757,11 +736,6 @@
                 "project-card_14_users": "This system is used by energy specialists, engineers, representatives of state organizations, and operators.",
                 "project-card_14_work": "A system for monitoring and analyzing renewable energy sources has been implemented. Mechanisms for controlling energy production and consumption indicators have been established.",
                 "project-card_14_screens": "The system interface consists of a management panel, an energy monitoring page, an analytics and reports window, an alerts section, and a user management page.",
-                "project-card_14_images": [
-                        "./ProjectDetailImages/project_14_img_1.jpg",
-                        "./ProjectDetailImages/project_14_img_2.jpg"
-                ],
-                "project-card_14_gallery_layout": "list",
                 "project-card_15_detail": "Military training and simulation system",
                 "project-card_15_features": [
                         "Simulation-based training",
@@ -780,11 +754,6 @@
                 "project-card_15_users": "This system is used by military personnel, instructors, and management staff.",
                 "project-card_15_work": "A military training and simulation process management system has been implemented. Mechanisms for planning exercises and analyzing results have been established.",
                 "project-card_15_screens": "The system interface consists of a management panel, a training page, a results and analytics window, a user management section, and a settings page.",
-                "project-card_15_images": [
-                        "./ProjectDetailImages/project_15_img_1.jpg",
-                        "./ProjectDetailImages/project_15_img_2.jpg"
-                ],
-                "project-card_15_gallery_layout": "list",
                 "about_title": "About Us",
                 "about_text": "\"Digital Control\" — is a team implementing high-tech projects, contributing to the digital modernization of Uzbekistan. Our goal is to provide the most simple and effective solutions to the most complex technical tasks."
         },
@@ -1129,11 +1098,6 @@
                 "project-card_13_users": "Этой системой пользуются врачи, медицинские работники, администраторы и руководители организаций здравоохранения.",
                 "project-card_13_work": "Внедрена система управления медицинскими данными и работы с пациентами. Налажены механизмы ведения электронных карт и контроля услуг.",
                 "project-card_13_screens": "Интерфейс системы состоит из панели управления, страницы медицинской карты пациента, окна медицинских услуг, раздела аналитики и отчетов, а также панели управления администратора.",
-                "project-card_13_images": [
-                        "./ProjectDetailImages/project_13_img_1.jpg",
-                        "./ProjectDetailImages/project_13_img_2.jpg"
-                ],
-                "project-card_13_gallery_layout": "list",
                 "project-card_14_detail": "Система управления зеленой энергией и возобновляемыми ресурсами",
                 "project-card_14_features": [
                         "Мониторинг солнечных и других источников энергии",
@@ -1152,11 +1116,6 @@
                 "project-card_14_users": "Этой системой пользуются специалисты по энергетике, инженеры, представители государственных организаций и операторы.",
                 "project-card_14_work": "Внедрена система мониторинга и анализа возобновляемых источников энергии. Налажены механизмы контроля показателей производства и потребления энергии.",
                 "project-card_14_screens": "Интерфейс системы состоит из панели управления, страницы мониторинга энергии, окна аналитики и отчетов, раздела оповещений и страницы управления пользователями.",
-                "project-card_14_images": [
-                        "./ProjectDetailImages/project_14_img_1.jpg",
-                        "./ProjectDetailImages/project_14_img_2.jpg"
-                ],
-                "project-card_14_gallery_layout": "list",
                 "project-card_15_detail": "Система военной подготовки и симуляции",
                 "project-card_15_features": [
                         "Обучение на основе симуляции",
@@ -1175,11 +1134,6 @@
                 "project-card_15_users": "Этой системой пользуются военнослужащие, инструкторы и руководящий состав.",
                 "project-card_15_work": "Внедрена система управления процессами военной подготовки и симуляции. Налажены механизмы планирования учений и анализа результатов.",
                 "project-card_15_screens": "Интерфейс системы состоит из панели управления, страницы тренировок, окна результатов и аналитики, раздела управления пользователями и страницы настроек.",
-                "project-card_15_images": [
-                        "./ProjectDetailImages/project_15_img_1.jpg",
-                        "./ProjectDetailImages/project_15_img_2.jpg"
-                ],
-                "project-card_15_gallery_layout": "list",
                 "about_title": "О нас",
                 "about_text": "«Raqamli Nazorat» — это команда, реализующая высокотехнологичные проекты и вносящая вклад в цифровую модернизацию Узбекистана. Наша цель — предложить самые простые и эффективные решения для самых сложных технических задач."
         }

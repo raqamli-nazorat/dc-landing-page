@@ -21,7 +21,8 @@
     <header class="header container">
         <div class="header__container">
             <div class="logo">
-                <img src="./Assets/Navbar_logo.svg" alt="" loading="lazy">
+                <img src="./Assets/Navbar_logo.svg" alt="" loading="lazy" class="logo--desktop">
+                <img src="./Assets/navbar_mobile_logo.svg" alt="" loading="lazy" class="logo--mobile">
                 <span class="logo__text">Raqamli Nazorat</span>
             </div>
             <nav class="nav">
@@ -29,6 +30,17 @@
                     <li><a href="#loyihalar" class="nav__link" data-i18n="nav_projects">Loyihalar</a></li>
                     <li><a href="#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a></li>
                 </ul>
+                <div class="nav__mobile-actions">
+                    <div class="divider"></div>
+                    <div class="mobile-theme-switcher">
+                        <button class="theme-btn theme-btn--light active" id="theme-light">
+                            <i data-lucide="sun"></i>
+                        </button>
+                        <button class="theme-btn theme-btn--dark" id="theme-dark">
+                            <i data-lucide="moon"></i>
+                        </button>
+                    </div>
+                </div>
             </nav>
             <div class="header__actions">
                 <button class="theme-toggle" id="theme-toggle">
@@ -64,6 +76,9 @@
                     <span data-i18n="btn_new_project">Yangi loyiha</span>
                     <i data-lucide="mouse-pointer-2"></i>
                 </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -82,10 +97,17 @@
                         O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan
                         boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.
                     </p>
-                    <a href="#loyihalar" class="btn btn--large btn-linear-gradient">
-                        <span data-i18n="hero_btn">Loyihalarni ko'rish</span>
-                        <i data-lucide="rocket" style="width: 20px; height: 20px;"></i>
-                    </a>
+                    <div class="hero__actions">
+                        <a href="#loyihalar" class="btn btn--hero btn--hero-primary">
+                            <span data-i18n="hero_btn">Loyihalarni ko'rish</span>
+                            <i data-lucide="rocket"></i>
+                        </a>
+                        <a target="_blank" href="https://boshqaruv.raqamlinazorat.uz"
+                            class="btn btn--hero btn--hero-secondary btn--mobile-only">
+                            <span data-i18n="btn_new_project">Yangi loyiha</span>
+                            <i data-lucide="sparkles"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="hero__graphic">
                     <!-- Background wireframe globe handled via CSS/SVG or image -->
@@ -109,12 +131,15 @@
                 <div class="solutions-card">
                     <h2 class="section-title" data-i18n="solutions_title">Yechimlarimiz</h2>
                     <div class="filter-tags">
-                        <button data-i18n="monitoring_systems" class="tag tag--active features_tag">Monitoring tizimlari</button>
+                        <button data-i18n="monitoring_systems" class="tag tag--active features_tag">Monitoring
+                            tizimlari</button>
                         <button data-i18n="gas_modems" class="tag features_tag">Gaz modemlari</button>
                         <button data-i18n="it_devices" class="tag tag--active features_tag">IT qurilmalar</button>
                         <button data-i18n="software_platforms" class="tag features_tag">Dasturiy platformalar</button>
-                        <button data-i18n="infrastructure_solutions" class="tag features_tag">Infratuzilma yechimlari</button>
-                        <button data-i18n="technical_support" class="tag tag--active features_tag">Texnik qo'llab-quvvatlash</button>
+                        <button data-i18n="infrastructure_solutions" class="tag features_tag">Infratuzilma
+                            yechimlari</button>
+                        <button data-i18n="technical_support" class="tag tag--active features_tag">Texnik
+                            qo'llab-quvvatlash</button>
                     </div>
                 </div>
             </div>
@@ -384,15 +409,22 @@
 
     <footer class="footer">
         <div class="footer__content">
-            <div class="logo">
-                <img id="footer-img" src="./Assets/Footer_logo.svg" alt="" loading="lazy">
+            <div class="footer-logo">
+                <img id="footer-img" src="./Assets/Footer_logo.svg" alt="" loading="lazy" class="footer-logo--desktop">
+                <img src="./Assets/footer_mobile_logo.svg" alt="" loading="lazy" class="footer-logo--mobile">
                 <span class="logo__text">Raqamli Nazorat</span>
             </div>
             <div class="footer__actions">
-                <button class="btn btn--number" id="aloqa">
+                <a href="tel:+998916014333" target="_blank" class="btn btn--number" id="aloqa">
                     <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
                     <span style="font-size: 15px; font-weight: 600;">+998 91 601 43 33</span>
-                </button>
+                </a>
+                <a href="mailto:info@example.com" target="_blank" class="btn btn--number">
+                    <img src="./Assets/mail-02.svg" alt="" style="width: 18px; height: 18px;">
+                </a>
+                <a href="https://t.me/BAT2N93" target="_blank" class="btn btn--number">
+                    <img src="./Assets/telegram.svg" alt="" style="width: 18px; height: 18px;">
+                </a>
             </div>
         </div>
     </footer>

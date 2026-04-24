@@ -18,15 +18,26 @@
     <header class="header container">
         <div class="header__container">
             <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
-                <img src="./Assets/Navbar_logo.svg" alt="">
+                <img src="./Assets/Navbar_logo.svg" alt="" loading="lazy" class="logo--desktop">
+                <img src="./Assets/navbar_mobile_logo.svg" alt="" loading="lazy" class="logo--mobile">
                 <span class="logo__text">Raqamli Nazorat</span>
             </div>
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="index.html#loyihalar" class="nav__link" data-i18n="nav_projects">Loyihalar</a></li>
-                    <li><a href="index.html#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a>
-                    </li>
+                    <li><a href="index.html#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a></li>
                 </ul>
+                <div class="nav__mobile-actions">
+                    <div class="divider"></div>
+                    <div class="mobile-theme-switcher">
+                        <button class="theme-btn theme-btn--light active" id="theme-light">
+                            <i data-lucide="sun"></i>
+                        </button>
+                        <button class="theme-btn theme-btn--dark" id="theme-dark">
+                            <i data-lucide="moon"></i>
+                        </button>
+                    </div>
+                </div>
             </nav>
 
             <div class="header__actions">
@@ -36,26 +47,26 @@
                 </button>
                 <div class="lang-switcher">
                     <div class="lang-switcher__current" id="lang-current">
-                        <img src="./Assets/uzbekistan.svg" alt="UZ">
+                        <img src="./Assets/UZB.svg" alt="UZ">
                         <span>UZ</span>
                         <img src="./Assets/arrow-up-01-sharp.svg" style="width: 25px; height: 25px;" alt="">
                     </div>
                     <div class="lang-switcher__dropdown" id="lang-dropdown">
                         <div class="lang-switcher__option" data-lang="uz">
-                            <img src="./Assets/UZB.svg" alt="UZ">
+                            <img src="./Assets/UZB.svg" alt="UZ" loading="lazy">
                             <span>O'zbekcha</span>
                         </div>
                         <div class="lang-switcher__option" data-lang="en">
-                            <img src="./Assets/ENG.svg" alt="EN">
+                            <img src="./Assets/ENG.svg" alt="EN" loading="lazy">
                             <span>English</span>
                         </div>
                         <div class="lang-switcher__option" data-lang="ru">
-                            <img src="./Assets/RUS.svg" alt="RU">
+                            <img src="./Assets/RUS.svg" alt="RU" loading="lazy">
                             <span>Русский</span>
                         </div>
                     </div>
                 </div>
-                <a href="#aloqa" class="btn btn--aloqa">
+                <a href="index.html#aloqa" class="btn btn--aloqa">
                     <span data-i18n="btn_contact">Aloqa</span>
                     <i data-lucide="phone"></i>
                 </a>
@@ -63,13 +74,16 @@
                     <span data-i18n="btn_new_project">Yangi loyiha</span>
                     <i data-lucide="mouse-pointer-2"></i>
                 </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
             </div>
         </div>
     </header>
 
     <main class="project-detail-container container">
-        <div class="breadcrumbs" style="margin-top: -50px; font-size: 15px;">
-            <span data-i18n="nav_home" onclick="location.href='index.html'" style="cursor: pointer;color: var(--text-muted);">Asosiy</span> /
+        <div class="breadcrumbs">
+            <span data-i18n="nav_home" onclick="location.href='index.html'" style="cursor: pointer;color: var(--text-muted);">Asosiy</span>
             <span data-i18n="nav_projects" style="color: var(--text-title); cursor: pointer;" onclick="location.href='index.html#loyihalar'">Loyihalar</span>
         </div>
         <div id="project-content">
@@ -79,15 +93,22 @@
 
     <footer class="footer">
         <div class="footer__content">
-            <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
-                <img id="footer-img" src="./Images/Footer_logo.png" alt="">
+            <div class="footer-logo" onclick="location.href='index.html'" style="cursor: pointer;">
+                <img id="footer-img" src="./Assets/Footer_logo.svg" alt="" loading="lazy" class="footer-logo--desktop">
+                <img src="./Assets/footer_mobile_logo.svg" alt="" loading="lazy" class="footer-logo--mobile">
                 <span class="logo__text">Raqamli Nazorat</span>
             </div>
             <div class="footer__actions">
-                <button class="btn btn--number" id="aloqa">
+                <a href="tel:+998916014333" target="_blank" class="btn btn--number" id="aloqa">
                     <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
                     <span style="font-size: 15px; font-weight: 600;">+998 91 601 43 33</span>
-                </button>
+                </a>
+                <a href="mailto:info@example.com" target="_blank" class="btn btn--number">
+                    <img src="./Assets/mail-02.svg" alt="" style="width: 18px; height: 18px;">
+                </a>
+                <a href="https://t.me/BAT2N93" target="_blank" class="btn btn--number">
+                    <img src="./Assets/telegram.svg" alt="" style="width: 18px; height: 18px;">
+                </a>
             </div>
         </div>
     </footer>

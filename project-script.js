@@ -43,6 +43,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
+
+    window.showImgBox = function(img) {
+        const imgBox = document.createElement('div');
+        imgBox.className = 'img-box';
+        imgBox.innerHTML = `
+            <div class="img-box__content">
+                <img src="${img}" alt="">
+            </div>
+        `;
+        imgBox.onclick = () => imgBox.remove();
+        document.body.appendChild(imgBox);
+    }
+
     function populateProjectDetails(id, lang) {
         const project = translations[lang];
         if (!project) return;
@@ -82,7 +95,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (isPremium) {
             // PREMIUM FIGMA LAYOUT (ID 1 ONLY)
             wrapper.style.gap = '24px';
-            
+
             // 1. Blue Header Card
             const headerBlock = document.createElement('div');
             headerBlock.className = 'project-header-premium';
@@ -159,8 +172,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const galleryContainer = document.createElement('div');
                 galleryContainer.className = 'project-gallery-premium';
                 galleryContainer.style.marginTop = '24px';
-                
+
                 if (galleryLayout === 'list') {
+                    galleryContainer.classList.add('project-gallery-premium--list');
                     galleryContainer.style.display = 'flex';
                     galleryContainer.style.flexDirection = 'column';
                     galleryContainer.style.gap = '24px';
@@ -168,16 +182,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                     galleryContainer.style.display = 'grid';
                     galleryContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(380px, 1fr))';
                     galleryContainer.style.gap = '24px';
+                    galleryContainer.style.height = '380px';
                 }
-                
+
                 galleryContainer.innerHTML = images.map(src => {
-                    const imgStyle = galleryLayout === 'list' 
-                        ? 'width: 100%; height: auto; object-fit: contain; transition: transform 0.3s ease; transform: scale(1);' 
-                        : 'width: 100%; height: 280px;';
-                    
                     return `
-                        <div style="border-radius: 24px; overflow: hidden; border: 1px solid var(--border-color);">
-                            <img src="${src}" alt="${title}" style="${imgStyle} transition: transform 0.3s ease; transform: scale(1);" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                        <div onclick="showImgBox('${src}')" style="cursor: pointer;">
+                            <img style="height: 100%; object-fit: cover;" src="${src}" alt="${title}">
                         </div>
                     `;
                 }).join('');
@@ -188,7 +199,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (advantages || results || users || work || screens) {
                 const detailsSection = document.createElement('div');
                 detailsSection.className = 'project-details-premium';
-                
+
                 const addSec = (title, text) => {
                     if (!text) return '';
                     return `
@@ -208,7 +219,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `;
                 wrapper.appendChild(detailsSection);
             }
-        } 
+        }
 
         container.appendChild(wrapper);
 
@@ -239,21 +250,76 @@ document.addEventListener("DOMContentLoaded", async () => {
         langDropdown.classList.remove('lang-switcher__dropdown--active');
     });
 
-    // Theme Toggle
+    // Elements
+    const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
     const footerImg = document.getElementById('footer-img');
-    const body = document.body;
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeToggle.classList.add('theme-toggle--active');
-        footerImg.src = './Assets/footer_logo_dark.png';
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.querySelector('.nav');
+    const themeLight = document.getElementById('theme-light');
+    const themeDark = document.getElementById('theme-dark');
+
+    // Theme Management
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            body.classList.add('dark-mode');
+            if (themeToggle) themeToggle.classList.add('theme-toggle--active');
+            if (themeDark) themeDark.classList.add('active');
+            if (themeLight) themeLight.classList.remove('active');
+            if (footerImg) footerImg.src = './Assets/footer_logo_dark.png';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.remove('dark-mode');
+            if (themeToggle) themeToggle.classList.remove('theme-toggle--active');
+            if (themeLight) themeLight.classList.add('active');
+            if (themeDark) themeDark.classList.remove('active');
+            if (footerImg) footerImg.src = './Assets/footer_logo_light.png';
+            localStorage.setItem('theme', 'light');
+        }
     }
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        themeToggle.classList.toggle('theme-toggle--active');
-        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-        footerImg.src = body.classList.contains('dark-mode') ? './Assets/footer_logo_dark.png' : './Assets/footer_logo_light.png';
+    // Initial Theme Setup
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+    }
+
+    if (themeLight && themeDark) {
+        themeLight.addEventListener('click', () => setTheme('light'));
+        themeDark.addEventListener('click', () => setTheme('dark'));
+    }
+
+    // Mobile Menu Toggle
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('nav--active');
+
+            // Toggle icon between menu and x
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('nav--active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+    }
+
+    // Close menu on click outside
+    document.addEventListener('click', (e) => {
+        if (navMenu && navMenu.classList.contains('nav--active')) {
+            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navMenu.classList.remove('nav--active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            }
+        }
     });
 });
