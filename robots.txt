@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://raqamlinazorat.uz/sitemap.xml

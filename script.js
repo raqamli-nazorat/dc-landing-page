@@ -126,6 +126,35 @@ document.addEventListener("DOMContentLoaded", async () => {
                 }
             }
         });
+
+        // Update document title and meta description for SEO
+        if (translations[lang]) {
+            const siteTitle = "Raqamli Nazorat";
+            const heroTitle = translations[lang]['hero_title'];
+            const heroDesc = translations[lang]['hero_desc'];
+
+            if (heroTitle) {
+                document.title = `${siteTitle} - ${heroTitle}`;
+                
+                // Update OG/Twitter titles too
+                const ogTitle = document.querySelector('meta[property="og:title"]');
+                if (ogTitle) ogTitle.setAttribute('content', `${siteTitle} - ${heroTitle}`);
+                
+                const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+                if (twitterTitle) twitterTitle.setAttribute('content', `${siteTitle} - ${heroTitle}`);
+            }
+
+            if (heroDesc) {
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) metaDesc.setAttribute('content', heroDesc);
+
+                const ogDesc = document.querySelector('meta[property="og:description"]');
+                if (ogDesc) ogDesc.setAttribute('content', heroDesc);
+
+                const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+                if (twitterDesc) twitterDesc.setAttribute('content', heroDesc);
+            }
+        }
     }
 
     langCurrent.addEventListener('click', (e) => {

@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const savedLang = (localStorage.getItem('selectedLang') || 'UZ').toUpperCase();
         await updateContent(savedLang); // Wait for content update
         populateProjectDetails(projectId, savedLang);
+        updateProjectSEO(projectId, savedLang);
 
         // Sync theme to body from html if set by anti-flash script
         if (document.documentElement.classList.contains('dark-mode')) {
@@ -50,6 +51,37 @@ document.addEventListener("DOMContentLoaded", async () => {
                 el.textContent = translations[lang][key];
             }
         });
+    }
+
+    function updateProjectSEO(id, lang) {
+        if (!translations[lang]) return;
+        
+        const title = translations[lang][`project-card_${id}_title`];
+        const detail = translations[lang][`project-card_${id}_detail`];
+        const siteName = "Raqamli Nazorat";
+
+        if (title) {
+            const fullTitle = `${title} - ${siteName}`;
+            document.title = fullTitle;
+
+            // Update OG/Twitter
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute('content', fullTitle);
+
+            const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+            if (twitterTitle) twitterTitle.setAttribute('content', fullTitle);
+        }
+
+        if (detail) {
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', detail);
+
+            const ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc) ogDesc.setAttribute('content', detail);
+
+            const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+            if (twitterDesc) twitterDesc.setAttribute('content', detail);
+        }
     }
 
 
@@ -250,6 +282,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             langCurrent.querySelector('img').src = imgSrc;
             updateContent(lang);
             populateProjectDetails(projectId, lang);
+            updateProjectSEO(projectId, lang);
             langDropdown.classList.remove('lang-switcher__dropdown--active');
             localStorage.setItem('selectedLang', lang);
         });
