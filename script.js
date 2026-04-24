@@ -111,6 +111,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     function updateContent(lang) {
+        // Update document language dynamically
+        document.documentElement.lang = lang.toLowerCase();
+
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(el => {
             const key = el.getAttribute('data-i18n');

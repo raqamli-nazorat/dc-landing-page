@@ -58,7 +58,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         
         const title = translations[lang][`project-card_${id}_title`];
         const detail = translations[lang][`project-card_${id}_detail`];
+        const images = translations[lang][`project-card_${id}_images`];
         const siteName = "Raqamli Nazorat";
+
+        // Update HTML lang attribute
+        document.documentElement.lang = lang.toLowerCase();
 
         if (title) {
             const fullTitle = `${title} - ${siteName}`;
@@ -81,6 +85,38 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const twitterDesc = document.querySelector('meta[name="twitter:description"]');
             if (twitterDesc) twitterDesc.setAttribute('content', detail);
+        }
+        
+        // Update JSON-LD Schema dynamically
+        const schemaElement = document.getElementById('project-schema');
+        if (schemaElement && title && detail) {
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": title,
+                "description": detail,
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Raqamli Nazorat",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://raqamlinazorat.uz/Assets/Navbar_logo.svg"
+                    }
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": `https://raqamlinazorat.uz/project.html?id=${id}`
+                }
+            };
+            
+            // Add image if available
+            if (images && images.length > 0) {
+                schemaData.image = images.map(img => img.startsWith('http') ? img : `https://raqamlinazorat.uz/${img.replace('./', '')}`);
+            } else {
+                schemaData.image = ["https://raqamlinazorat.uz/Assets/og_image.jpg"];
+            }
+
+            schemaElement.textContent = JSON.stringify(schemaData, null, 2);
         }
     }
 
