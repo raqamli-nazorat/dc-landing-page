@@ -205,6 +205,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const navMenu = document.querySelector('.nav');
     const themeLight = document.getElementById('theme-light');
     const themeDark = document.getElementById('theme-dark');
+    const mailImg = document.getElementById('mail-img');
+    const telegramImg = document.getElementById('telegram-img');
 
     // Theme Management
     function setTheme(theme) {
@@ -214,6 +216,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (themeDark) themeDark.classList.add('active');
             if (themeLight) themeLight.classList.remove('active');
             if (heroIcon) heroIcon.src = './Assets/hero_icon_dark.svg';
+            if (mailImg) mailImg.src = './Assets/mail_02_dark.svg';
+            if (telegramImg) telegramImg.src = './Assets/telegram_dark.svg';
             localStorage.setItem('theme', 'dark');
         } else {
             body.classList.remove('dark-mode');
@@ -221,6 +225,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (themeLight) themeLight.classList.add('active');
             if (themeDark) themeDark.classList.remove('active');
             if (heroIcon) heroIcon.src = './Assets/hero_icon_light.svg';
+            if (mailImg) mailImg.src = './Assets/mail-02.svg';
+            if (telegramImg) telegramImg.src = './Assets/telegram.svg';
             localStorage.setItem('theme', 'light');
         }
     }
