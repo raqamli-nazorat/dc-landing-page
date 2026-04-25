@@ -336,6 +336,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const navMenu = document.querySelector('.nav');
     const themeLight = document.getElementById('theme-light');
     const themeDark = document.getElementById('theme-dark');
+    const tgLogo = document.getElementById('tg_logo');
+    const mailLogo = document.getElementById('mail-logo');
 
     // Theme Management
     function setTheme(theme) {
@@ -345,6 +347,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (themeDark) themeDark.classList.add('active');
             if (themeLight) themeLight.classList.remove('active');
             if (footerImg) footerImg.src = './Assets/footer_logo_dark.png';
+            tgLogo.setAttribute('src', './Assets/telegram_dark.svg');
+            mailLogo.setAttribute('src', './Assets/mail_02_dark.svg');
             localStorage.setItem('theme', 'dark');
         } else {
             body.classList.remove('dark-mode');
@@ -352,6 +356,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (themeLight) themeLight.classList.add('active');
             if (themeDark) themeDark.classList.remove('active');
             if (footerImg) footerImg.src = './Assets/footer_logo_light.png';
+            tgLogo.setAttribute('src', './Assets/telegram.svg');
+            mailLogo.setAttribute('src', './Assets/mail-02.svg');
             localStorage.setItem('theme', 'light');
         }
     }
