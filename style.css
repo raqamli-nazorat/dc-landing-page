@@ -2622,7 +2622,7 @@ input:checked+.slider:before {
     }
 
     .dark-mode .jobs-form-container {
-        background: #111;
+        background: #222323;
     }
 
     .jobs-info {

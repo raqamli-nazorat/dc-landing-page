@@ -431,15 +431,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 showNotification(t('error_birth_date'), 'error');
                 return;
             }
-            const isStudent = document.getElementById('is_student').checked;
-            if (isStudent && document.getElementById('education').value.trim() == '') {
-                showNotification(t('error_education'), 'error');
-                return;
-            }
-            if (document.getElementById('region').value == '') {
-                showNotification(t('error_region'), 'error');
-                return;
-            }
             const phoneVal = document.getElementById('phone').value.replace(/[^\d+]/g, '');
             if (phoneVal == '' || phoneVal == '+998' || phoneVal.length < 13) {
                 showNotification(t('error_phone'), 'error');
@@ -453,6 +444,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 showNotification(t('error_position'), 'error');
                 return;
             }
+            if (document.getElementById('region').value == '') {
+                showNotification(t('error_region'), 'error');
+                return;
+            }
             if (document.getElementById('cv_upload').files.length === 0) {
                 showNotification(t('error_cv'), 'error');
                 return;
@@ -464,6 +459,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (!document.getElementById('portfolio').value.startsWith('https://')) {
                 showNotification(t('error_portfolio_invalid'), 'error');
+                return;
+            }
+            const isStudent = document.getElementById('is_student').checked;
+            if (isStudent && document.getElementById('education').value.trim() == '') {
+                showNotification(t('error_education'), 'error');
                 return;
             }
 
