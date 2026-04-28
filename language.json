@@ -400,7 +400,19 @@
                 "project-card_15_work": "Harbiy trening va simulyatsiya jarayonlarini boshqarish tizimi joriy etilgan. Mashg'ulotlarni rejalashtirish va natijalarni tahlil qilish mexanizmlari yo'lga qo'yilgan.",
                 "project-card_15_screens": "Tizim interfeysi boshqaruv paneli, trening sahifasi, natijalar va analitika oynasi, foydalanuvchilarni boshqarish bo'limi hamda sozlamalar sahifasidan iborat.",
                 "about_title": "Biz haqimizda",
-                "about_text": "\"Raqamli Nazorat\" — bu O'zbekistonning raqamli modernizatsiyasiga hissa qo'shayotgan, yuqori texnologiyali loyihalarni amalga oshiruvchi jamoa. Bizning maqsadimiz — eng murakkab texnik topshiriqlarni eng sodda va samarali yechimlar bilan ta'minlashdir."
+                "about_text": "\"Raqamli Nazorat\" — bu O'zbekistonning raqamli modernizatsiyasiga hissa qo'shayotgan, yuqori texnologiyali loyihalarni amalga oshiruvchi jamoa. Bizning maqsadimiz — eng murakkab texnik topshiriqlarni eng sodda va samarali yechimlar bilan ta'minlashdir.",
+                "error_full_name": "Iltimos, to‘liq ismingizni yozing!",
+                "error_birth_date": "Iltimos, tug‘ilgan kuningizni yozing!",
+                "error_education": "Iltimos, ta‘limingizni yozing!",
+                "error_region": "Iltimos, hududingizni kiriting!",
+                "error_phone": "Iltimos, telefon raqamingizni to‘liq kiriting!",
+                "error_telegram": "Iltimos, telegramingizni yozing!",
+                "error_position": "Iltimos, mutaxassisligingizni kiriting!",
+                "error_cv": "Iltimos, CV yuklang!",
+                "error_portfolio_empty": "Iltimos, portfolioingizni kiriting",
+                "error_portfolio_invalid": "Iltimos, to‘g‘ri portfolio linkini kiriting!",
+                "success_message": "Arizangiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog‘lanamiz.",
+                "error_generic": "Xatolik yuz berdi!"
         },
         "EN": {
                 "nav_home": "Home",
@@ -805,7 +817,19 @@
                 "project-card_15_work": "A military training and simulation process management system has been implemented. Mechanisms for planning exercises and analyzing results have been established.",
                 "project-card_15_screens": "The system interface consists of a management panel, a training page, a results and analytics window, a user management section, and a settings page.",
                 "about_title": "About Us",
-                "about_text": "\"Digital Control\" — is a team implementing high-tech projects, contributing to the digital modernization of Uzbekistan. Our goal is to provide the most simple and effective solutions to the most complex technical tasks."
+                "about_text": "\"Digital Control\" — is a team implementing high-tech projects, contributing to the digital modernization of Uzbekistan. Our goal is to provide the most simple and effective solutions to the most complex technical tasks.",
+                "error_full_name": "Please enter your full name!",
+                "error_birth_date": "Please enter your date of birth!",
+                "error_education": "Please enter your education details!",
+                "error_region": "Please enter your region!",
+                "error_phone": "Please enter your full phone number!",
+                "error_telegram": "Please enter your telegram!",
+                "error_position": "Please enter your position!",
+                "error_cv": "Please upload your CV!",
+                "error_portfolio_empty": "Please enter your portfolio link!",
+                "error_portfolio_invalid": "Please enter a valid portfolio link (starting with https://)!",
+                "success_message": "Your application has been successfully sent. We will contact you soon.",
+                "error_generic": "An error occurred!"
         },
         "RU": {
                 "nav_home": "Главная",
@@ -1210,6 +1234,18 @@
                 "project-card_15_work": "Внедрена система управления процессами военной подготовки и симуляции. Налажены механизмы планирования учений и анализа результатов.",
                 "project-card_15_screens": "Интерфейс системы состоит из панели управления, страницы тренировок, окна результатов и аналитики, раздела управления пользователями и страницы настроек.",
                 "about_title": "О нас",
-                "about_text": "«Raqamli Nazorat» — это команда, реализующая высокотехнологичные проекты и вносящая вклад в цифровую модернизацию Узбекистана. Наша цель — предложить самые простые и эффективные решения для самых сложных технических задач."
+                "about_text": "«Raqamli Nazorat» — это команда, реализующая высокотехнологичные проекты и вносящая вклад в цифровую модернизацию Узбекистана. Наша цель — предложить самые простые и эффективные решения для самых сложных технических задач.",
+                "error_full_name": "Пожалуйста, введите ваше полное имя!",
+                "error_birth_date": "Пожалуйста, введите дату вашего рождения!",
+                "error_education": "Пожалуйста, введите данные об образовании!",
+                "error_region": "Пожалуйста, укажите ваш регион!",
+                "error_phone": "Пожалуйста, введите ваш номер телефона полностью!",
+                "error_telegram": "Пожалуйста, укажите ваш телеграм!",
+                "error_position": "Пожалуйста, укажите вашу специальность!",
+                "error_cv": "Пожалуйста, загрузите резюме!",
+                "error_portfolio_empty": "Пожалуйста, введите ссылку на портфолио!",
+                "error_portfolio_invalid": "Пожалуйста, введите корректную ссылку на портфолио (начинается с https://)!",
+                "success_message": "Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.",
+                "error_generic": "Произошла ошибка!"
         }
 }

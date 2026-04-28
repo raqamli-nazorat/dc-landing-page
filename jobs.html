@@ -24,18 +24,26 @@
      <script src="https://unpkg.com/lucide@latest"></script>
 
      <script>
-          (function () {
+          (function() {
                const savedTheme = localStorage.getItem('theme') || 'light';
                if (savedTheme === 'dark') {
                     document.documentElement.classList.add('dark-mode');
-                    // We also add it to body via script later, but this helps with initial paint
                }
                document.documentElement.style.visibility = 'hidden';
           })();
      </script>
 </head>
 
-<body>
+<body class="light">
+     <script>
+          (function () {
+               const savedTheme = localStorage.getItem('theme') || 'light';
+               if (savedTheme === 'dark') {
+                    document.body.classList.remove('light');
+                    document.body.classList.add('dark-mode');
+               }
+          })();
+     </script>
      <header class="header container">
           <div class="header__container">
                <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
@@ -138,18 +146,21 @@
 
                     <!-- Right Side: Form -->
                     <div class="jobs-form-wrapper">
-                         <form id="jobs-form" class="jobs-form">
+                         <form id="jobs-form" class="jobs-form" title="" novalidate>
                               <!-- Ism Sharifi -->
                               <div class="form-group">
                                    <label for="full_name" data-i18n="label_name">Ism Sharifi</label>
-                                   <input type="text" id="full_name" name="full_name" data-i18n-placeholder="placeholder_name" placeholder="Ism sharif kiritinig" required maxlength="255">
+                                   <input type="text" id="full_name" name="full_name"
+                                        data-i18n-placeholder="placeholder_name" placeholder="Ism sharif kiritinig"
+                                        required maxlength="255">
                               </div>
 
                               <!-- Tug'ilgan sanasi -->
                               <div class="form-group">
                                    <label for="birthdate" data-i18n="label_birthdate">Tug'ilgan sanasi</label>
                                    <div class="input-with-icon">
-                                        <input type="date" id="birth_date" name="birthdate" style="width: 100%;" required>
+                                        <input type="date" id="birth_date" name="birthdate" style="width: 100%;"
+                                             required>
                                    </div>
                               </div>
 
@@ -163,7 +174,8 @@
                               <div class="form-group">
                                    <label for="telegram" data-i18n="label_telegram">Telegram profil havolasi</label>
                                    <input type="text" id="telegram" name="telegram"
-                                        data-i18n-placeholder="placeholder_telegram" placeholder="@user" required maxlength="255">
+                                        data-i18n-placeholder="placeholder_telegram" placeholder="@user" required
+                                        maxlength="255">
                               </div>
 
                               <!-- Lavozim (Custom Select) -->
@@ -200,7 +212,7 @@
                                    <label data-i18n="label_cv">Rezyume (CV)</label>
                                    <label for="cv_upload" class="file-upload-label">
                                         <i data-lucide="paperclip"></i>
-                                        <span data-i18n="btn_upload_cv">Fayl yuklash</span>
+                                        <span data-i18n="btn_upload_cv" id="cv-text">Fayl yuklash</span>
                                         <input type="file" accept=".pdf" id="cv_upload" name="cv" hidden required>
                                    </label>
                               </div>
@@ -208,8 +220,8 @@
                               <!-- Portfolio -->
                               <div class="form-group">
                                    <label for="portfolio" data-i18n="label_portfolio">Portfolio havolasi</label>
-                                   <input type="url" id="portfolio" name="portfolio"
-                                        data-i18n-placeholder="placeholder_portfolio" placeholder="Havola kiriting" maxlength="500">
+                                   <input id="portfolio" name="portfolio" data-i18n-placeholder="placeholder_portfolio"
+                                        placeholder="Havola kiriting" maxlength="500">
                               </div>
 
                               <!-- Additional Info -->
@@ -275,6 +287,15 @@
                </div>
           </div>
      </footer>
+
+     <div class="notifications" id="notification">
+          <div class="notif_icon" id="notif-icon">
+          </div>
+          <div class="notif_text" id="notif-text"></div>
+          <span id="close-button" style="cursor: pointer;">
+               <i data-lucide="x" class="close-button"></i>
+          </span>
+     </div>
 
      <script src="jobs-script.js"></script>
 </body>

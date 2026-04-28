@@ -138,11 +138,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (heroTitle) {
                 document.title = `${siteTitle} - ${heroTitle}`;
-                
+
                 // Update OG/Twitter titles too
                 const ogTitle = document.querySelector('meta[property="og:title"]');
                 if (ogTitle) ogTitle.setAttribute('content', `${siteTitle} - ${heroTitle}`);
-                
+
                 const twitterTitle = document.querySelector('meta[name="twitter:title"]');
                 if (twitterTitle) twitterTitle.setAttribute('content', `${siteTitle} - ${heroTitle}`);
             }
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     langCurrent.addEventListener('click', (e) => {
         e.stopPropagation();
-        
+
         // Close mobile nav menu if open
         if (typeof navMenu !== 'undefined' && navMenu && navMenu.classList.contains('nav--active')) {
             navMenu.classList.remove('nav--active');
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 lucide.createIcons();
             }
         }
-        
+
         // Close filter dropdown if open
         const filterHeader = document.querySelector('.filter-tags--small');
         if (filterHeader) filterHeader.classList.remove('filter-tags--open');
@@ -262,16 +262,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            
+
             // Close filter dropdown if open
             const filterHeader = document.querySelector('.filter-tags--small');
             if (filterHeader) filterHeader.classList.remove('filter-tags--open');
-            
+
             // Close language dropdown if open
             if (langDropdown) langDropdown.classList.remove('active');
 
             navMenu.classList.toggle('nav--active');
-            
+
             // Toggle icon between menu and x
             const icon = mobileMenuBtn.querySelector('i');
             if (navMenu.classList.contains('nav--active')) {
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 lucide.createIcons();
             }
         }
-        
+
         const filterHeader = document.querySelector('.filter-tags--small');
         if (filterHeader && filterHeader.classList.contains('filter-tags--open')) {
             if (!filterHeader.contains(e.target)) {
@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         filterHeader.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 e.stopPropagation();
-                
+
                 // Close mobile nav menu if open
                 if (navMenu) {
                     navMenu.classList.remove('nav--active');
@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         lucide.createIcons();
                     }
                 }
-                
+
                 // Close language dropdown if open
                 if (langDropdown) langDropdown.classList.remove('active');
 
