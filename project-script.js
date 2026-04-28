@@ -304,9 +304,31 @@ document.addEventListener("DOMContentLoaded", async () => {
         lucide.createIcons();
     }
 
+    // Elements
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const footerImg = document.getElementById('footer-img');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.querySelector('.nav');
+    const themeLight = document.getElementById('theme-light');
+    const themeDark = document.getElementById('theme-dark');
+    const tgLogo = document.getElementById('tg_logo');
+    const mailLogo = document.getElementById('mail-logo');
+
     // Language Switcher
     langCurrent.addEventListener('click', (e) => {
         e.stopPropagation();
+
+        // Close mobile nav menu if open
+        if (navMenu && navMenu.classList.contains('nav--active')) {
+            navMenu.classList.remove('nav--active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            }
+        }
+
         langDropdown.classList.toggle('lang-switcher__dropdown--active');
     });
 
@@ -324,20 +346,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
+    // Close dropdown on outside click
     document.addEventListener('click', () => {
         langDropdown.classList.remove('lang-switcher__dropdown--active');
     });
-
-    // Elements
-    const body = document.body;
-    const themeToggle = document.getElementById('theme-toggle');
-    const footerImg = document.getElementById('footer-img');
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const navMenu = document.querySelector('.nav');
-    const themeLight = document.getElementById('theme-light');
-    const themeDark = document.getElementById('theme-dark');
-    const tgLogo = document.getElementById('tg_logo');
-    const mailLogo = document.getElementById('mail-logo');
 
     // Theme Management
     function setTheme(theme) {
@@ -384,6 +396,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
+
+            // Close language dropdown if open
+            if (langDropdown) langDropdown.classList.remove('lang-switcher__dropdown--active');
+
             navMenu.classList.toggle('nav--active');
 
             // Toggle icon between menu and x

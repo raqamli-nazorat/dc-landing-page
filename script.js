@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (filterHeader) filterHeader.classList.remove('filter-tags--open');
 
             // Close language dropdown if open
-            if (langDropdown) langDropdown.classList.remove('active');
+            if (langDropdown) langDropdown.classList.remove('lang-switcher__dropdown--active');
 
             navMenu.classList.toggle('nav--active');
 
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 }
 
                 // Close language dropdown if open
-                if (langDropdown) langDropdown.classList.remove('active');
+                if (langDropdown) langDropdown.classList.remove('lang-switcher__dropdown--active');
 
                 filterHeader.classList.toggle('filter-tags--open');
             }

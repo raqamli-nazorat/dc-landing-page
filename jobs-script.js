@@ -89,9 +89,31 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
+    // Theme Management
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const footerImg = document.getElementById('footer-img');
+    const mailImg = document.getElementById('mail-img');
+    const telegramImg = document.getElementById('telegram-img');
+    const themeLight = document.getElementById('theme-light');
+    const themeDark = document.getElementById('theme-dark');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.querySelector('.nav');
+
     if (langCurrent) {
         langCurrent.addEventListener('click', (e) => {
             e.stopPropagation();
+
+            // Close mobile nav menu if open
+            if (navMenu && navMenu.classList.contains('nav--active')) {
+                navMenu.classList.remove('nav--active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            }
+
             langDropdown.classList.toggle('lang-switcher__dropdown--active');
         });
     }
@@ -112,15 +134,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.addEventListener('click', () => {
         if (langDropdown) langDropdown.classList.remove('lang-switcher__dropdown--active');
     });
-
-    // Theme Management
-    const body = document.body;
-    const themeToggle = document.getElementById('theme-toggle');
-    const footerImg = document.getElementById('footer-img');
-    const mailImg = document.getElementById('mail-img');
-    const telegramImg = document.getElementById('telegram-img');
-    const themeLight = document.getElementById('theme-light');
-    const themeDark = document.getElementById('theme-dark');
 
     function setTheme(theme) {
         if (theme === 'dark') {
@@ -163,12 +176,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const navMenu = document.querySelector('.nav');
-
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
+
+            // Close language dropdown if open
+            if (langDropdown) langDropdown.classList.remove('lang-switcher__dropdown--active');
+
             navMenu.classList.toggle('nav--active');
             const icon = mobileMenuBtn.querySelector('i');
             if (navMenu.classList.contains('nav--active')) {
