@@ -435,8 +435,6 @@ body.dark-mode .lang-switcher__option:hover {
 .hero {
     padding: 100px 0 60px;
     text-align: center;
-    position: sticky;
-    top: 78px;
     overflow: hidden;
     height: 100vh;
     background: var(--bg-hero);
@@ -445,7 +443,6 @@ body.dark-mode .lang-switcher__option:hover {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    z-index: 0;
 }
 
 /* Ensure subsequent sections scroll over hero */
