@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Ish o'rinlari - Raqamli Nazorat</title>
+     <meta name="description"
+          content="O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.">
+     <meta name="keywords"
+          content="Raqamli Nazorat, monitoring tizimlari, gaz modemlari, IT qurilmalar, sun'iy intellekt, O'zbekiston innovatsiya, PLC, sanoat avtomatlashtirish, Digital Control Uzbekistan">
+     <meta name="author" content="Raqamli Nazorat">
+     <meta name="robots" content="index, follow">
+     <link rel="canonical" href="https://raqamlinazorat.uz/">
+
+     <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="./Assets/footer_logo_dark.svg" type="image/svg+xml">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+     <script src="https://unpkg.com/lucide@latest"></script>
+
+     <script>
+          (function () {
+               const savedTheme = localStorage.getItem('theme') || 'light';
+               if (savedTheme === 'dark') {
+                    document.documentElement.classList.add('dark-mode');
+                    // We also add it to body via script later, but this helps with initial paint
+               }
+               document.documentElement.style.visibility = 'hidden';
+          })();
+     </script>
+</head>
+
+<body>
+     <header class="header container">
+          <div class="header__container">
+               <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+                    <img src="./Assets/Navbar_logo.svg" alt="Raqamli Nazorat Logo" loading="lazy" class="logo--desktop">
+                    <img src="./Assets/navbar_mobile_logo.svg" alt="Raqamli Nazorat" loading="lazy"
+                         class="logo--mobile">
+                    <span class="logo__text">Raqamli Nazorat</span>
+               </div>
+               <nav class="nav">
+                    <ul class="nav__list">
+                         <li><a href="index.html#loyihalar" class="nav__link" data-i18n="nav_projects">Loyihalar</a>
+                         </li>
+                         <li><a href="index.html#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz
+                                   haqimizda</a></li>
+                    </ul>
+                    <div class="nav__mobile-actions">
+                         <div class="divider"></div>
+                         <div class="mobile-theme-switcher">
+                              <button class="theme-btn theme-btn--light active" id="theme-light">
+                                   <i data-lucide="sun"></i>
+                              </button>
+                              <button class="theme-btn theme-btn--dark" id="theme-dark">
+                                   <i data-lucide="moon"></i>
+                              </button>
+                         </div>
+                    </div>
+               </nav>
+
+               <div class="header__actions">
+                    <button class="theme-toggle" id="theme-toggle">
+                         <i data-lucide="sun" class="theme-icon-sun"></i>
+                         <i data-lucide="moon" class="theme-icon-moon"></i>
+                    </button>
+                    <div class="lang-switcher">
+                         <div class="lang-switcher__current" id="lang-current">
+                              <img src="./Assets/UZB.svg" alt="UZ">
+                              <span>UZ</span>
+                              <img src="./Assets/arrow-up-01-sharp.svg" style="width: 25px; height: 25px;" alt="">
+                         </div>
+                         <div class="lang-switcher__dropdown" id="lang-dropdown">
+                              <div class="lang-switcher__option" data-lang="uz">
+                                   <img src="./Assets/UZB.svg" alt="UZ" loading="lazy">
+                                   <span>O'zbekcha</span>
+                              </div>
+                              <div class="lang-switcher__option" data-lang="en">
+                                   <img src="./Assets/ENG.svg" alt="EN" loading="lazy">
+                                   <span>English</span>
+                              </div>
+                              <div class="lang-switcher__option" data-lang="ru">
+                                   <img src="./Assets/RUS.svg" alt="RU" loading="lazy">
+                                   <span>Русский</span>
+                              </div>
+                         </div>
+                    </div>
+                    <a href="index.html#aloqa" class="btn btn--aloqa">
+                         <span data-i18n="btn_contact">Aloqa</span>
+                         <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                    </a>
+                    <a href="https://boshqaruv.raqamlinazorat.uz" target="_blank" class="btn btn--project"
+                         style="padding: 8px 15px;">
+                         <span data-i18n="btn_new_project">Raqamli boshqaruv</span>
+                         <i data-lucide="mouse-pointer-2" style="width: 18px; height: 18px;"></i>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                         <i data-lucide="menu"></i>
+                    </button>
+               </div>
+          </div>
+     </header>
+
+     <main class="container" style="padding-top: 40px; background: transparent; min-height: 66vh; border: none;">
+          <div class="breadcrumbs">
+               <span data-i18n="nav_home" onclick="location.href='index.html'"
+                    style="cursor: pointer;color: var(--text-muted);">Asosiy</span>
+               <span data-i18n="nav_careers" style="color: var(--text-title); cursor: pointer;">Ish o'rinlari</span>
+          </div>
+
+          <section class="jobs-hero">
+               <h1 class="jobs-hero__title" data-i18n="jobs_hero_title">Biz bilan ishlashni xohlaysizmi?</h1>
+               <p class="jobs-hero__description" data-i18n="jobs_hero_desc">
+                    Biz doim iqtidorli mutaxassislarni izlaymiz. Ochiq vakansiyalar bilan tanishing yoki o‘z
+                    rezyumeingizni yuboring.
+               </p>
+          </section>
+
+          <section class="main_content">
+               <div class="jobs-form-container">
+                    <!-- Left Side: Info & Graphic -->
+                    <div class="jobs-info">
+                         <div class="jobs-info__content">
+                              <h2 class="jobs-info__title" data-i18n="jobs_form_title">Yangi imkoniyat sari bir qadam
+                              </h2>
+                              <p class="jobs-info__desc" data-i18n="jobs_form_desc">Qisqa forma orqali ma'lumot
+                                   qoldiring — biz siz bilan bog'lanamiz.</p>
+                         </div>
+                         <div class="jobs-info__image">
+                              <img src="./Assets/jobs.svg" alt="Jobs Graphic" loading="lazy">
+                         </div>
+                    </div>
+
+                    <!-- Right Side: Form -->
+                    <div class="jobs-form-wrapper">
+                         <form id="jobs-form" class="jobs-form">
+                              <!-- Ism Sharifi -->
+                              <div class="form-group">
+                                   <label for="full_name" data-i18n="label_name">Ism Sharifi</label>
+                                   <input type="text" id="full_name" name="full_name" data-i18n-placeholder="placeholder_name" placeholder="Ism sharif kiritinig" required maxlength="255">
+                              </div>
+
+                              <!-- Tug'ilgan sanasi -->
+                              <div class="form-group">
+                                   <label for="birthdate" data-i18n="label_birthdate">Tug'ilgan sanasi</label>
+                                   <div class="input-with-icon">
+                                        <input type="date" id="birth_date" name="birthdate" style="width: 100%;" required>
+                                   </div>
+                              </div>
+
+                              <!-- Telefon raqami -->
+                              <div class="form-group">
+                                   <label for="phone" data-i18n="label_phone">Telefon raqami</label>
+                                   <input type="tel" id="phone" name="phone" value="+998" required>
+                              </div>
+
+                              <!-- Telegram -->
+                              <div class="form-group">
+                                   <label for="telegram" data-i18n="label_telegram">Telegram profil havolasi</label>
+                                   <input type="text" id="telegram" name="telegram"
+                                        data-i18n-placeholder="placeholder_telegram" placeholder="@user" required maxlength="255">
+                              </div>
+
+                              <!-- Lavozim (Custom Select) -->
+                              <div class="form-group">
+                                   <label data-i18n="label_position">Sizni qaysi yo'nalishdagi bo'sh ish o'rni
+                                        qiziqtiradi?</label>
+                                   <div class="custom-select" id="position-select">
+                                        <div class="custom-select__header" id="position-header">
+                                             <span data-i18n="placeholder_position">Lavozim tanlang</span>
+                                             <i data-lucide="chevron-down"></i>
+                                        </div>
+                                        <div class="custom-select__dropdown" id="position-dropdown">
+                                        </div>
+                                        <input type="hidden" id="position" name="position" required>
+                                   </div>
+                              </div>
+
+                              <!-- Viloyat (Custom Select) -->
+                              <div class="form-group">
+                                   <label data-i18n="label_region">Viloyat</label>
+                                   <div class="custom-select" id="region-select">
+                                        <div class="custom-select__header" id="region-header">
+                                             <span data-i18n="placeholder_region">Viloyatni tanlang</span>
+                                             <i data-lucide="chevron-down"></i>
+                                        </div>
+                                        <div class="custom-select__dropdown" id="region-dropdown">
+                                        </div>
+                                        <input type="hidden" id="region" name="region" required>
+                                   </div>
+                              </div>
+
+                              <!-- Resume -->
+                              <div class="form-group">
+                                   <label data-i18n="label_cv">Rezyume (CV)</label>
+                                   <label for="cv_upload" class="file-upload-label">
+                                        <i data-lucide="paperclip"></i>
+                                        <span data-i18n="btn_upload_cv">Fayl yuklash</span>
+                                        <input type="file" accept=".pdf" id="cv_upload" name="cv" hidden required>
+                                   </label>
+                              </div>
+
+                              <!-- Portfolio -->
+                              <div class="form-group">
+                                   <label for="portfolio" data-i18n="label_portfolio">Portfolio havolasi</label>
+                                   <input type="url" id="portfolio" name="portfolio"
+                                        data-i18n-placeholder="placeholder_portfolio" placeholder="Havola kiriting" maxlength="500">
+                              </div>
+
+                              <!-- Additional Info -->
+                              <div class="form-group">
+                                   <label for="additional_info" data-i18n="label_additional_info">Qo'shimcha ma'lumotlar
+                                        yoki savollar</label>
+                                   <textarea id="additional_info" name="additional_info"
+                                        data-i18n-placeholder="placeholder_additional_info"
+                                        placeholder="Ma'lumot kiriting"></textarea>
+                              </div>
+
+                              <!-- Student Toggle -->
+                              <div class="form-group form-group--row">
+                                   <label data-i18n="label_is_student">Talabamisiz?</label>
+                                   <label class="switch">
+                                        <input type="checkbox" id="is_student" name="is_student">
+                                        <span class="slider round"></span>
+                                   </label>
+                              </div>
+
+                              <!-- Education -->
+                              <div class="form-group" id="education_group">
+                                   <label for="education" data-i18n="label_education">O'qish joyi va kursi</label>
+                                   <textarea id="education" name="education"
+                                        data-i18n-placeholder="placeholder_education"
+                                        placeholder="Qaysi o'quv yurtida yoki kursda o'qigansiz"></textarea>
+                              </div>
+
+                              <!-- Submit -->
+                              <button type="submit" class="btn btn--submit">
+                                   <span data-i18n="btn_submit_job">Yuborish</span>
+                                   <i data-lucide="arrow-up-right"></i>
+                              </button>
+                         </form>
+                    </div>
+               </div>
+          </section>
+
+     </main>
+
+     <footer class="footer">
+          <div class="footer__content container">
+               <div class="footer-logo" onclick="location.href='index.html'" style="cursor: pointer;">
+                    <img id="footer-img" src="./Assets/Footer_logo.svg" alt="Raqamli Nazorat Footer Logo" loading="lazy"
+                         class="footer-logo--desktop">
+                    <img src="./Assets/footer_mobile_logo.svg" alt="Raqamli Nazorat" loading="lazy"
+                         class="footer-logo--mobile">
+                    <span class="logo__text">Raqamli Nazorat</span>
+               </div>
+               <div class="footer__actions">
+                    <a href="tel:+998916014333" target="_blank" class="btn btn--number">
+                         <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                         <span style="font-size: 15px; font-weight: 600;">+998 91 601 43 33</span>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alxsoft2018@gmail.com" target="_blank"
+                         class="btn btn--number">
+                         <img src="./Assets/mail-02.svg" id="mail-img" alt="Email" style="width: 18px; height: 18px;">
+                    </a>
+                    <a href="https://t.me/BAT2N93" target="_blank" class="btn btn--number">
+                         <img src="./Assets/telegram.svg" id="telegram-img" alt="Telegram"
+                              style="width: 18px; height: 18px;">
+                    </a>
+               </div>
+          </div>
+     </footer>
+
+     <script src="jobs-script.js"></script>
+</body>
+
+</html>

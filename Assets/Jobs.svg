@@ -1,0 +1,6 @@
+<svg width="440" height="640" viewBox="0 0 440 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 200C0 89.5431 89.5431 0 200 0H320V120C320 230.457 230.457 320 120 320H0V200Z" fill="#526ED3"/>
+<path d="M320 0H440C550.457 0 640 89.5431 640 200V320H320V0Z" fill="#526ED3"/>
+<path d="M320 520C320 409.543 409.543 320 520 320H640V440C640 550.457 550.457 640 440 640H320V520Z" fill="#526ED3"/>
+<rect width="320" height="320" transform="translate(0 320)" fill="#526ED3"/>
+</svg>

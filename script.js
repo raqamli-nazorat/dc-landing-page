@@ -207,6 +207,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const themeDark = document.getElementById('theme-dark');
     const mailImg = document.getElementById('mail-img');
     const telegramImg = document.getElementById('telegram-img');
+    const footerImg = document.getElementById('footer-img');
 
     // Theme Management
     function setTheme(theme) {
@@ -216,6 +217,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (themeDark) themeDark.classList.add('active');
             if (themeLight) themeLight.classList.remove('active');
             if (heroIcon) heroIcon.src = './Assets/hero_icon_dark.svg';
+            if (footerImg) footerImg.src = './Assets/footer_logo_dark.svg';
             if (mailImg) mailImg.src = './Assets/mail_02_dark.svg';
             if (telegramImg) telegramImg.src = './Assets/telegram_dark.svg';
             localStorage.setItem('theme', 'dark');
@@ -225,6 +227,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (themeLight) themeLight.classList.add('active');
             if (themeDark) themeDark.classList.remove('active');
             if (heroIcon) heroIcon.src = './Assets/hero_icon_light.svg';
+            if (footerImg) footerImg.src = './Assets/Footer_logo.svg';
             if (mailImg) mailImg.src = './Assets/mail-02.svg';
             if (telegramImg) telegramImg.src = './Assets/telegram.svg';
             localStorage.setItem('theme', 'light');
