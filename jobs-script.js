@@ -497,7 +497,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const telegramValue = document.getElementById('telegram').value.replace('@', '');
 
-            formData.append('telegram', "https://t.me/" + telegramValue);
+            formData.append('telegram', telegramValue.startsWith('https://t.me/') ? telegramValue : `https://t.me/${telegramValue}`);
 
             formData.append('position', document.getElementById('position').value);
 
