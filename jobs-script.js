@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
             const res = await fetch("https://backend.raqamlinazorat.uz/api/applications/regions/");
             const { data: regionsData } = await res.json();
-            const regions = regionsData?.results;
+            const regions = regionsData?.results?.filter((region) => region.is_application === true);
 
             const regionSelect = document.getElementById('region-select');
             if (!regionSelect) return;
@@ -215,6 +215,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Clear existing manual options
             dropdown.innerHTML = '';
+
+            if (!regions.length) {
+                const option = document.createElement('div');
+                option.className = 'custom-select__option';
+                option.textContent = 'Ish joylari hozircha mavjud emas';
+                dropdown.appendChild(option);
+                return;
+            }
 
             regions?.forEach(region => {
                 const option = document.createElement('div');
@@ -251,7 +259,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
             const res = await fetch('https://backend.raqamlinazorat.uz/api/applications/positions/');
             const { data: positionsData } = await res.json();
-            const positions = positionsData?.results;
+            const positions = positionsData?.results?.filter((pos) => pos.is_application === true);
 
             const positionSelect = document.getElementById('position-select');
             if (!positionSelect) return;
@@ -262,6 +270,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Clear existing manual options
             dropdown.innerHTML = '';
+
+            if (!positions.length) {
+                const option = document.createElement('div');
+                option.className = 'custom-select__option';
+                option.textContent = 'Bo\'sh ish o\'rinlari hozircha mavjud emas';
+                dropdown.appendChild(option);
+                return;
+            }
 
             positions?.forEach(position => {
                 const option = document.createElement('div');
