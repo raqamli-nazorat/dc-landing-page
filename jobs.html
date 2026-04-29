@@ -24,7 +24,7 @@
      <script src="https://unpkg.com/lucide@latest"></script>
 
      <script>
-          (function() {
+          (function () {
                const savedTheme = localStorage.getItem('theme') || 'light';
                if (savedTheme === 'dark') {
                     document.documentElement.classList.add('dark-mode');
@@ -130,8 +130,7 @@
           </section>
 
           <section class="main_content">
-               <div class="jobs-form
-               -container">
+               <div class="jobs-form-container">
                     <!-- Left Side: Info & Graphic -->
                     <div class="jobs-info">
                          <div class="jobs-info__content">
@@ -174,9 +173,8 @@
                               <!-- Telegram -->
                               <div class="form-group">
                                    <label for="telegram" data-i18n="label_telegram">Telegram profil havolasi</label>
-                                   <input type="text" id="telegram" name="telegram"
-                                        data-i18n-placeholder="placeholder_telegram" placeholder="@user" required
-                                        maxlength="255">
+                                   <input type="text" id="telegram" name="telegram" placeholder="https://t.me/username"
+                                        required maxlength="255">
                               </div>
 
                               <!-- Lavozim (Custom Select) -->

@@ -2522,7 +2522,17 @@ input:checked+.slider:before {
 }
 
 #education_group {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#education_group.is-visible {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .notif_text {
@@ -2663,7 +2673,7 @@ input:checked+.slider:before {
         width: auto !important;
     }
 
-    .notifications{
+    .notifications {
         right: 20px;
     }
 

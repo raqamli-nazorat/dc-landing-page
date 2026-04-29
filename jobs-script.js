@@ -81,12 +81,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     const educationGroup = document.getElementById('education_group');
 
     if (isStudentCheckbox && educationGroup) {
-        // Initial state
-        educationGroup.style.display = isStudentCheckbox.checked ? 'flex' : 'none';
+        // Boshlang'ich holatni tekshirish
+        const syncEducation = () => {
+            if (isStudentCheckbox.checked) {
+                educationGroup.classList.add('is-visible');
+            } else {
+                educationGroup.classList.remove('is-visible');
+            }
+        };
 
-        isStudentCheckbox.addEventListener('change', () => {
-            educationGroup.style.display = isStudentCheckbox.checked ? 'flex' : 'none';
-        });
+        syncEducation();
+
+        isStudentCheckbox.addEventListener('change', syncEducation);
     }
 
     // Theme Management
@@ -385,7 +391,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             notification.classList.remove('active');
         }, 5000);
     }
-
 
     const phoneInput = document.getElementById('phone');
     phoneInput.addEventListener('input', (e) => {
