@@ -2574,6 +2574,27 @@ input:checked+.slider:before {
     color: red;
 }
 
+.flatpickr-current-month {
+    font-size: 14px !important;
+    padding: 0 !important;
+}
+
+.flatpickr-monthDropdown-months {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+/* Yil yozuvi uchun */
+.numInputWrapper {
+    margin-top: 10px;
+    font-size: 15px !important;
+}
+
+/* Kalendarning umumiy o'lchamini biroz ixchamroq qilish (ixtiyoriy) */
+.flatpickr-calendar {
+    width: 280px !important;
+}
+
 /* Jobs Page Responsive Adjustments */
 @media (max-width: 768px) {
     .header {

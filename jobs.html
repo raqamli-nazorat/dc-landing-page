@@ -22,7 +22,9 @@
      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
           rel="stylesheet">
      <script src="https://unpkg.com/lucide@latest"></script>
-
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" id="flatpickr-dark-theme">
+     
      <script>
           (function () {
                const savedTheme = localStorage.getItem('theme') || 'light';
@@ -151,29 +153,35 @@
                               <div class="form-group">
                                    <label for="full_name" data-i18n="label_name">Ism Sharifi</label>
                                    <input type="text" id="full_name" name="full_name"
-                                        data-i18n-placeholder="placeholder_name" placeholder="Ism sharif kiritinig"
+                                        data-i18n-placeholder="placeholder_name" placeholder="Ism sharif kiriting"
                                         required maxlength="255">
+                                   <span id="full_name-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Tug'ilgan sanasi -->
                               <div class="form-group">
                                    <label for="birthdate" data-i18n="label_birthdate">Tug'ilgan sanasi</label>
                                    <div class="input-with-icon">
-                                        <input type="date" id="birth_date" name="birthdate" style="width: 100%;"
-                                             required>
+                                        <!-- <input type="date" id="birth_date" name="birthdate" style="width: 100%;"
+                                             required> -->
+                                        <input type="text" style="width: 100%;" id="date-picker" placeholder="Sana tanlash" required maxlength="10">
                                    </div>
+                                   <span id="date-picker-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Telefon raqami -->
                               <div class="form-group">
                                    <label for="phone" data-i18n="label_phone">Telefon raqami</label>
                                    <input type="tel" id="phone" name="phone" value="+998" required>
+                                   <span id="phone-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Telegram -->
                               <div class="form-group">
                                    <label for="telegram" data-i18n="label_telegram">Telegram profil havolasi</label>
-                                   <input type="text" id="telegram" name="telegram" placeholder="https://username.t.me" required maxlength="255">
+                                   <input type="text" id="telegram" name="telegram" placeholder="https://username.t.me"
+                                        required maxlength="255">
+                                   <span id="telegram-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Lavozim (Custom Select) -->
@@ -189,6 +197,7 @@
                                         </div>
                                         <input type="hidden" id="position" name="position" required>
                                    </div>
+                                   <span id="position-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Viloyat (Custom Select) -->
@@ -203,6 +212,7 @@
                                         </div>
                                         <input type="hidden" id="region" name="region" required>
                                    </div>
+                                   <span id="region-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Resume -->
@@ -213,6 +223,7 @@
                                         <span data-i18n="btn_upload_cv" id="cv-text">Fayl yuklash</span>
                                         <input type="file" accept=".pdf" id="cv_upload" name="cv" hidden required>
                                    </label>
+                                   <span id="cv_upload-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Portfolio -->
@@ -220,6 +231,7 @@
                                    <label for="portfolio" data-i18n="label_portfolio">Portfolio havolasi</label>
                                    <input id="portfolio" name="portfolio" data-i18n-placeholder="placeholder_portfolio"
                                         placeholder="Havola kiriting" maxlength="500">
+                                   <span id="portfolio-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Additional Info -->
@@ -246,6 +258,7 @@
                                    <textarea id="education" name="education"
                                         data-i18n-placeholder="placeholder_education"
                                         placeholder="Qaysi o'quv yurtida yoki kursda o'qigansiz"></textarea>
+                                   <span id="education-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
                               </div>
 
                               <!-- Submit -->
@@ -295,6 +308,7 @@
           </span>
      </div>
 
+     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
      <script src="jobs-script.js"></script>
 </body>
 

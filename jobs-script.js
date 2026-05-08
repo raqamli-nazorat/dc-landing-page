@@ -142,9 +142,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     function setTheme(theme) {
+        const flatpickrDark = document.getElementById('flatpickr-dark-theme');
         if (theme === 'dark') {
             document.documentElement.classList.add('dark-mode');
             body.classList.add('dark-mode');
+            if (flatpickrDark) flatpickrDark.disabled = false;
             if (themeToggle) themeToggle.classList.add('theme-toggle--active');
             if (themeDark) themeDark.classList.add('active');
             if (themeLight) themeLight.classList.remove('active');
@@ -155,6 +157,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else {
             document.documentElement.classList.remove('dark-mode');
             body.classList.remove('dark-mode');
+            if (flatpickrDark) flatpickrDark.disabled = true;
             if (themeToggle) themeToggle.classList.remove('theme-toggle--active');
             if (themeLight) themeLight.classList.add('active');
             if (themeDark) themeDark.classList.remove('active');
@@ -244,6 +247,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     // Close dropdown
                     regionSelect.classList.remove('custom-select--open');
                     regionSelect.querySelector('.custom-select__header').classList.add('custom-select__header--filled');
+                    hideError('region');
                 });
 
                 dropdown.appendChild(option);
@@ -299,6 +303,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     // Close dropdown
                     positionSelect.classList.remove('custom-select--open');
                     positionSelect.querySelector('.custom-select__header').classList.add('custom-select__header--filled');
+                    hideError('position');
                 });
 
                 dropdown.appendChild(option);
@@ -366,10 +371,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 // Mark header as "filled" if needed (optional)
                 header.classList.add('custom-select__header--filled');
+                hideError(input.id);
             });
         });
     });
 
+    flatpickr("#date-picker", {
+        dateFormat: "d.m.Y",      // Bizga kerakli format: dd.mm.yyyy
+        allowInput: true,         // Qo'lda yozish imkoniyati
+        locale: {
+            firstDayOfWeek: 1     // Haftani dushanbadan boshlash
+        },
+        // Qo'shimcha: tanlaganda chiroyli ko'rinishi uchun
+        disableMobile: "true"     // Mobil qurilmalarda ham o'z interfeysini ko'rsatish
+    });
 
     const notification = document.getElementById('notification');
     const notifIcon = document.getElementById('notif-icon');
@@ -408,7 +423,77 @@ document.addEventListener("DOMContentLoaded", async () => {
         }, 5000);
     }
 
+    const telegramInput = document.getElementById('telegram');
+    const telegramError = document.getElementById('telegram-error');
+    const datePicker = document.getElementById('date-picker');
+    const fullNameInput = document.getElementById('full_name');
     const phoneInput = document.getElementById('phone');
+    const cvInput = document.getElementById("cv_upload");
+    const portfolioInput = document.getElementById('portfolio');
+    const educationInput = document.getElementById('education');
+    const positionInput = document.getElementById('position');
+    const regionInput = document.getElementById('region');
+
+    // Helper to hide error
+    const hideError = (id) => {
+        const errorElement = document.getElementById(`${id}-error`);
+        const element = document.getElementById(id);
+        const targetElement = (id === 'position' || id === 'region') ? document.getElementById(`${id}-select`) : element;
+        if (errorElement) errorElement.style.display = 'none';
+        if (targetElement && targetElement.style) targetElement.style.borderColor = '';
+    };
+
+    if (fullNameInput) fullNameInput.addEventListener('input', () => hideError('full_name'));
+    if (datePicker) datePicker.addEventListener('input', () => hideError('date-picker'));
+    if (phoneInput) phoneInput.addEventListener('input', () => hideError('phone'));
+    if (telegramInput) telegramInput.addEventListener('input', () => hideError('telegram'));
+    if (cvInput) cvInput.addEventListener('change', () => hideError('cv_upload'));
+    if (portfolioInput) portfolioInput.addEventListener('input', () => hideError('portfolio'));
+    if (educationInput) educationInput.addEventListener('input', () => hideError('education'));
+
+    if (datePicker) {
+        datePicker.addEventListener('input', (e) => {
+            let input = e.target.value.replace(/\D/g, ''); // Faqat raqamlarni olamiz
+            let size = input.length;
+
+            let day = input.substring(0, 2);
+            let month = input.substring(2, 4);
+            let year = input.substring(4, 8);
+
+            // Kunni tekshirish (maksimum 31)
+            if (size >= 2) {
+                if (parseInt(day) > 31) day = "31";
+                if (parseInt(day) === 0 && size === 2) day = "01";
+            }
+
+            // Oyni tekshirish (maksimum 12)
+            if (size >= 4) {
+                if (parseInt(month) > 12) month = "12";
+                if (parseInt(month) === 0 && size === 4) month = "01";
+            }
+
+            let formattedValue = "";
+            if (size > 0) {
+                formattedValue += day;
+            }
+            if (size > 2) {
+                formattedValue += "." + month;
+            }
+            if (size > 4) {
+                formattedValue += "." + year;
+            }
+
+            e.target.value = formattedValue;
+        });
+    }
+
+    if (telegramInput) {
+        telegramInput.addEventListener('input', () => {
+            telegramError.style.display = 'none';
+            telegramInput.style.borderColor = '';
+        });
+    }
+
     phoneInput.addEventListener('input', (e) => {
         let input = e.target.value.replace(/\D/g, ''); // Faqat raqamlarni olamiz
         let size = input.length;
@@ -436,7 +521,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         e.target.value = formattedValue;
     });
 
-    const cvInput = document.getElementById("cv_upload");
     const cvText = document.getElementById("cv-text");
 
     cvInput.addEventListener("change", function () {
@@ -458,62 +542,94 @@ document.addEventListener("DOMContentLoaded", async () => {
             const lang = (localStorage.getItem('selectedLang') || 'UZ').toUpperCase();
             const t = (key) => (translations[lang] && translations[lang][key]) ? translations[lang][key] : key;
 
-            if (document.getElementById('full_name').value.trim() == '') {
-                showNotification(t('error_full_name'), 'error');
-                return;
-            }
-            if (document.getElementById('birth_date').value == '') {
-                showNotification(t('error_birth_date'), 'error');
-                return;
-            }
+            let isValid = true;
+
+            // Helper to handle field errors
+            const validateField = (id, condition, customMessage = null) => {
+                const element = document.getElementById(id);
+                const errorElement = document.getElementById(`${id}-error`);
+                
+                // For custom selects, the target might be the parent container
+                const targetElement = (id === 'position' || id === 'region') ? document.getElementById(`${id}-select`) : element;
+
+                if (condition) {
+                    if (errorElement) {
+                        errorElement.style.display = 'block';
+                        if (customMessage) errorElement.textContent = customMessage;
+                    }
+                    if (targetElement && targetElement.style) targetElement.style.borderColor = '#ef4444';
+                    isValid = false;
+                } else {
+                    if (errorElement) errorElement.style.display = 'none';
+                    if (targetElement && targetElement.style) targetElement.style.borderColor = '';
+                }
+            };
+
+            // Full Name
+            validateField('full_name', document.getElementById('full_name').value.trim() === '');
+
+            // Date Picker
+            validateField('date-picker', document.getElementById('date-picker').value === '');
+
+            // Phone
             const phoneVal = document.getElementById('phone').value.replace(/[^\d+]/g, '');
-            if (phoneVal == '' || phoneVal == '+998' || phoneVal.length < 13) {
-                showNotification(t('error_phone'), 'error');
-                return;
-            }
-            if (document.getElementById('telegram').value.trim() == '') {
-                showNotification(t('error_telegram'), 'error');
-                return;
-            }
-            if (document.getElementById('position').value == '') {
-                showNotification(t('error_position'), 'error');
-                return;
-            }
-            if (document.getElementById('region').value == '') {
-                showNotification(t('error_region'), 'error');
-                return;
-            }
-            if (document.getElementById('cv_upload').files.length === 0) {
-                showNotification(t('error_cv'), 'error');
-                return;
-            }
-            if (document.getElementById('portfolio').value.trim() == '') {
-                showNotification(t('error_portfolio_empty'), 'error');
-                return;
+            validateField('phone', phoneVal === '' || phoneVal === '+998' || phoneVal.length < 13);
+
+            // Telegram
+            const telegramInput = document.getElementById('telegram');
+            const telegramValue = telegramInput.value.trim();
+            const telegramRegex = /^https:\/\/[a-zA-Z0-9_]+\.t\.me$/;
+
+            if (telegramValue === '') {
+                validateField('telegram', true);
+            } else if (!telegramRegex.test(telegramValue)) {
+                validateField('telegram', true, "https://username.t.me faqat ko'rinishda ma'lumot kiriting");
+            } else {
+                validateField('telegram', false);
             }
 
-            if (!document.getElementById('portfolio').value.startsWith('https://')) {
-                showNotification(t('error_portfolio_invalid'), 'error');
-                return;
+            // Position
+            validateField('position', document.getElementById('position').value === '');
+
+            // Region
+            validateField('region', document.getElementById('region').value === '');
+
+            // CV Upload
+            validateField('cv_upload', document.getElementById('cv_upload').files.length === 0);
+
+            // Portfolio
+            const portfolioValue = document.getElementById('portfolio').value.trim();
+            if (portfolioValue === '') {
+                validateField('portfolio', true);
+            } else if (!portfolioValue.startsWith('https://')) {
+                validateField('portfolio', true, t('error_portfolio_invalid'));
+            } else {
+                validateField('portfolio', false);
             }
+
+            // Education (if student)
             const isStudent = document.getElementById('is_student').checked;
-            if (isStudent && document.getElementById('education').value.trim() == '') {
-                showNotification(t('error_education'), 'error');
+            if (isStudent) {
+                validateField('education', document.getElementById('education').value.trim() === '');
+            } else {
+                validateField('education', false);
+            }
+
+            if (!isValid) {
+                showNotification(t('error_generic'), 'error');
                 return;
             }
 
             const formData = new FormData();
 
             formData.append('full_name', document.getElementById('full_name').value);
-            formData.append('birth_date', document.getElementById('birth_date').value);
+            formData.append('birth_date', document.getElementById('date-picker').value);
             formData.append('is_student', document.getElementById('is_student').checked);
             formData.append('university', document.getElementById('education').value);
             formData.append('region', document.getElementById('region').value);
             formData.append('phone', document.getElementById('phone').value.replace(/[^\d+]/g, ''));
 
-            const telegramValue = document.getElementById('telegram').value.replace('@', '');
-
-            formData.append('telegram', telegramValue.startsWith('https://t.me/') ? telegramValue : `https://t.me/${telegramValue}`);
+            formData.append('telegram', document.getElementById('telegram').value.trim());
 
             formData.append('position', document.getElementById('position').value);
 
