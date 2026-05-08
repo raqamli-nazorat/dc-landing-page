@@ -2590,9 +2590,9 @@ input:checked+.slider:before {
     font-size: 15px !important;
 }
 
-/* Kalendarning umumiy o'lchamini biroz ixchamroq qilish (ixtiyoriy) */
+/* Kalendarning umumiy o'lchami */
 .flatpickr-calendar {
-    width: 280px !important;
+    width: 315px !important;
 }
 
 /* Jobs Page Responsive Adjustments */
@@ -2698,4 +2698,97 @@ input:checked+.slider:before {
         right: 20px;
     }
 
+}
+
+/* Flatpickr Dark Mode Customization */
+.dark-mode .flatpickr-calendar {
+    background: #1A1A1A;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-family: inherit;
+}
+
+.dark-mode .flatpickr-months .flatpickr-month,
+.dark-mode .flatpickr-months .flatpickr-prev-month,
+.dark-mode .flatpickr-months .flatpickr-next-month {
+    color: #fff;
+    fill: #fff;
+}
+
+.dark-mode .flatpickr-current-month .flatpickr-monthDropdown-months {
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.dark-mode .flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .flatpickr-monthDropdown-month {
+    background-color: #1A1A1A;
+    color: #fff;
+}
+
+.dark-mode .flatpickr-weekdays {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .flatpickr-weekday {
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.dark-mode .flatpickr-day {
+    color: #f1f3f9;
+}
+
+.dark-mode .flatpickr-day.flatpickr-disabled, 
+.dark-mode .flatpickr-day.flatpickr-disabled:hover {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .flatpickr-day:hover,
+.dark-mode .flatpickr-day.prevMonthDay:hover,
+.dark-mode .flatpickr-day.nextMonthDay:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.dark-mode .flatpickr-day.selected {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: #fff;
+}
+
+.dark-mode .flatpickr-calendar.arrowTop:after {
+    border-bottom-color: #1A1A1A;
+}
+.dark-mode .flatpickr-calendar.arrowTop:before {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+.dark-mode .flatpickr-calendar.arrowBottom:after {
+    border-top-color: #1A1A1A;
+}
+.dark-mode .flatpickr-calendar.arrowBottom:before {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Dropdown ichidagi qora backgroundni yo'qotish */
+.dark-mode .flatpickr-current-month {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dark-mode .numInputWrapper span.arrowUp:after {
+    border-bottom-color: #fff;
+}
+.dark-mode .numInputWrapper span.arrowDown:after {
+    border-top-color: #fff;
 }

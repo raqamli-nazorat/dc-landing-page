@@ -548,7 +548,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const validateField = (id, condition, customMessage = null) => {
                 const element = document.getElementById(id);
                 const errorElement = document.getElementById(`${id}-error`);
-                
+
                 // For custom selects, the target might be the parent container
                 const targetElement = (id === 'position' || id === 'region') ? document.getElementById(`${id}-select`) : element;
 
@@ -708,6 +708,4 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         });
     }
-
-
 });
