@@ -623,7 +623,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             const formData = new FormData();
 
             formData.append('full_name', document.getElementById('full_name').value);
-            formData.append('birth_date', document.getElementById('date-picker').value);
+            const birthDateVal = document.getElementById('date-picker').value;
+            const formattedBirthDate = birthDateVal.split('.').reverse().join('-');
+            formData.append('birth_date', formattedBirthDate);
             formData.append('is_student', document.getElementById('is_student').checked);
             formData.append('university', document.getElementById('education').value);
             formData.append('region', document.getElementById('region').value);
@@ -642,6 +644,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             formData.append('extra_info', document.getElementById('additional_info').value);
             formData.append('portfolio', document.getElementById('portfolio').value);
             formData.append('status', 'pending');
+
 
             const res = await fetch("https://backend.raqamlinazorat.uz/api/applications/", {
                 method: "POST",
