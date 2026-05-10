@@ -152,6 +152,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const images = project[`project-card_${id}_images`];
         const galleryLayout = project[`project-card_${id}_gallery_layout`] || 'grid';
 
+        const functionsTitle = project['project_functions_title'];
+
         const advantagesTitle = project['project_advantages_title'];
         const resultsTitle = project['project_results_title'];
         const usersTitle = project['project_users_title'];
@@ -217,11 +219,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const functionsBox = document.createElement('div');
                 functionsBox.className = 'project-functions-premium';
                 functionsBox.innerHTML = `
-                    <h2 class="project-functions-premium__title">Funksiyalar</h2>
+                    <h2 class="project-functions-premium__title">${functionsTitle}</h2>
                     <ul class="functions-list-premium">
-                        ${features.map(f => `
+                        ${features.map((f, index) => `
                             <li class="function-item-premium">
-                                <img src="./Assets/detail_icon_2.svg" style="width: 32px; height: 32px;" alt="">
+                                <img src="./Assets/funcIcon${index + 1}.svg" style="width: 32px; height: 32px;" alt="">
                                 <span>${f}</span>
                             </li>
                         `).join('')}

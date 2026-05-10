@@ -654,6 +654,28 @@ document.addEventListener("DOMContentLoaded", async () => {
             const data = await res.json();
 
             if (res.ok) {
+                // Hide form content and show success screen
+                const jobsHero = document.getElementById('jobs-hero');
+                const formContent = document.getElementById('form-content');
+                const successScreen = document.getElementById('success-screen');
+
+                // Add fade out animation
+                if (jobsHero) jobsHero.classList.add('form-fade-out');
+                if (formContent) formContent.classList.add('form-fade-out');
+
+                // Scroll to top smoothly
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                setTimeout(() => {
+                    if (jobsHero) jobsHero.style.display = 'none';
+                    if (formContent) formContent.style.display = 'none';
+                    if (successScreen) {
+                        successScreen.style.display = 'flex';
+                        // Re-initialize Lucide icons for the success screen
+                        lucide.createIcons();
+                    }
+                }, 500);
+
                 form.reset();
                 // Custom selectlarni reset qilish
                 document.querySelectorAll('.custom-select').forEach(select => {
@@ -683,8 +705,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 // Education group hide
                 const educationGroup = document.getElementById('education_group');
                 if (educationGroup) educationGroup.style.display = 'none';
-
-                showNotification(t('success_message'), 'success');
             } else {
                 console.error("Xatolik tafsilotlari:", data);
                 let errorMsg = t('error_generic');

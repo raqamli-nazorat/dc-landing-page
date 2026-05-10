@@ -175,6 +175,11 @@ h3 {
     justify-content: center;
 }
 
+.btn--hero img {
+    width: 25px;
+    height: 25px;
+}
+
 .btn--hero-primary {
     background: linear-gradient(#5272F0, #3F57B3);
     color: var(--white);
@@ -1287,6 +1292,11 @@ main {
         min-width: 0;
     }
 
+    .btn--hero img {
+        width: 20px;
+        height: 20px;
+    }
+
     .btn--mobile-only {
         display: flex !important;
     }
@@ -1551,7 +1561,7 @@ main {
     }
 
     .footer {
-        padding: 60px 20px;
+        padding: 40px 20px;
     }
 
     .footer__content {
@@ -1660,7 +1670,7 @@ main {
 
 /* Premium Project Detail Page (Figma Match) */
 .project-header-premium {
-    background: linear-gradient(45deg, #4896FD, #4896FD, #316FED, #2663F1);
+    background: linear-gradient(99.21deg, #3B99F5 4.58%, #4896FD 38.86%, #316FED 69.67%, #2663F1 94.84%);
     padding: 60px;
     border-radius: 40px;
     color: var(--white);
@@ -2747,7 +2757,7 @@ input:checked+.slider:before {
     color: #f1f3f9;
 }
 
-.dark-mode .flatpickr-day.flatpickr-disabled, 
+.dark-mode .flatpickr-day.flatpickr-disabled,
 .dark-mode .flatpickr-day.flatpickr-disabled:hover {
     color: rgba(255, 255, 255, 0.1);
 }
@@ -2768,12 +2778,15 @@ input:checked+.slider:before {
 .dark-mode .flatpickr-calendar.arrowTop:after {
     border-bottom-color: #1A1A1A;
 }
+
 .dark-mode .flatpickr-calendar.arrowTop:before {
     border-bottom-color: rgba(255, 255, 255, 0.08);
 }
+
 .dark-mode .flatpickr-calendar.arrowBottom:after {
     border-top-color: #1A1A1A;
 }
+
 .dark-mode .flatpickr-calendar.arrowBottom:before {
     border-top-color: rgba(255, 255, 255, 0.08);
 }
@@ -2789,6 +2802,149 @@ input:checked+.slider:before {
 .dark-mode .numInputWrapper span.arrowUp:after {
     border-bottom-color: #fff;
 }
+
 .dark-mode .numInputWrapper span.arrowDown:after {
     border-top-color: #fff;
+}
+
+/* Success Screen Styles */
+@keyframes formFadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+}
+
+.form-fade-out {
+    animation: formFadeOutUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    pointer-events: none;
+}
+
+@keyframes successFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.success-screen {
+    width: 100%;
+    background: #F8FAFC;
+    padding: 40px;
+    border-radius: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    animation: successFadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.dark-mode .success-screen {
+    background: #1A1A1A;
+}
+
+.success-screen__info {
+    flex: 1;
+    width: 500px;
+}
+
+.success-screen__title {
+    font-family: var(--unbounded);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--text-title);
+    margin-bottom: 20px;
+    line-height: 1.1;
+    animation: successFadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s backwards;
+}
+
+.success-screen__desc {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 400px;
+    font-weight: 500;
+    animation: successFadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
+}
+
+.btn--back-home {
+    background: #3F57B3;
+    color: var(--white);
+    padding: 16px 32px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.2s;
+    animation: successFadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s backwards;
+}
+
+.btn--back-home:hover {
+    background: #33428a;
+}
+
+.success-screen__img {
+    width: 372px;
+    height: 200px;
+    position: absolute;
+    right: -60px;
+    bottom: 0px;
+    animation: imageSlideIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
+}
+
+@media (max-width: 768px) {
+    main {
+        min-height: 430px !important;
+    }
+
+    .success-screen {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+        height: 300px;
+        margin-bottom: 0px;
+    }
+
+    .success-screen__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .success-screen__title {
+        font-size: 28px;
+        max-width: 400px;
+    }
+
+    .success-screen__desc {
+        max-width: 350px;
+    }
+
+    .success-screen__img {
+        display: none;
+    }
 }

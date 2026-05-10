@@ -23,8 +23,9 @@
           rel="stylesheet">
      <script src="https://unpkg.com/lucide@latest"></script>
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" id="flatpickr-dark-theme">
-     
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css"
+          id="flatpickr-dark-theme">
+
      <script>
           (function () {
                const savedTheme = localStorage.getItem('theme') || 'light';
@@ -123,7 +124,7 @@
                <span data-i18n="nav_careers" style="color: var(--text-title); cursor: pointer;">Ish o'rinlari</span>
           </div>
 
-          <section class="jobs-hero">
+          <section class="jobs-hero" id="jobs-hero">
                <h1 class="jobs-hero__title" data-i18n="jobs_hero_title">Biz bilan ishlashni xohlaysizmi?</h1>
                <p class="jobs-hero__description" data-i18n="jobs_hero_desc">
                     Biz doim iqtidorli mutaxassislarni izlaymiz. Ochiq vakansiyalar bilan tanishing yoki o‘z
@@ -132,7 +133,8 @@
           </section>
 
           <section class="main_content">
-               <div class="jobs-form-container">
+               <!-- Form Content (Visible by default) -->
+               <div class="jobs-form-container" id="form-content">
                     <!-- Left Side: Info & Graphic -->
                     <div class="jobs-info">
                          <div class="jobs-info__content">
@@ -155,7 +157,9 @@
                                    <input type="text" id="full_name" name="full_name"
                                         data-i18n-placeholder="placeholder_name" placeholder="Ism sharif kiriting"
                                         required maxlength="255">
-                                   <span id="full_name-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="full_name-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Tug'ilgan sanasi -->
@@ -164,16 +168,21 @@
                                    <div class="input-with-icon">
                                         <!-- <input type="date" id="birth_date" name="birthdate" style="width: 100%;"
                                              required> -->
-                                        <input type="text" style="width: 100%;" id="date-picker" placeholder="Sana tanlash" required maxlength="10">
+                                        <input type="text" style="width: 100%;" id="date-picker"
+                                             placeholder="Sana tanlash" data-i18n-placeholder="placeholder_birthdate" required maxlength="10">
                                    </div>
-                                   <span id="date-picker-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="date-picker-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Telefon raqami -->
                               <div class="form-group">
                                    <label for="phone" data-i18n="label_phone">Telefon raqami</label>
                                    <input type="tel" id="phone" name="phone" value="+998" required>
-                                   <span id="phone-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="phone-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Telegram -->
@@ -181,7 +190,9 @@
                                    <label for="telegram" data-i18n="label_telegram">Telegram profil havolasi</label>
                                    <input type="text" id="telegram" name="telegram" placeholder="https://username.t.me"
                                         required maxlength="255">
-                                   <span id="telegram-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="telegram-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Lavozim (Custom Select) -->
@@ -197,7 +208,9 @@
                                         </div>
                                         <input type="hidden" id="position" name="position" required>
                                    </div>
-                                   <span id="position-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="position-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Viloyat (Custom Select) -->
@@ -212,7 +225,9 @@
                                         </div>
                                         <input type="hidden" id="region" name="region" required>
                                    </div>
-                                   <span id="region-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="region-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Resume -->
@@ -223,7 +238,9 @@
                                         <span data-i18n="btn_upload_cv" id="cv-text">Fayl yuklash</span>
                                         <input type="file" accept=".pdf" id="cv_upload" name="cv" hidden required>
                                    </label>
-                                   <span id="cv_upload-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="cv_upload-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Portfolio -->
@@ -231,7 +248,9 @@
                                    <label for="portfolio" data-i18n="label_portfolio">Portfolio havolasi</label>
                                    <input id="portfolio" name="portfolio" data-i18n-placeholder="placeholder_portfolio"
                                         placeholder="Havola kiriting" maxlength="500">
-                                   <span id="portfolio-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="portfolio-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Additional Info -->
@@ -258,7 +277,9 @@
                                    <textarea id="education" name="education"
                                         data-i18n-placeholder="placeholder_education"
                                         placeholder="Qaysi o'quv yurtida yoki kursda o'qigansiz"></textarea>
-                                   <span id="education-error" class="error-text" style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;">*Ushbu maydon majburiy</span>
+                                   <span id="education-error" class="error-text"
+                                        style="display: none; color: #ef4444; font-size: 12px; margin-top: 5px; font-weight: 500;" data-i18n="error_required">*Ushbu
+                                        maydon majburiy</span>
                               </div>
 
                               <!-- Submit -->
@@ -268,6 +289,20 @@
                               </button>
                          </form>
                     </div>
+               </div>
+
+               <!-- Success Screen (Hidden by default) -->
+               <div id="success-screen" class="success-screen" style="display: none;">
+                    <div class="success-screen__info">
+                         <h2 class="success-screen__title" data-i18n="success_title">Sizning so'rovingiz yuborildi.</h2>
+                         <p class="success-screen__desc" data-i18n="success_desc">Ma'qul kelsangiz albatta sizga aloqaga
+                              chiqamiz.</p>
+                         <button class="btn btn--back-home" onclick="location.href='index.html'">
+                              <span data-i18n="btn_back_home">Bosh sahifaga qaytish</span>
+                              <i data-lucide="arrow-up-left"></i>
+                         </button>
+                    </div>
+                    <img class="success-screen__img" src="./Assets/succesIcon.svg" alt="">
                </div>
           </section>
 

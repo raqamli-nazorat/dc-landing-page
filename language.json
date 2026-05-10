@@ -37,6 +37,7 @@
                 "project_results_title": "Natija",
                 "project_users_title": "Foydalanuvchilar",
                 "project_work_title": "Amalga oshirilgan ishlar",
+                "project_functions_title": "Funksiyalar",
                 "project_screens_title": "Ekranlar uchun tavsif",
                 "hero_title": "Kelajakni raqamli boshqaramiz",
                 "hero_desc": "O'zbekistondagi innovatsion loyihalar markazi. Sun'iy intellektdan boshlab murakkab sanoat avtomatlashtirish tizimlarigacha bo'lgan professional yechimlar.",
@@ -412,7 +413,12 @@
                 "error_portfolio_empty": "Iltimos, portfolioingizni kiriting",
                 "error_portfolio_invalid": "Iltimos, to‘g‘ri portfolio linkini kiriting!",
                 "success_message": "Arizangiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog‘lanamiz.",
-                "error_generic": "Xatolik yuz berdi!"
+                "success_title": "Sizning so'rovingiz yuborildi.",
+                "success_desc": "Ma'qul kelsangiz albatta sizga aloqaga chiqamiz.",
+                "btn_back_home": "Bosh sahifaga qaytish",
+                "error_generic": "Xatolik yuz berdi!",
+                "placeholder_birthdate": "Sana tanlash",
+                "error_required": "*Ushbu maydon majburiy"
         },
         "EN": {
                 "nav_home": "Home",
@@ -452,6 +458,7 @@
                 "project_results_title": "Results",
                 "project_users_title": "Users",
                 "project_work_title": "Work Done",
+                "project_functions_title": "Functions",
                 "project_screens_title": "Screen Descriptions",
                 "hero_title": "Controlling the Future Digitally",
                 "hero_desc": "Innovative project center in Uzbekistan. Professional solutions from artificial intelligence to complex industrial automation systems.",
@@ -829,7 +836,12 @@
                 "error_portfolio_empty": "Please enter your portfolio link!",
                 "error_portfolio_invalid": "Please enter a valid portfolio link (starting with https://)!",
                 "success_message": "Your application has been successfully sent. We will contact you soon.",
-                "error_generic": "An error occurred!"
+                "success_title": "Your request has been sent.",
+                "success_desc": "If suitable, we will definitely contact you.",
+                "btn_back_home": "Back to home page",
+                "error_generic": "An error occurred!",
+                "placeholder_birthdate": "Select date",
+                "error_required": "*This field is required"
         },
         "RU": {
                 "nav_home": "Главная",
@@ -870,7 +882,8 @@
                 "project_users_title": "Пользователи",
                 "project_work_title": "Выполненные работы",
                 "project_screens_title": "Описание экранов",
-                "hero_title": "Управляем будущим цифровым способом",
+                "project_functions_title": "Функции",
+                "hero_title": "Цифровое управление будущим",
                 "hero_desc": "Центр инновационных проектов в Узбекистане. Профессиональные решения от искусственного интеллекта до сложных систем промышленной автоматизации.",
                 "hero_btn": "Посмотреть проекты",
                 "stat_projects": "проектов реализовано в сфере",
@@ -1246,6 +1259,11 @@
                 "error_portfolio_empty": "Пожалуйста, введите ссылку на портфолио!",
                 "error_portfolio_invalid": "Пожалуйста, введите корректную ссылку на портфолио (начинается с https://)!",
                 "success_message": "Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.",
-                "error_generic": "Произошла ошибка!"
+                "success_title": "Ваш запрос отправлен.",
+                "success_desc": "Если вы подойдете, мы обязательно свяжемся с вами.",
+                "btn_back_home": "Вернуться на главную",
+                "error_generic": "Произошла ошибка!",
+                "placeholder_birthdate": "Выберите дату",
+                "error_required": "*Это поле обязательно"
         }
 }
