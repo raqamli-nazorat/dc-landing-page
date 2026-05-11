@@ -818,7 +818,7 @@ main {
     height: 100%;
     background: linear-gradient(135deg, #5266D0 0%, #3B4FB0 100%);
     opacity: 0;
-    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
 }
 
@@ -870,7 +870,7 @@ main {
     font-family: var(--unbounded);
     font-weight: 600;
     margin-bottom: 12px;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, color 0.4s ease;
 }
 
 .project-card:hover .project-card__title {
@@ -881,7 +881,7 @@ main {
 .project-card__description {
     color: var(--text-muted);
     font-size: 14px;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, color 0.4s ease;
     line-height: 1.6;
 }
 
@@ -900,7 +900,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+    transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
     border: 1px solid var(--border-color);
     position: relative;
     z-index: 5;

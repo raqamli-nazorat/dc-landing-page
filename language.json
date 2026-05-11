@@ -104,6 +104,10 @@
                         "Xabarnomalar tizimi",
                         "Ko'p tilli qo'llab-quvvatlash"
                 ],
+                "project-card_1_summary_title_1": "Sun'iy intellekt yordamida murojaatlarni avtomatlashtirish",
+                "project-card_1_summary_text_1": "Ushbu tizim mijozlardan kelib tushadigan murojaatlarni qayta ishlash, call-markaz faoliyatini optimallashtirish va ichki jarayonlarni samarali boshqarish uchun ishlab chiqilgan.",
+                "project-card_1_summary_title_2": "Mahsulot haqida",
+                "project-card_1_summary_text_2": "Platforma call-markaz, murojaatlarni boshqarish va ijro nazoratini yagona tizimga birlashtiradi. Natijada foydalanuvchilar murojaatlariga tezkor javob berish va jarayonlarni real vaqt rejimida kuzatish yaratiladi.",
                 "project-card_1_advantages": "Tizim 24/7 rejimida uzluksiz ishlash imkonini beradi va foydalanuvchilarga istalgan vaqtda murojaat yuborish imkoniyatini yaratadi. Sun'iy intellekt yordamida nutqni aniqlash va qayta ishlash funksiyasi orqali murojaatlar tez va aniq tahlil qilahdi. Avtomatlashtirilgan jarayonlar operatorlar yuklamasini sezilarli darajada kamaytiradi va xizmat ko'rsatish samaradorligini oshiradi. Tizim tezkor javob berish imkoniyati bilan foydalanuvchi tajribasini yaxshilaydi. Shu bilan birga, tizim arxitekturasi masshtablanadigan bo'lib, kelajakda qo'shimcha modullarni integratsiya qilish imkonini beradi.",
                 "project-card_1_results": "Tizim joriy etilishi natijasida murojaatlarni ko'rib chiqish vaqti sezilarli darajada qisqardi va foydalanuvchilarga xizmat ko'rsatish sifati oshdi. Ichki ish jarayonlari optimallashtirilib, vazifalarni bajarish yanada tizimli va nazorat ostida amalga oshiriladigan bo'ldi. Shu bilan birga, avtomatlashtirish hisobiga xodimlar yuklamasi kamaytirildi va umumiy ish samaradorligi oshirildi.",
                 "project-card_1_users": "Mazkur tizimdan asosan call-markaz operatorlari, kompaniya xodimlari hamda tizim administratorlari foydalanadi. Har bir foydalanuvchi o'ziga tegishli funksiyalar orqali tizim bilan samarali ishlash imkoniyatiga ega bo'ladi.",
@@ -525,6 +529,10 @@
                         "Notification system",
                         "Multi-language support"
                 ],
+                "project-card_1_summary_title_1": "Automate applications using artificial intelligence",
+                "project-card_1_summary_text_1": "This system was developed to process incoming customer calls, optimize call center operations, and effectively manage internal processes.",
+                "project-card_1_summary_title_2": "About the product",
+                "project-card_1_summary_text_2": "The platform combines call center, appeal management, and execution control into a single system. As a result, it is possible to quickly respond to user appeals and monitor processes in real time.",
                 "project-card_1_advantages": "The system enables continuous 24/7 operation and allows users to submit requests at any time. Through AI-powered speech recognition and processing, requests are analyzed quickly and accurately. Automated processes significantly reduce operator workload and increase service efficiency. The system improves user experience with quick response capability. At the same time, the system architecture is scalable, allowing for future integration of additional modules.",
                 "project-card_1_results": "As a result of system implementation, request processing time was significantly reduced and service quality for users improved. Internal workflows were optimized, and task execution became more systematic and controlled. Simultaneously, automation reduced staff workload and increased overall work efficiency.",
                 "project-card_1_users": "The system is mainly used by call center operators, company employees, and system administrators. Each user can work effectively with the system through their respective functions.",
@@ -702,7 +710,6 @@
                         "./ProjectDetailImages/project_9_img_1.jpg",
                         "./ProjectDetailImages/project_9_img_2.jpg"
                 ],
-                "project-card_9_gallery_layout": "list",
                 "project-card_10_detail": "Liquefied petroleum gas (LPG) logistics management system",
                 "project-card_10_features": [
                         "Gas cylinder accounting",
@@ -765,8 +772,8 @@
                 "project-card_12_work": "A corporate portal and procurement management system have been implemented. Modules for information posting, searching, and working with users have been established.",
                 "project-card_12_screens": "The system interface consists of a home page, an announcements page, a news section, a search and filter panel, a user account, and an administrator management page.",
                 "project-card_12_images": [
-                        "./ProjectDetailImages/project_12_img_1.jpg",
-                        "./ProjectDetailImages/project_12_img_2.jpg"
+                        "./ProjectDetailImages/project_12_img_1.png",
+                        "./ProjectDetailImages/project_12_img_2.png"
                 ],
                 "project-card_12_gallery_layout": "list",
                 "project-card_13_detail": "Digital management platform for the healthcare system",
@@ -948,6 +955,10 @@
                         "Система уведомлений",
                         "Мультиязычная поддержка"
                 ],
+                "project-card_1_summary_title_1": "Автоматизация приложений с помощью искусственного интеллекта",
+                "project-card_1_summary_text_1": "Эта система была разработана для обработки входящих звонков от клиентов, оптимизации работы колл-центра и эффективного управления внутренними процессами.",
+                "project-card_1_summary_title_2": "О продукте",
+                "project-card_1_summary_text_2": "Платформа объединяет колл-центр, систему обработки апелляций и контроль исполнения в единую систему. В результате становится возможным оперативно реагировать на обращения пользователей и отслеживать процессы в режиме реального времени.",
                 "project-card_1_advantages": "Система обеспечивает круглосуточную работу 24/7 и позволяет пользователям отправлять запросы в любое время. Благодаря функции распознавания и обработки речи на базе ИИ, обращения анализируются быстро и точно. Автоматизированные процессы значительно снижают нагрузку на операторов и повышают эффективность обслуживания. Система улучшает пользовательский опыт за счет возможности быстрого реагирования. В то же время архитектура системы является масштабируемой, что позволяет интегрировать дополнительные модули в будущем.",
                 "project-card_1_results": "В результате внедрения системы время обработки заявок значительно сократилось, а качество обслуживания пользователей повысилось. Внутренние рабочие процессы были оптимизированы, а выполнение задач стало более систематическим и контролируемым. В то же время за счет автоматизации снизилась нагрузка на персонал и повысилась общая эффективность работы.",
                 "project-card_1_users": "Системой в основном пользуются операторы колл-центров, сотрудники компании и администраторы системы. Каждый пользователь может эффективно работать с системой через соответствующие функции.",
@@ -1125,7 +1136,6 @@
                         "./ProjectDetailImages/project_9_img_1.jpg",
                         "./ProjectDetailImages/project_9_img_2.jpg"
                 ],
-                "project-card_9_gallery_layout": "list",
                 "project-card_10_detail": "Система управления логистикой сжиженного газа (LPG)",
                 "project-card_10_features": [
                         "Учет газовых баллонов",
@@ -1188,8 +1198,8 @@
                 "project-card_12_work": "Внедрены корпоративный портал и система управления тендерными процессами. Налажены модули размещения информации, поиска и работы с пользователями.",
                 "project-card_12_screens": "Интерфейс системы состоит из главной страницы, страницы объявлений, раздела новостей, панели поиска и фильтрации, личного кабинета пользователя и страницы управления администратора.",
                 "project-card_12_images": [
-                        "./ProjectDetailImages/project_12_img_1.jpg",
-                        "./ProjectDetailImages/project_12_img_2.jpg"
+                        "./ProjectDetailImages/project_12_img_1.png",
+                        "./ProjectDetailImages/project_12_img_2.png"
                 ],
                 "project-card_12_gallery_layout": "list",
                 "project-card_13_detail": "Цифровая платформа управления для системы здравоохранения",

@@ -129,6 +129,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <img src="${img}" alt="">
             </div>
         `;
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                imgBox.remove();
+            }
+        })
         imgBox.onclick = () => imgBox.remove();
         document.body.appendChild(imgBox);
     }
@@ -259,9 +264,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     galleryContainer.style.gap = '24px';
                 } else {
                     galleryContainer.style.display = 'grid';
-                    galleryContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(380px, 1fr))';
+                    galleryContainer.style.gridTemplateColumns = 'repeat(auto-fit, minmax(400px, 1fr))';
                     galleryContainer.style.gap = '24px';
-                    galleryContainer.style.height = '380px';
+                    galleryContainer.style.height = '400px';
                 }
 
                 galleryContainer.innerHTML = images.map(src => {
