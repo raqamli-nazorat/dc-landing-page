@@ -543,21 +543,41 @@ document.addEventListener("DOMContentLoaded", async () => {
             const t = (key) => (translations[lang] && translations[lang][key]) ? translations[lang][key] : key;
 
             let isValid = true;
+            let firstInvalidField = null;
+            let firstInvalidMessage = null;
+
+            const requiredErrorKeys = {
+                full_name: 'error_full_name',
+                'date-picker': 'error_birth_date',
+                phone: 'error_phone',
+                telegram: 'error_telegram',
+                position: 'error_position',
+                region: 'error_region',
+                cv_upload: 'error_cv',
+                portfolio: 'error_portfolio_empty',
+                education: 'error_education'
+            };
 
             // Helper to handle field errors
-            const validateField = (id, condition, customMessage = null) => {
+            const validateField = (id, condition, customMessage = null, errorKey = null) => {
                 const element = document.getElementById(id);
                 const errorElement = document.getElementById(`${id}-error`);
 
                 // For custom selects, the target might be the parent container
                 const targetElement = (id === 'position' || id === 'region') ? document.getElementById(`${id}-select`) : element;
+                const message = customMessage || t(errorKey || requiredErrorKeys[id] || 'error_required');
 
                 if (condition) {
                     if (errorElement) {
                         errorElement.style.display = 'block';
-                        if (customMessage) errorElement.textContent = customMessage;
+                        errorElement.textContent = message;
                     }
                     if (targetElement && targetElement.style) targetElement.style.borderColor = '#ef4444';
+
+                    if (!firstInvalidField) {
+                        firstInvalidField = targetElement || element;
+                        firstInvalidMessage = message;
+                    }
                     isValid = false;
                 } else {
                     if (errorElement) errorElement.style.display = 'none';
@@ -583,7 +603,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (telegramValue === '') {
                 validateField('telegram', true);
             } else if (!telegramRegex.test(telegramValue)) {
-                validateField('telegram', true, "https://username.t.me faqat ko'rinishda ma'lumot kiriting");
+                validateField('telegram', true, t('error_telegram_invalid'));
             } else {
                 validateField('telegram', false);
             }
@@ -600,7 +620,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Portfolio
             const portfolioValue = document.getElementById('portfolio').value.trim();
             if (portfolioValue === '') {
-                validateField('portfolio', true);
+                validateField('portfolio', true, t('error_portfolio_empty'));
             } else if (!portfolioValue.startsWith('https://')) {
                 validateField('portfolio', true, t('error_portfolio_invalid'));
             } else {
@@ -616,7 +636,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             if (!isValid) {
-                showNotification(t('error_generic'), 'error');
+                if (firstInvalidField) {
+                    firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    if (firstInvalidField.focus) firstInvalidField.focus({ preventScroll: true });
+                }
+                showNotification(firstInvalidMessage || t('error_generic'), 'error');
                 return;
             }
 

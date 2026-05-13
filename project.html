@@ -31,23 +31,24 @@
     <meta name="theme-color" content="#6f1dfc">
 
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Font Preloading for Performance -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" as="style">
-    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        as="style">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Dynamic Project JSON-LD Schema Placeholder -->
     <script type="application/ld+json" id="project-schema"></script>
     <!-- Anti-flash script -->
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme') || 'light';
             if (savedTheme === 'dark') {
                 document.documentElement.classList.add('dark-mode');
@@ -68,7 +69,8 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="index.html#loyihalar" class="nav__link" data-i18n="nav_projects">Loyihalar</a></li>
-                    <li><a href="index.html#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a></li>
+                    <li><a href="index.html#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a>
+                    </li>
                     <li><a href="jobs.html" class="nav__link" data-i18n="nav_careers">Ish o'rinlari</a></li>
                 </ul>
                 <div class="nav__mobile-actions">
@@ -112,11 +114,12 @@
                 </div>
                 <a href="index.html#aloqa" class="btn btn--aloqa">
                     <span data-i18n="btn_contact">Aloqa</span>
-                    <i data-lucide="phone"></i>
+                    <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
                 </a>
-                <a href="https://boshqaruv.raqamlinazorat.uz" target="_blank" class="btn btn--project" style="padding: 8px 15px;">
+                <a href="https://boshqaruv.raqamlinazorat.uz" target="_blank" class="btn btn--project"
+                    style="padding: 8px 15px;">
                     <span data-i18n="btn_new_project">Raqamli Boshqaruv</span>
-                    <i data-lucide="mouse-pointer-2"></i>
+                    <img src="./Assets/mouse-pointer-click.svg" style="width: 25px; height: 25px;" alt="">
                 </a>
                 <button class="mobile-menu-btn" id="mobile-menu-btn">
                     <i data-lucide="menu"></i>
@@ -127,8 +130,10 @@
 
     <main class="project-detail-container container">
         <div class="breadcrumbs">
-            <span data-i18n="nav_home" onclick="location.href='index.html'" style="cursor: pointer;color: var(--text-muted);">Asosiy</span>
-            <span data-i18n="nav_projects" style="color: var(--text-title); cursor: pointer;" onclick="location.href='index.html#loyihalar'">Loyihalar</span>
+            <span data-i18n="nav_home" onclick="location.href='index.html'"
+                style="cursor: pointer;color: var(--text-muted);">Asosiy</span>
+            <span data-i18n="nav_projects" style="color: var(--text-title); cursor: pointer;"
+                onclick="location.href='index.html#loyihalar'">Loyihalar</span>
         </div>
         <div id="project-content">
             <!-- Dynamic sections -->
@@ -138,8 +143,10 @@
     <footer class="footer">
         <div class="footer__content">
             <div class="footer-logo" onclick="location.href='index.html'" style="cursor: pointer;">
-                <img id="footer-img" src="./Assets/Footer_logo.svg" alt="Raqamli Nazorat Footer Logo" loading="lazy" class="footer-logo--desktop">
-                <img src="./Assets/footer_mobile_logo.svg" alt="Raqamli Nazorat" loading="lazy" class="footer-logo--mobile">
+                <img id="footer-img" src="./Assets/Footer_logo.svg" alt="Raqamli Nazorat Footer Logo" loading="lazy"
+                    class="footer-logo--desktop">
+                <img src="./Assets/footer_mobile_logo.svg" alt="Raqamli Nazorat" loading="lazy"
+                    class="footer-logo--mobile">
                 <span class="logo__text">Raqamli Nazorat</span>
             </div>
             <div class="footer__actions">
@@ -147,7 +154,8 @@
                     <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
                     <span style="font-size: 15px; font-weight: 600;">+998 91 601 43 33</span>
                 </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alxsoft2018@gmail.com" target="_blank" class="btn btn--number">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alxsoft2018@gmail.com" target="_blank"
+                    class="btn btn--number">
                     <img src="./Assets/mail-02.svg" id="mail-logo" alt="Email" style="width: 18px; height: 18px;">
                 </a>
                 <a href="https://t.me/BAT2N93" target="_blank" class="btn btn--number">
