@@ -156,6 +156,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         const videoId = project[`project-card_${id}_video`];
         const images = project[`project-card_${id}_images`];
         const galleryLayout = project[`project-card_${id}_gallery_layout`] || 'grid';
+        const siteUrl = project[`project-card_${id}_url`];
+
+        const siteLink = document.getElementById('project-site-link');
+        if (siteLink) {
+            if (siteUrl) {
+                siteLink.href = siteUrl;
+                siteLink.textContent = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+                siteLink.hidden = false;
+            } else {
+                siteLink.hidden = true;
+            }
+        }
 
         const functionsTitle = project['project_functions_title'];
 
@@ -178,7 +190,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (isPremium) {
             // PREMIUM FIGMA LAYOUT (ID 1 ONLY)
-            wrapper.style.gap = '24px';
+            wrapper.style.gap = '32px';
 
             // 1. Blue Header Card
             const headerBlock = document.createElement('div');

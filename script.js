@@ -258,7 +258,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Project Navigation
     projects.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.project-card__link')) return; // domain link opens its own site
             const projectId = card.getAttribute('data-project-id');
             window.location.href = `project.html?id=${projectId}`;
         });
