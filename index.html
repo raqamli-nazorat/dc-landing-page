@@ -100,6 +100,16 @@
                     <li><a href="#biz-haqimizda" class="nav__link" data-i18n="nav_about">Biz haqimizda</a></li>
                     <li><a href="jobs.html" class="nav__link" data-i18n="nav_careers">Ish o'rinlari</a></li>
                 </ul>
+                <div class="nav__mobile-links">
+                    <a href="#aloqa" class="nav__link">
+                        <span data-i18n="btn_contact">Aloqa</span>
+                        <i data-lucide="phone"></i>
+                    </a>
+                    <a href="https://passport.raqamlinazorat.uz" target="_blank" rel="noopener" class="nav__link">
+                        <span data-i18n="btn_passport">Passport</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 4.5a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 0 0 0-5.5ZM7.5 17.25c0 .41.34.75.75.75h7.5c.41 0 .75-.34.75-.75 0-1.8-2.01-3.25-4.5-3.25s-4.5 1.45-4.5 3.25Z"/></svg>
+                    </a>
+                </div>
                 <div class="nav__mobile-actions">
                     <div class="divider"></div>
                     <div class="mobile-theme-switcher">
@@ -113,7 +123,7 @@
                 </div>
             </nav>
             <div class="header__actions">
-                <button class="theme-toggle" id="theme-toggle">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Theme">
                     <i data-lucide="sun" class="theme-icon-sun"></i>
                     <i data-lucide="moon" class="theme-icon-moon"></i>
                 </button>
@@ -140,9 +150,13 @@
                 </div>
                 <a class="btn btn--aloqa" href="#aloqa">
                     <span data-i18n="btn_contact">Aloqa</span>
-                    <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
+                    <i data-lucide="phone"></i>
                 </a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <a class="btn btn--passport" href="https://passport.raqamlinazorat.uz" target="_blank" rel="noopener">
+                    <span data-i18n="btn_passport">Passport</span>
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 4.5a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 0 0 0-5.5ZM7.5 17.25c0 .41.34.75.75.75h7.5c.41 0 .75-.34.75-.75 0-1.8-2.01-3.25-4.5-3.25s-4.5 1.45-4.5 3.25Z"/></svg>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
                     <i data-lucide="menu"></i>
                 </button>
             </div>
