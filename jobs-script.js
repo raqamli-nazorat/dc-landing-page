@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Close mobile nav menu if open
             if (navMenu && navMenu.classList.contains('nav--active')) {
                 navMenu.classList.remove('nav--active');
-                const icon = mobileMenuBtn.querySelector('i');
+                const icon = mobileMenuBtn.querySelector('i, svg');
                 if (icon) {
                     icon.setAttribute('data-lucide', 'menu');
                     lucide.createIcons();
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (langDropdown) langDropdown.classList.remove('lang-switcher__dropdown--active');
 
             navMenu.classList.toggle('nav--active');
-            const icon = mobileMenuBtn.querySelector('i');
+            const icon = mobileMenuBtn.querySelector('i, svg');
             if (navMenu.classList.contains('nav--active')) {
                 icon.setAttribute('data-lucide', 'x');
             } else {
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (navMenu && navMenu.classList.contains('nav--active')) {
             if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                 navMenu.classList.remove('nav--active');
-                const icon = mobileMenuBtn.querySelector('i');
+                const icon = mobileMenuBtn.querySelector('i, svg');
                 icon.setAttribute('data-lucide', 'menu');
                 lucide.createIcons();
             }

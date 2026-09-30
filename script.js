@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Close mobile nav menu if open
         if (typeof navMenu !== 'undefined' && navMenu && navMenu.classList.contains('nav--active')) {
             navMenu.classList.remove('nav--active');
-            const icon = mobileMenuBtn.querySelector('i');
+            const icon = mobileMenuBtn.querySelector('i, svg');
             if (icon) {
                 icon.setAttribute('data-lucide', 'menu');
                 lucide.createIcons();
@@ -290,13 +290,22 @@ document.addEventListener("DOMContentLoaded", async () => {
             navMenu.classList.toggle('nav--active');
 
             // Toggle icon between menu and x
-            const icon = mobileMenuBtn.querySelector('i');
+            const icon = mobileMenuBtn.querySelector('i, svg');
             if (navMenu.classList.contains('nav--active')) {
                 icon.setAttribute('data-lucide', 'x');
             } else {
                 icon.setAttribute('data-lucide', 'menu');
             }
             lucide.createIcons();
+        });
+
+        // Close the menu after picking a link
+        navMenu.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav--active');
+                mobileMenuBtn.querySelector('i, svg').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
         });
     }
 
@@ -321,7 +330,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (navMenu && navMenu.classList.contains('nav--active')) {
             if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                 navMenu.classList.remove('nav--active');
-                const icon = mobileMenuBtn.querySelector('i');
+                const icon = mobileMenuBtn.querySelector('i, svg');
                 icon.setAttribute('data-lucide', 'menu');
                 lucide.createIcons();
             }
@@ -345,7 +354,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 // Close mobile nav menu if open
                 if (navMenu) {
                     navMenu.classList.remove('nav--active');
-                    const icon = mobileMenuBtn.querySelector('i');
+                    const icon = mobileMenuBtn.querySelector('i, svg');
                     if (icon) {
                         icon.setAttribute('data-lucide', 'menu');
                         lucide.createIcons();
