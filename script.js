@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Tag filtering logic
     const tags = document.querySelectorAll('.tag');
     const projects = document.querySelectorAll('.project-card');
+    const filterableProjects = document.querySelectorAll('#loyihalar .project-card');
 
     tags.forEach(tag => {
         tag.addEventListener('click', () => {
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             parent.querySelectorAll('.tag').forEach(t => t.classList.remove('tag--active'));
             tag.classList.add('tag--active');
 
-            projects.forEach(project => {
+            filterableProjects.forEach(project => {
                 const category = project.getAttribute('data-category');
 
                 if (filter === 'all' || category === filter) {
@@ -258,10 +259,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Project Navigation
     projects.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.project-card__link')) return; // domain link opens its own site
             const projectId = card.getAttribute('data-project-id');
             window.location.href = `project.html?id=${projectId}`;
         });
+
+        // Start/end the hover fill from the cursor's entry/exit point
+        const setOrigin = (e) => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--x', `${((e.clientX - rect.left) / rect.width) * 100}%`);
+            card.style.setProperty('--y', `${((e.clientY - rect.top) / rect.height) * 100}%`);
+        };
+        card.addEventListener('pointerenter', setOrigin);
+        card.addEventListener('pointerleave', setOrigin);
     });
 
     // Mobile Menu Toggle

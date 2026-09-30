@@ -181,30 +181,607 @@
         </div>
     </section>
     <main>
-        <section class="overview container">
-            <div class="overview__grid">
-                <div class="stats">
-                    <div class="stat-card stat-card--dark">
-                        <div class="stat-card__number">50+</div>
-                        <div class="stat-card__label" data-i18n="stat_projects">sohada amalga oshirilgan loyihalar</div>
+        <section id="loyihalar" class="projects container">
+            <div class="projects__header">
+                <h2 class="section-title" data-i18n="projects_title">Loyihalar</h2>
+                <div class="filter-tags filter-tags--small">
+                    <button class="tag tag--dark tag--active" data-filter="all" data-i18n="projects_all">
+                        Barchasi
+                    </button>
+                    <button class="tag tag--dark" data-filter="ai" data-i18n="projects_ai">
+                        Sun'iy intellekt
+                    </button>
+                    <button class="tag tag--dark" data-filter="industrial" data-i18n="projects_industrial">
+                        Sanoat (PLC)
+                    </button>
+                    <button class="tag tag--dark" data-filter="web" data-i18n="projects_web">
+                        Web Tizimlar
+                    </button>
+                </div>
+            </div>
+            <div class="projects__grid">
+                <!-- Project cards will be populated here -->
+                <div class="project-card" data-category="web" data-project-id="16">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_16_title">Raqamli muloqot</h3>
+                        <p class="project-card__description" data-i18n="project-card_16_desc">Onlayn audio/video yig'ilishlar va videokonferensiyalarni tashkil etish platformasi</p>
                     </div>
-                    <div class="stat-card stat-card--light">
-                        <div class="stat-card__number">10 000+</div>
-                        <div class="stat-card__label" data-i18n="stat_devices">ulangan qurilmalar va modemlar</div>
+                    <div class="project-card__footer">
+                        <a href="https://muloqot.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">muloqot.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
                     </div>
                 </div>
-                <div class="solutions-card">
-                    <h2 class="section-title" data-i18n="solutions_title">Yechimlarimiz</h2>
-                    <div class="filter-tags">
-                        <button data-i18n="monitoring_systems" class="tag tag--active features_tag">Monitoring
-                            tizimlari</button>
-                        <button data-i18n="gas_modems" class="tag features_tag">Gaz modemlari</button>
-                        <button data-i18n="it_devices" class="tag tag--active features_tag">IT qurilmalar</button>
-                        <button data-i18n="software_platforms" class="tag features_tag">Dasturiy platformalar</button>
-                        <button data-i18n="infrastructure_solutions" class="tag features_tag">Infratuzilma
-                            yechimlari</button>
-                        <button data-i18n="technical_support" class="tag tag--active features_tag">Texnik
-                            qo'llab-quvvatlash</button>
+                <div class="project-card" data-category="web" data-project-id="17">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_17_title">Raqamli taksi</h3>
+                        <p class="project-card__description" data-i18n="project-card_17_desc">Yo'lovchi tashish xizmatlarini boshqarish, buyurtmalar va haydovchilar faoliyati nazorati tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://taxi.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">taxi.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="18">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_18_title">Raqamli barber</h3>
+                        <p class="project-card__description" data-i18n="project-card_18_desc">Barbershoplar uchun mijozlar qabuli, onlayn navbat va xizmatlar hisobi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://barber.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">barber.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="19">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_19_title">Raqamli salon</h3>
+                        <p class="project-card__description" data-i18n="project-card_19_desc">Go'zallik salonlar uchun mijozlar qabuli, onlayn navbat va xizmatlar hisobi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://salon.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">salon.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="20">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_20_title">Raqamli choyxona</h3>
+                        <p class="project-card__description" data-i18n="project-card_20_desc">Umumiy ovqatlanish maskanlari va choyxonalar uchun joy band qilish hamda buyurtmalar boshqaruvi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://choyxona.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">choyxona.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="21">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_21_title">Raqamli stomatologiya</h3>
+                        <p class="project-card__description" data-i18n="project-card_21_desc">Stomatologiya klinikalari uchun bemorlar qabuli, elektron tibbiy kartalar va xizmatlar hisobi tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://stomatologiya.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">stomatologiya.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="22">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_22_title">Xizmat ko'rsatish yo'nalishi (Zaxira)</h3>
+                        <p class="project-card__description" data-i18n="project-card_22_desc">Rejalashtirilayotgan yangi yo'nalishdagi xizmat ko'rsatish loyihasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="23">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_23_title">Raqamli kunlik ishchi</h3>
+                        <p class="project-card__description" data-i18n="project-card_23_desc">Mavsumiy va kunlik ishchilar hamda buyurtmachilar o'rtasida bandlikni tezkor muvofiqlashtirish platformasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://kunlik-ishchi.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">kunlik-ishchi.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="24">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_24_title">Raqamli hamshira</h3>
+                        <p class="project-card__description" data-i18n="project-card_24_desc">Uyda tibbiy yordam ko'rsatish, malakali hamshiralarni chaqirish va tibbiy xizmatlar monitoringi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://hamshira.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">hamshira.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="25">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_25_title">Xizmat ko'rsatish yo'nalishi (Zaxira)</h3>
+                        <p class="project-card__description" data-i18n="project-card_25_desc">Rejalashtirilayotgan yangi yo'nalishdagi xizmat ko'rsatish loyihasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="26">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_26_title">Raqamli dorixona</h3>
+                        <p class="project-card__description" data-i18n="project-card_26_desc">Dorixonalar tarmog'i, dori vositalari qoldig'i, narxlari va savdoni avtomatlashtirish tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://dorixona.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">dorixona.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="27">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_27_title">Raqamli bozorchi</h3>
+                        <p class="project-card__description" data-i18n="project-card_27_desc">Bozorlar va savdo rastalari uchun tovarlar aylanmasi, yetkazib berish va hisob-kitob platformasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://bozorchi.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">bozorchi.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="28">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_28_title">Raqamli sport CRM</h3>
+                        <p class="project-card__description" data-i18n="project-card_28_desc">Fitnes klublar va sport majmualari uchun mijozlar tashrifi, abonementlar va murabbiylar CRM tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://sport-crm.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">sport-crm.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="29">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_29_title">Raqamli avto-servis va ehtiyot qismlar</h3>
+                        <p class="project-card__description" data-i18n="project-card_29_desc">Avtotexxizmat ustaxonalari va ehtiyot qismlar savdosi jarayonlarini avtomatlashtirish tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://avto-servise.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">avto-servise.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="30">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_30_title">Xizmat ko'rsatish yo'nalishi (Zaxira)</h3>
+                        <p class="project-card__description" data-i18n="project-card_30_desc">Rejalashtirilayotgan yangi yo'nalishdagi xizmat ko'rsatish loyihasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="31">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_31_title">Raqamli sayohat firmasi</h3>
+                        <p class="project-card__description" data-i18n="project-card_31_desc">Turistik agentliklar uchun turlar, viza xizmatlari va sayohatchilar buyurtmalarini boshqarish tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://sayohat-firma.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">sayohat-firma.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="32">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_32_title">Raqamli xizmatlar agregatori</h3>
+                        <p class="project-card__description" data-i18n="project-card_32_desc">Turli sohalardagi maishiy va professional xizmat ko'rsatuvchilarni jamlovchi yagona portal</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="33">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_33_title">Raqamli buxgalteriya</h3>
+                        <p class="project-card__description" data-i18n="project-card_33_desc">Korxona va tashkilotlar uchun buxgalteriya hisoboti, birlamchi hujjatlar va moliyaviy hisobotlar platformasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://buxgalter.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">buxgalter.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="34">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_34_title">Raqamli shtamp</h3>
+                        <p class="project-card__description" data-i18n="project-card_34_desc">Muhr va shtamplar tayyorlashga buyurtma olish, hisobga olish va elektron verifikatsiya xizmati</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://shtamp.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">shtamp.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="35">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_35_title">Raqamli audit</h3>
+                        <p class="project-card__description" data-i18n="project-card_35_desc">Moliyaviy va xo'jalik faoliyati auditi, tekshiruvlar hisobi va ekspertiza xulosalarini yuritish tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://audit.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">audit.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="36">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_36_title">Maishiy xizmatlar (Ta'mirlash)</h3>
+                        <p class="project-card__description" data-i18n="project-card_36_desc">Maishiy texnika va uy jihozlarini ta'mirlash ustalari xizmatlarini boshqarish tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="37">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_37_title">Raqamli advokat</h3>
+                        <p class="project-card__description" data-i18n="project-card_37_desc">Yuridik byurolar va advokatlar uchun ish yurituv, sud hujjatlari va mijozlar hisobi tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://advokat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">advokat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="38">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_38_title">Raqamli to'qimachilik (Tekstil) CRM</h3>
+                        <p class="project-card__description" data-i18n="project-card_38_desc">To'qimachilik va tikuvchilik korxonalari uchun xomashyo, ishlab chiqarish va buyurtmalar CRM tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://textil.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">textil.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="39">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_39_title">Xizmat ko'rsatish yo'nalishi (Zaxira)</h3>
+                        <p class="project-card__description" data-i18n="project-card_39_desc">Rejalashtirilayotgan yangi yo'nalishdagi xizmat ko'rsatish loyihasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="40">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_40_title">Yetkazib berish va logistika xizmati</h3>
+                        <p class="project-card__description" data-i18n="project-card_40_desc">Tezkor yetkazib berish, posilkalar nazorati va kuryerlik faoliyatini boshqarish platformasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="41">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_41_title">Klining va tozalash xizmati</h3>
+                        <p class="project-card__description" data-i18n="project-card_41_desc">Kvartiralar, xususiy xonadonlar va ofislarni professional tozalash brigadalari boshqaruvi tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="42">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_42_title">Raqamli ta'lim CRM</h3>
+                        <p class="project-card__description" data-i18n="project-card_42_desc">O'quv markazlari va kurslar uchun talabalar bazasi, davomat, jadvallar va to'lovlar hisobi CRM tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://talim.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">talim.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="43">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_43_title">Santexnika va usta xizmatlari</h3>
+                        <p class="project-card__description" data-i18n="project-card_43_desc">Santexnika, isitish tizimlari va tegishli muhandislik xizmatlari buyurtmalarini muvofiqlashtirish</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="44">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_44_title">Elektr montaj va sozlash xizmatlari</h3>
+                        <p class="project-card__description" data-i18n="project-card_44_desc">Elektr tarmoqlari, xonadonlar va tijorat obyektlarida montaj xizmatlarini ko'rsatuvchi ustalar platformasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="45">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_45_title">Raqamli servis (Zaxira)</h3>
+                        <p class="project-card__description" data-i18n="project-card_45_desc">Kelgusida joriy etish uchun rejalashtirilgan zaxiradagi xizmat loyihasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="46">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_46_title">Raqamli tarjimon CRM</h3>
+                        <p class="project-card__description" data-i18n="project-card_46_desc">Tarjima markazlari uchun hujjatlar tarjimasi, notarial tasdiqlash va tarjimonlar ishini boshqarish CRM tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://tarjimon.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">tarjimon.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="47">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_47_title">Raqamli servis (Zaxira)</h3>
+                        <p class="project-card__description" data-i18n="project-card_47_desc">Kelgusida joriy etish uchun rejalashtirilgan zaxiradagi xizmat loyihasi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://xizmat.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">xizmat.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="48">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_48_title">Raqamli qassobxona CRM</h3>
+                        <p class="project-card__description" data-i18n="project-card_48_desc">Go'sht mahsulotlari do'konlari va qassobxonalar uchun mahsulot kirimi, savdo va ta'minot CRM tizimi</p>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://qassob.raqamlinazorat.uz" target="_blank" rel="noopener" class="project-card__link">qassob.raqamlinazorat.uz</a>
+                        <div class="project-card__action">
+                            <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sanoat-loyihalar" class="projects projects--industrial container">
+            <div class="projects__header">
+                <h2 class="section-title" data-i18n="industrial_projects_title">Sanoat loyihalari</h2>
+            </div>
+            <div class="projects__grid">
+                <div class="project-card" data-category="web" data-project-id="12">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_12_title">E-Komplektatsiya</h3>
+                        <p class="project-card__description" data-i18n="project-card_12_desc">
+                            Ishlab chiqarish va qurilish materiallari
+                            komplektatsiyasini boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="9">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_9_title">M-Gaz</h3>
+                        <p class="project-card__description" data-i18n="project-card_9_desc">
+                            G'az taqsimlash punktlari uchun zamonaviy nazorat va
+                            boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai" data-project-id="1">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_1_title">AI Call center</h3>
+                        <p class="project-card__description" data-i18n="project-card_1_desc">
+                            Mijozlar bilan aloqani avtomatlashtirish va nutqni tahlil
+                            qiluvchi aqlli call markaz tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai" data-project-id="2">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_2_title">YPX AI</h3>
+                        <p class="project-card__description" data-i18n="project-card_2_desc">
+                            Yo'l harakati qoidabuzarliklarini intellektual tahlil va
+                            avtomatlashtirish platformasi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai" data-project-id="3">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_3_title">Elektron o'qituvchi</h3>
+                        <p class="project-card__description" data-i18n="project-card_3_desc">
+                            Ta'lim sohasida o'quvchilar uchun individual qobiliyatlari
+                            va o'zlashtirishni tahlil qiluvchi AI assistent platformasi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial" data-project-id="4">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_4_title">Ageing Tank</h3>
+                        <p class="project-card__description" data-i18n="project-card_4_desc">
+                            Pivo va boshqa ichimliklarni tayyorlash jarayonini nazorat
+                            qiluvchi sanoat PLC tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial" data-project-id="5">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_5_title">Gazprom PLS</h3>
+                        <p class="project-card__description" data-i18n="project-card_5_desc">
+                            Gaz sanoati ob'ektlari uchun zamonaviy texnologik nazorat
+                            va boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial" data-project-id="6">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_6_title">Biokimyo</h3>
+                        <p class="project-card__description" data-i18n="project-card_6_desc">
+                            Kimyoviy jarayonlarni monitoring-laboratoriya nazoratini
+                            avtomatlashtirilgan boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai" data-project-id="7">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_7_title">Gologramma</h3>
+                        <p class="project-card__description" data-i18n="project-card_7_desc">
+                            Markaziy nazorat va vizuallashtirish tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="8">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_8_title">ERP-CRM Hudud</h3>
+                        <p class="project-card__description" data-i18n="project-card_8_desc">
+                            Hududiy boshqaruvni rejalashtirish uchun mo'ljallangan keng
+                            qamrovli korporativ tizim.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="10">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_10_title">S-Gaz</h3>
+                        <p class="project-card__description" data-i18n="project-card_10_desc">
+                            Gaz ta'minoti va monitoring markazi uchun yagona nazorat va
+                            monitoring platformasi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-project-id="11">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_11_title">Dispatcher</h3>
+                        <p class="project-card__description" data-i18n="project-card_11_desc">
+                            Operativ boshqaruv va dispetcherlik xizmatlari uchun
+                            mo'ljallangan boshqaruv tizimi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial" data-project-id="13">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_13_title">Telman</h3>
+                        <p class="project-card__description" data-i18n="project-card_13_desc">
+                            Telekommunikatsiya tizimlari va tarmoqlarini boshqarish
+                            interfeysi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial" data-project-id="14">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_14_title">Yashil energiya</h3>
+                        <p class="project-card__description" data-i18n="project-card_14_desc">
+                            Muqobil energiya manbalari va yashil texnologiyalar
+                            monitoringi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial" data-project-id="15">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title" data-i18n="project-card_15_title">Mudofaa</h3>
+                        <p class="project-card__description" data-i18n="project-card_15_desc">
+                            Mudofaa tizimlari uchun maxsus mo'ljallangan xavfsiz va
+                            barqaror boshqaruv platformasi.
+                        </p>
+                    </div>
+                    <div class="project-card__action">
+                        <svg width="20" height="20" viewBox="9 9 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.021 12.021H21.9205V21.9205Z" fill="currentColor"/><path d="M12.021 21.9205L21.9205 12.021M21.9205 21.9205V12.021H12.021" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                 </div>
             </div>
@@ -256,207 +833,37 @@
             </div>
         </section>
 
-        <section id="loyihalar" class="projects container">
-            <div class="projects__header">
-                <h2 class="section-title" data-i18n="projects_title">Loyihalar</h2>
-                <div class="filter-tags filter-tags--small">
-                    <button class="tag tag--dark tag--active" data-filter="all" data-i18n="projects_all">
-                        Barchasi
-                    </button>
-                    <button class="tag tag--dark" data-filter="ai" data-i18n="projects_ai">
-                        Sun'iy intellekt
-                    </button>
-                    <button class="tag tag--dark" data-filter="industrial" data-i18n="projects_industrial">
-                        Sanoat (PLC)
-                    </button>
-                    <button class="tag tag--dark" data-filter="web" data-i18n="projects_web">
-                        Web Tizimlar
-                    </button>
-                </div>
-            </div>
-            <div class="projects__grid">
-                <!-- Project cards will be populated here -->
-                <div class="project-card" data-category="web" data-project-id="12">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_12_title">E-Komplektatsiya</h3>
-                        <p class="project-card__description" data-i18n="project-card_12_desc">
-                            Ishlab chiqarish va qurilish materiallari
-                            komplektatsiyasini boshqaruv tizimi.
-                        </p>
+        <section class="overview container">
+            <div class="overview__grid">
+                <div class="stats">
+                    <div class="stat-card stat-card--dark">
+                        <div class="stat-card__number">50+</div>
+                        <div class="stat-card__label" data-i18n="stat_projects">sohada amalga oshirilgan loyihalar</div>
                     </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
+                    <div class="stat-card stat-card--light">
+                        <div class="stat-card__number">10 000+</div>
+                        <div class="stat-card__label" data-i18n="stat_devices">ulangan qurilmalar va modemlar</div>
                     </div>
                 </div>
-                <div class="project-card" data-category="web" data-project-id="9">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_9_title">M-Gaz</h3>
-                        <p class="project-card__description" data-i18n="project-card_9_desc">
-                            G'az taqsimlash punktlari uchun zamonaviy nazorat va
-                            boshqaruv tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="ai" data-project-id="1">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_1_title">AI Call center</h3>
-                        <p class="project-card__description" data-i18n="project-card_1_desc">
-                            Mijozlar bilan aloqani avtomatlashtirish va nutqni tahlil
-                            qiluvchi aqlli call markaz tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="ai" data-project-id="2">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_2_title">YPX AI</h3>
-                        <p class="project-card__description" data-i18n="project-card_2_desc">
-                            Yo'l harakati qoidabuzarliklarini intellektual tahlil va
-                            avtomatlashtirish platformasi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="ai" data-project-id="3">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_3_title">Elektron o'qituvchi</h3>
-                        <p class="project-card__description" data-i18n="project-card_3_desc">
-                            Ta'lim sohasida o'quvchilar uchun individual qobiliyatlari
-                            va o'zlashtirishni tahlil qiluvchi AI assistent platformasi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="industrial" data-project-id="4">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_4_title">Ageing Tank</h3>
-                        <p class="project-card__description" data-i18n="project-card_4_desc">
-                            Pivo va boshqa ichimliklarni tayyorlash jarayonini nazorat
-                            qiluvchi sanoat PLC tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="industrial" data-project-id="5">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_5_title">Gazprom PLS</h3>
-                        <p class="project-card__description" data-i18n="project-card_5_desc">
-                            Gaz sanoati ob'ektlari uchun zamonaviy texnologik nazorat
-                            va boshqaruv tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="industrial" data-project-id="6">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_6_title">Biokimyo</h3>
-                        <p class="project-card__description" data-i18n="project-card_6_desc">
-                            Kimyoviy jarayonlarni monitoring-laboratoriya nazoratini
-                            avtomatlashtirilgan boshqaruv tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="ai" data-project-id="7">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_7_title">Gologramma</h3>
-                        <p class="project-card__description" data-i18n="project-card_7_desc">
-                            Markaziy nazorat va vizuallashtirish tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web" data-project-id="8">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_8_title">ERP-CRM Hudud</h3>
-                        <p class="project-card__description" data-i18n="project-card_8_desc">
-                            Hududiy boshqaruvni rejalashtirish uchun mo'ljallangan keng
-                            qamrovli korporativ tizim.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web" data-project-id="10">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_10_title">S-Gaz</h3>
-                        <p class="project-card__description" data-i18n="project-card_10_desc">
-                            Gaz ta'minoti va monitoring markazi uchun yagona nazorat va
-                            monitoring platformasi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web" data-project-id="11">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_11_title">Dispatcher</h3>
-                        <p class="project-card__description" data-i18n="project-card_11_desc">
-                            Operativ boshqaruv va dispetcherlik xizmatlari uchun
-                            mo'ljallangan boshqaruv tizimi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="industrial" data-project-id="13">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_13_title">Telman</h3>
-                        <p class="project-card__description" data-i18n="project-card_13_desc">
-                            Telekommunikatsiya tizimlari va tarmoqlarini boshqarish
-                            interfeysi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="industrial" data-project-id="14">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_14_title">Yashil energiya</h3>
-                        <p class="project-card__description" data-i18n="project-card_14_desc">
-                            Muqobil energiya manbalari va yashil texnologiyalar
-                            monitoringi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
-                    </div>
-                </div>
-                <div class="project-card" data-category="industrial" data-project-id="15">
-                    <div class="project-card__content">
-                        <h3 class="project-card__title" data-i18n="project-card_15_title">Mudofaa</h3>
-                        <p class="project-card__description" data-i18n="project-card_15_desc">
-                            Mudofaa tizimlari uchun maxsus mo'ljallangan xavfsiz va
-                            barqaror boshqaruv platformasi.
-                        </p>
-                    </div>
-                    <div class="project-card__action">
-                        <i data-lucide="arrow-up-right"></i>
+                <div class="solutions-card">
+                    <h2 class="section-title" data-i18n="solutions_title">Yechimlarimiz</h2>
+                    <div class="filter-tags">
+                        <button data-i18n="monitoring_systems" class="tag tag--active features_tag">Monitoring
+                            tizimlari</button>
+                        <button data-i18n="gas_modems" class="tag features_tag">Gaz modemlari</button>
+                        <button data-i18n="it_devices" class="tag tag--active features_tag">IT qurilmalar</button>
+                        <button data-i18n="software_platforms" class="tag features_tag">Dasturiy platformalar</button>
+                        <button data-i18n="infrastructure_solutions" class="tag features_tag">Infratuzilma
+                            yechimlari</button>
+                        <button data-i18n="technical_support" class="tag tag--active features_tag">Texnik
+                            qo'llab-quvvatlash</button>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
 
         <section id="biz-haqimizda" class="about container">
             <div class="about__card">
