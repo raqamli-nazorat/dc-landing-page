@@ -21,7 +21,7 @@
     --notifications-text: #1A1D2E;
 
     --number: #3f51a3;
-    --card-action-bg: #000000;
+    --card-action-bg: #222222;
     --card-action-text: #ffffff;
 
     /* font Unbounded */
@@ -816,14 +816,15 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #5266D0 0%, #3B4FB0 100%);
-    opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #3D55B4;
+    /* Fill grows as a circle from the point where the cursor entered (--x/--y set in script.js) */
+    clip-path: circle(0% at var(--x, 50%) var(--y, 50%));
+    transition: clip-path 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
 }
 
 .project-card:hover::before {
-    opacity: 1;
+    clip-path: circle(150% at var(--x, 50%) var(--y, 50%));
 }
 
 .project-card:hover {
@@ -848,6 +849,7 @@ main {
     transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: -1;
     transform: scale(0);
+    display: none;
 }
 
 .project-card:hover::after {
@@ -892,8 +894,8 @@ main {
 
 .project-card__action {
     align-self: flex-end;
-    width: 44px;
-    height: 44px;
+    width: 56px;
+    height: 56px;
     background: var(--card-action-bg);
     color: var(--card-action-text);
     border-radius: 50%;
@@ -901,7 +903,7 @@ main {
     align-items: center;
     justify-content: center;
     transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     z-index: 5;
 }
@@ -940,11 +942,9 @@ main {
     color: #8b9cf0;
 }
 
-@media (hover: hover) {
-    .project-card:hover .project-card__link {
-        opacity: 0;
-        visibility: hidden;
-    }
+.project-card:hover .project-card__link,
+.dark-mode .project-card:hover .project-card__link {
+    color: var(--white);
 }
 
 .project-card__link {
@@ -954,21 +954,9 @@ main {
 .project-card__footer .project-card__action {
     flex-shrink: 0;
     margin-top: 0;
-    transform-origin: right bottom;
 }
 
-/* Figma hover: flat blue card, link hidden, larger white arrow button */
-.project-card:has(.project-card__footer)::before {
-    background: #3D55B4;
-}
-
-.project-card:has(.project-card__footer)::after {
-    display: none;
-}
-
-.project-card:hover .project-card__footer .project-card__action {
-    transform: scale(1.25);
-}
+/* Figma hover: flat blue card, white link, white arrow button rotated to point right */
 
 @media (max-width: 768px) {
     .project-card__footer {
@@ -979,10 +967,6 @@ main {
         font-size: 14px;
     }
 
-    .project-card__footer .project-card__action {
-        width: 46px;
-        height: 46px;
-    }
 
     .breadcrumbs-row {
         flex-direction: column;
@@ -1615,6 +1599,10 @@ main {
         width: 50px;
         height: 50px;
         margin-top: 20px;
+    }
+
+    .project-card__footer .project-card__action {
+        margin-top: 0;
     }
 
     /* About Section */
