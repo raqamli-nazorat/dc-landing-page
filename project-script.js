@@ -158,14 +158,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         const galleryLayout = project[`project-card_${id}_gallery_layout`] || 'grid';
         const siteUrl = project[`project-card_${id}_url`];
 
+        const siteBlock = document.getElementById('project-site');
         const siteLink = document.getElementById('project-site-link');
-        if (siteLink) {
+        if (siteBlock && siteLink) {
             if (siteUrl) {
                 siteLink.href = siteUrl;
-                siteLink.textContent = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
-                siteLink.hidden = false;
+                siteLink.textContent = siteUrl.replace(/\/$/, '');
+                siteBlock.hidden = false;
             } else {
-                siteLink.hidden = true;
+                siteBlock.hidden = true;
             }
         }
 
