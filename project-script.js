@@ -162,8 +162,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const siteLink = document.getElementById('project-site-link');
         if (siteBlock && siteLink) {
             if (siteUrl) {
-                siteLink.href = siteUrl;
-                siteLink.textContent = siteUrl.replace(/\/$/, '');
+                siteBlock.href = siteUrl;
+                siteLink.textContent = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
                 siteBlock.hidden = false;
             } else {
                 siteBlock.hidden = true;

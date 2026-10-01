@@ -968,30 +968,70 @@ main {
     z-index: 5;
 }
 
+/* Domain link: 56px blue globe circle, expands into a 255px pill with the URL on hover */
 .project-card__link {
-    color: #4F65C1;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    --link-bg: var(--Accent-accent-strong, #3F57B3);
+    --link-fg: var(--Icon-icon-in-white, #FFFFFF);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 56px;
+    max-width: 56px;
+    min-width: 56px;
+    padding: 14px 13px;
+    border-radius: 48px;
+    background: var(--link-bg);
+    color: var(--link-fg);
+    overflow: hidden;
+    text-decoration: none;
+    transition: max-width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background 0.4s ease, color 0.4s ease;
+}
+
+.project-card__link:hover,
+.project-card__link:focus-visible {
+    max-width: 255px;
+}
+
+.project-card__globe {
+    flex-shrink: 0;
+    width: 30px;
+    height: 28px;
+}
+
+.project-card__globe circle {
+    fill: var(--link-fg);
+    transition: fill 0.4s ease;
+}
+
+.project-card__globe-land {
+    fill: var(--link-bg);
+    transition: fill 0.4s ease;
+}
+
+.project-card__link-text {
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    min-width: 0;
-    transition: color 0.4s ease;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.dark-mode .project-card__link {
-    color: #8b9cf0;
+.project-card__link:hover .project-card__link-text,
+.project-card__link:focus-visible .project-card__link-text {
+    opacity: 1;
 }
 
+/* On the blue (hovered / highlighted) card the link turns white */
 .project-card:hover .project-card__link,
-.dark-mode .project-card:hover .project-card__link {
-    color: var(--white);
-}
-
-.project-card__link {
-    transition: opacity 0.3s ease, visibility 0.3s ease, color 0.4s ease;
+.project-card--highlight .project-card__link {
+    --link-bg: var(--Background-background-base, #FFFFFF);
+    --link-fg: #000000;
 }
 
 .project-card__footer .project-card__action {
@@ -1006,11 +1046,6 @@ main {
         margin-top: 20px;
     }
 
-    .project-card__link {
-        font-size: 14px;
-    }
-
-
     .breadcrumbs-row {
         flex-direction: column;
         align-items: flex-start;
@@ -1018,12 +1053,13 @@ main {
         margin-bottom: 20px;
     }
 
-    .project-site-link {
-        font-size: 14px;
+    .project-site {
+        height: 40px;
+        padding: 8px 14px;
     }
 
-    .project-site__label {
-        font-size: 12px;
+    .project-site-link {
+        font-size: 14px;
     }
 }
 
@@ -1594,6 +1630,13 @@ main {
         margin-top: 0;
     }
 
+    .project-card__link {
+        height: 50px;
+        min-width: 50px;
+        max-width: 50px;
+        padding: 11px 10px;
+    }
+
     /* About Section */
     .about__card {
         background: #191A1A;
@@ -1724,44 +1767,44 @@ main {
 }
 
 .project-site {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 48px;
+    max-width: 100%;
+    padding: 10px 16px;
+    border-radius: 48px;
+    background: var(--Accent-accent-strong, #3F57B3);
+    color: var(--Icon-icon-in-white, #FFFFFF);
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.project-site:hover {
+    background: #34499A;
 }
 
 .project-site[hidden] {
     display: none;
 }
 
-.project-site__label {
-    color: var(--text-muted);
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
+.project-site__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
 }
 
 .project-site-link {
-    color: #4F65C1;
-    font-size: 15px;
-    font-weight: 400;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: inherit;
+    font-size: 16px;
+    font-weight: 500;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    word-break: break-all;
-    transition: color 0.2s ease;
-}
-
-.project-site-link:hover {
-    color: #2663F1;
-}
-
-.dark-mode .project-site-link {
-    color: #8b9cf0;
-}
-
-.dark-mode .project-site-link:hover {
-    color: #aab6f5;
 }
 
 .project-detail-container {
