@@ -145,10 +145,13 @@
                 <span data-i18n="nav_projects" style="color: var(--text-title); cursor: pointer;"
                     onclick="location.href='index.html#loyihalar'">Loyihalar</span>
             </div>
-            <div id="project-site" class="project-site" hidden>
-                <span class="project-site__label" data-i18n="project_site_label">Manzil:</span>
-                <a id="project-site-link" class="project-site-link" target="_blank" rel="noopener"></a>
-            </div>
+            <a id="project-site" class="project-site" target="_blank" rel="noopener" hidden>
+                <svg class="project-site__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10.75" fill="currentColor" />
+                    <path fill="#3F57B3" d="M7.2 3.6c1.6.4 2.6 1.5 2.4 2.9-.2 1.2-1.4 1.6-2.4 2.3-.9.6-1.1 1.7-2 2.2-.8.4-1.8.1-2.5-.4.3-2.9 2-5.4 4.5-7ZM14.2 11.3c1.3-.5 2.9-.2 3.8.8.9 1 .7 2.4 1.6 3.3.4.4 1 .6 1.5.6-.9 2.6-3 4.6-5.6 5.4-.4-1.2-.2-2.6-.9-3.6-.6-.9-1.8-1.1-2.3-2.1-.5-1.5.5-3.8 1.9-4.4ZM16.6 3.9c1.4.7 2.6 1.7 3.4 3-.9.3-2 .1-2.7-.6-.5-.6-.7-1.5-.7-2.4Z" />
+                </svg>
+                <span id="project-site-link" class="project-site-link"></span>
+            </a>
         </div>
         <div id="project-content">
             <!-- Dynamic sections -->
